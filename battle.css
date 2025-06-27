@@ -1,0 +1,48 @@
+.battle-arena {
+  width: 880px;
+  height: 500px;
+  padding: 50px;
+  border: 1px solid rgb(0, 217, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This pushes the two .pokemon-side divs apart */
+  box-sizing: border-box;
+  margin: 0 auto; /*centers the arena*/
+}
+
+.health-bars-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.pokemon-health-display {
+  display: flex;
+  flex-direction: column; /* stack names and health bars vertically*/
+  width: 40%;
+  text-align: center;
+  margin: 5px;
+}
+
+/* Second row: Pokemon Images */
+.pokemon-images-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+/* displays a fliped view of player1's pokemon */
+.player1-active-pokemon {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  max-width: 50%;
+  max-height: 50%;
+}
+.player2-active-pokemon {
+  max-width: 50%;
+  max-height: 50%;
+}
