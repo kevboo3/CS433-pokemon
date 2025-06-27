@@ -9,7 +9,7 @@ Barrage,Normal,Physical ,15,85,20,Hits 2-5 times in one turn.
 Barrier,Psychic,Status ,— ,— ,20,Sharply raises user's Defense.
 Bide,Normal,Physical ,— ,— ,10,User takes damage for two turns then strikes back double.
 Bind,Normal,Physical ,15,85,20,"Traps opponent, damaging them for 4-5 turns."
-Bite,Dark,Physical ,60,100,25,May cause flinching.
+Bite,Normal,Physical ,60,100,25,May cause flinching.
 Blizzard,Ice,Special ,110,70,5,May freeze opponent.
 Body Slam,Normal,Physical ,85,100,15,May paralyze opponent.
 Bone Club,Ground,Physical ,65,85,20,May cause flinching.
@@ -140,7 +140,7 @@ Substitute,Normal,Status ,— ,— ,10,Uses HP to creates a decoy that takes hit
 Super Fang,Normal,Physical ,— ,90,10,Always takes off half of the opponent's HP.
 Supersonic,Normal,Status ,— ,55,20,Confuses opponent.
 Surf,Water,Special ,90,100,15,Hits all adjacent Pokémon.
-Swift,Normal,Special ,60,∞ ,20,Ignores Accuracy and Evasiveness.
+Swift,Normal,Special ,60,-1,20,Ignores Accuracy and Evasiveness.
 Swords Dance,Normal,Status ,— ,— ,20,Sharply raises user's Attack.
 Tackle,Normal,Physical ,40,100,35,
 Tail Whip,Normal,Status ,— ,100,30,Lowers opponent's Defense.

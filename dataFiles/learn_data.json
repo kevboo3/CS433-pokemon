@@ -1,0 +1,5484 @@
+﻿[
+	{
+		"pokemon": "Bulbasaur",
+		"level up moves": [
+			"Growl",
+			"Tackle",
+			"Leech Seed",
+			"Vine Whip",
+			"PoisonPowder",
+			"Razor Leaf",
+			"Growth",
+			"Sleep Powder",
+			"SolarBeam"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Ivysaur",
+		"level up moves": [
+			"Growl",
+			"Leech Seed",
+			"Tackle",
+			"Leech Seed",
+			"Vine Whip",
+			"PoisonPowder",
+			"Razor Leaf",
+			"Growth",
+			"Sleep Powder",
+			"SolarBeam"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Venusaur",
+		"level up moves": [
+			"Growl",
+			"Leech Seed",
+			"Tackle",
+			"Vine Whip",
+			"Leech Seed",
+			"Vine Whip",
+			"PoisonPowder",
+			"Razor Leaf",
+			"Growth",
+			"Sleep Powder",
+			"SolarBeam"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "VenusaurMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Charmander",
+		"level up moves": [
+			"Growl",
+			"Scratch",
+			"Ember",
+			"Leer",
+			"Rage",
+			"Slash",
+			"Flamethrower",
+			"Fire Spin"
+		],
+		"hm moves": [
+			"Cut",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Swords Dance",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dragon Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Charmeleon",
+		"level up moves": [
+			"Ember",
+			"Growl",
+			"Scratch",
+			"Ember",
+			"Leer",
+			"Rage",
+			"Slash",
+			"Flamethrower",
+			"Fire Spin"
+		],
+		"hm moves": [
+			"Cut",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Swords Dance",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dragon Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Charizard",
+		"level up moves": [
+			"Ember",
+			"Growl",
+			"Leer",
+			"Scratch",
+			"Ember",
+			"Leer",
+			"Rage",
+			"Slash",
+			"Flamethrower",
+			"Fire Spin"
+		],
+		"hm moves": [
+			"Cut",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Swords Dance",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dragon Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "CharizardMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "CharizardMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Squirtle",
+		"level up moves": [
+			"Tackle",
+			"Tail Whip",
+			"Bubble",
+			"Water Gun",
+			"Bite",
+			"Withdraw",
+			"Skull Bash",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Wartortle",
+		"level up moves": [
+			"Bubble",
+			"Tackle",
+			"Tail Whip",
+			"Bubble",
+			"Water Gun",
+			"Bite",
+			"Withdraw",
+			"Skull Bash",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Blastoise",
+		"level up moves": [
+			"Bubble",
+			"Tackle",
+			"Tail Whip",
+			"Water Gun",
+			"Bubble",
+			"Water Gun",
+			"Bite",
+			"Withdraw",
+			"Skull Bash",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "BlastoiseMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Caterpie",
+		"level up moves": [
+			"String Shot",
+			"Tackle"
+		],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Metapod",
+		"level up moves": [
+			"Harden",
+			"Bug",
+			"Normal"
+		],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Butterfree",
+		"level up moves": [
+			"Confusion",
+			"Confusion",
+			"PoisonPowder",
+			"Stun Spore",
+			"Sleep Powder",
+			"Supersonic",
+			"Whirlwind",
+			"Psybeam",
+			"Normal",
+			"Bug",
+			"Normal"
+		],
+		"hm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Weedle",
+		"level up moves": [
+			"Poison Sting",
+			"String Shot"
+		],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Kakuna",
+		"level up moves": [
+			"Harden",
+			"Poison",
+			"Bug"
+		],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Beedrill",
+		"level up moves": [
+			"Fury Attack",
+			"Fury Attack",
+			"Focus Energy",
+			"Twineedle",
+			"Rage",
+			"Pin Missile",
+			"Agility",
+			"Normal",
+			"Poison",
+			"Bug"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "BeedrillMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Pidgey",
+		"level up moves": [
+			"Gust",
+			"Sand-Attack",
+			"Quick Attack",
+			"Whirlwind",
+			"Wing Attack",
+			"Agility",
+			"Mirror Move"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Pidgeotto",
+		"level up moves": [
+			"Gust",
+			"Sand-Attack",
+			"Sand-Attack",
+			"Quick Attack",
+			"Whirlwind",
+			"Wing Attack",
+			"Agility",
+			"Mirror Move"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Pidgeot",
+		"level up moves": [
+			"Gust",
+			"Quick Attack",
+			"Sand-Attack",
+			"Sand-Attack",
+			"Quick Attack",
+			"Whirlwind",
+			"Wing Attack",
+			"Agility",
+			"Mirror Move"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "PidgeotMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Rattata",
+		"level up moves": [
+			"Tackle",
+			"Tail Whip",
+			"Quick Attack",
+			"Hyper Fang",
+			"Focus Energy",
+			"Super Fang"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Blizzard",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Raticate",
+		"level up moves": [
+			"Quick Attack",
+			"Tackle",
+			"Tail Whip",
+			"Quick Attack",
+			"Hyper Fang",
+			"Focus Energy",
+			"Super Fang"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Spearow",
+		"level up moves": [
+			"Growl",
+			"Peck",
+			"Leer",
+			"Fury Attack",
+			"Mirror Move",
+			"Drill Peck",
+			"Agility"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Fearow",
+		"level up moves": [
+			"Growl",
+			"Leer",
+			"Peck",
+			"Leer",
+			"Fury Attack",
+			"Mirror Move",
+			"Drill Peck",
+			"Agility"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Ekans",
+		"level up moves": [
+			"Leer",
+			"Wrap",
+			"Poison Sting",
+			"Bite",
+			"Glare",
+			"Screech",
+			"Acid"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Arbok",
+		"level up moves": [
+			"Leer",
+			"Poison Sting",
+			"Wrap",
+			"Poison Sting",
+			"Bite",
+			"Glare",
+			"Screech",
+			"Acid"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Pikachu",
+		"level up moves": [
+			"Growl",
+			"ThunderShock",
+			"Thunder Wave",
+			"Quick Attack",
+			"Swift",
+			"Agility",
+			"Thunder"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Pay Day",
+			"Submission",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Raichu",
+		"level up moves": [
+			"Growl",
+			"ThunderShock",
+			"Thunder Wave",
+			"Psychic",
+			"Normal",
+			"Normal",
+			"Electric"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Sandshrew",
+		"level up moves": [
+			"Scratch",
+			"Sand-Attack",
+			"Slash",
+			"Poison Sting",
+			"Swift",
+			"Fury Swipes"
+		],
+		"hm moves": [
+			"Cut",
+			"Strength"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Sandslash",
+		"level up moves": [
+			"Sand-Attack",
+			"Scratch",
+			"Sand-Attack",
+			"Slash",
+			"Poison Sting",
+			"Swift",
+			"Fury Swipes"
+		],
+		"hm moves": [
+			"Cut",
+			"Strength"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Nidoran♀",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Nidorina",
+		"level up moves": [
+			"Growl",
+			"Scratch",
+			"Tackle",
+			"Scratch",
+			"Poison Sting",
+			"Tail Whip",
+			"Bite",
+			"Fury Swipes",
+			"Double Kick"
+		],
+		"hm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Nidoqueen",
+		"level up moves": [
+			"Body Slam",
+			"Scratch",
+			"Tackle",
+			"Tail Whip",
+			"Scratch",
+			"Poison Sting",
+			"Body Slam",
+			"Normal",
+			"Fighting",
+			"Normal",
+			"Normal"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Nidoran♂",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Nidorino",
+		"level up moves": [
+			"Horn Attack",
+			"Leer",
+			"Tackle",
+			"Horn Attack",
+			"Poison Sting",
+			"Focus Energy",
+			"Fury Attack",
+			"Horn Drill",
+			"Double Kick"
+		],
+		"hm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Nidoking",
+		"level up moves": [
+			"Horn Attack",
+			"Poison Sting",
+			"Tackle",
+			"Thrash",
+			"Horn Attack",
+			"Poison Sting",
+			"Thrash",
+			"Fighting",
+			"Normal",
+			"Normal",
+			"Normal",
+			"Normal"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Clefairy",
+		"level up moves": [
+			"Growl",
+			"Pound",
+			"Sing",
+			"DoubleSlap",
+			"Minimize",
+			"Metronome",
+			"Defense Curl",
+			"Light Screen"
+		],
+		"hm moves": [
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"SolarBeam",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Clefable",
+		"level up moves": [
+			"DoubleSlap",
+			"Metronome",
+			"Minimize",
+			"Sing",
+			"Normal",
+			"Normal",
+			"Psychic",
+			"Normal"
+		],
+		"hm moves": [
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"SolarBeam",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Vulpix",
+		"level up moves": [
+			"Ember",
+			"Tail Whip",
+			"Quick Attack",
+			"Roar",
+			"Confuse Ray",
+			"Flamethrower",
+			"Fire Spin"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Ninetales",
+		"level up moves": [
+			"Ember",
+			"Quick Attack",
+			"Roar",
+			"Tail Whip",
+			"Ghost",
+			"Fire",
+			"Fire"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Jigglypuff",
+		"level up moves": [
+			"Sing",
+			"Pound",
+			"Disable",
+			"Defense Curl",
+			"DoubleSlap",
+			"Rest",
+			"Body Slam",
+			"Double-Edge"
+		],
+		"hm moves": [
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"SolarBeam",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Wigglytuff",
+		"level up moves": [
+			"Defense Curl",
+			"Disable",
+			"DoubleSlap",
+			"Sing",
+			"Normal",
+			"Normal",
+			"Normal",
+			"Psychic"
+		],
+		"hm moves": [
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"SolarBeam",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Zubat",
+		"level up moves": [
+			"Leech Life",
+			"Supersonic",
+			"Bite",
+			"Confuse Ray",
+			"Wing Attack",
+			"Haze"
+		],
+		"hm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Golbat",
+		"level up moves": [
+			"Bite",
+			"Leech Life",
+			"Screech",
+			"Supersonic",
+			"Bite",
+			"Confuse Ray",
+			"Wing Attack",
+			"Haze"
+		],
+		"hm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Oddish",
+		"level up moves": [
+			"Absorb",
+			"PoisonPowder",
+			"Stun Spore",
+			"Sleep Powder",
+			"Acid",
+			"Petal Dance",
+			"SolarBeam"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Gloom",
+		"level up moves": [
+			"Absorb",
+			"PoisonPowder",
+			"Stun Spore",
+			"PoisonPowder",
+			"Stun Spore",
+			"Sleep Powder",
+			"Acid",
+			"Petal Dance",
+			"SolarBeam"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Vileplume",
+		"level up moves": [
+			"Acid",
+			"Petal Dance",
+			"Sleep Powder",
+			"Stun Spore",
+			"PoisonPowder",
+			"Stun Spore",
+			"Sleep Powder",
+			"Grass",
+			"Grass"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Paras",
+		"level up moves": [
+			"Scratch",
+			"Stun Spore",
+			"Leech Life",
+			"Spore",
+			"Slash",
+			"Growth"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Parasect",
+		"level up moves": [
+			"Leech Life",
+			"Scratch",
+			"Stun Spore",
+			"Stun Spore",
+			"Leech Life",
+			"Spore",
+			"Slash",
+			"Growth"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Venonat",
+		"level up moves": [
+			"Disable",
+			"Tackle",
+			"PoisonPowder",
+			"Leech Life",
+			"Stun Spore",
+			"Psybeam",
+			"Sleep Powder",
+			"Psychic"
+		],
+		"hm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Venomoth",
+		"level up moves": [
+			"Disable",
+			"Leech Life",
+			"PoisonPowder",
+			"Tackle",
+			"PoisonPowder",
+			"Leech Life",
+			"Stun Spore",
+			"Psybeam",
+			"Sleep Powder",
+			"Psychic"
+		],
+		"hm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Diglett",
+		"level up moves": [
+			"Scratch",
+			"Growl",
+			"Dig",
+			"Sand-Attack",
+			"Slash",
+			"Earthquake"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Dugtrio",
+		"level up moves": [
+			"Dig",
+			"Growl",
+			"Scratch",
+			"Growl",
+			"Dig",
+			"Sand-Attack",
+			"Slash",
+			"Earthquake"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Meowth",
+		"level up moves": [
+			"Growl",
+			"Scratch",
+			"Bite",
+			"Pay Day",
+			"Screech",
+			"Fury Swipes",
+			"Slash"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Pay Day",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Persian",
+		"level up moves": [
+			"Bite",
+			"Growl",
+			"Scratch",
+			"Screech",
+			"Bite",
+			"Pay Day",
+			"Screech",
+			"Fury Swipes",
+			"Slash"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Hyper Beam",
+			"Pay Day",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Psyduck",
+		"level up moves": [
+			"Scratch",
+			"Tail Whip",
+			"Disable",
+			"Confusion",
+			"Fury Swipes",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Golduck",
+		"level up moves": [
+			"Disable",
+			"Scratch",
+			"Tail Whip",
+			"Tail Whip",
+			"Disable",
+			"Confusion",
+			"Fury Swipes",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Mankey",
+		"level up moves": [
+			"Leer",
+			"Scratch",
+			"Karate Chop",
+			"Fury Swipes",
+			"Focus Energy",
+			"Seismic Toss",
+			"Thrash"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Primeape",
+		"level up moves": [
+			"Fury Swipes",
+			"Karate Chop",
+			"Leer",
+			"Scratch",
+			"Karate Chop",
+			"Fury Swipes",
+			"Focus Energy",
+			"Seismic Toss",
+			"Thrash"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Growlithe",
+		"level up moves": [
+			"Bite",
+			"Roar",
+			"Ember",
+			"Leer",
+			"Take Down",
+			"Agility",
+			"Flamethrower"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Dragon Rage",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Arcanine",
+		"level up moves": [
+			"Ember",
+			"Leer",
+			"Roar",
+			"Take Down",
+			"Psychic",
+			"Normal",
+			"Fire"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Dragon Rage",
+			"Dig",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Poliwag",
+		"level up moves": [
+			"Bubble",
+			"Hypnosis",
+			"Water Gun",
+			"DoubleSlap",
+			"Body Slam",
+			"Amnesia",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Poliwhirl",
+		"level up moves": [
+			"Bubble",
+			"Hypnosis",
+			"Water Gun",
+			"Hypnosis",
+			"Water Gun",
+			"DoubleSlap",
+			"Body Slam",
+			"Amnesia",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Poliwrath",
+		"level up moves": [
+			"Body Slam",
+			"DoubleSlap",
+			"Hypnosis",
+			"Water Gun",
+			"Hypnosis",
+			"Water Gun",
+			"Psychic",
+			"Water",
+			"Water"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Abra",
+		"level up moves": [
+			"Teleport"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Kadabra",
+		"level up moves": [
+			"Confusion",
+			"Disable",
+			"Teleport",
+			"Confusion",
+			"Disable",
+			"Psybeam",
+			"Recover",
+			"Psychic",
+			"Reflect"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dig",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Alakazam",
+		"level up moves": [
+			"Confusion",
+			"Disable",
+			"Teleport",
+			"Confusion",
+			"Disable",
+			"Psybeam",
+			"Recover",
+			"Psychic",
+			"Reflect"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Dig",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "AlakazamMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Machop",
+		"level up moves": [
+			"Karate Chop",
+			"Low Kick",
+			"Leer",
+			"Focus Energy",
+			"Seismic Toss",
+			"Submission"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Machoke",
+		"level up moves": [
+			"Karate Chop",
+			"Leer",
+			"Low Kick",
+			"Low Kick",
+			"Leer",
+			"Focus Energy",
+			"Seismic Toss",
+			"Submission"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Machamp",
+		"level up moves": [
+			"Karate Chop",
+			"Leer",
+			"Low Kick",
+			"Low Kick",
+			"Leer",
+			"Focus Energy",
+			"Seismic Toss",
+			"Submission"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Bellsprout",
+		"level up moves": [
+			"Growth",
+			"Vine Whip",
+			"Wrap",
+			"PoisonPowder",
+			"Sleep Powder",
+			"Stun Spore",
+			"Acid",
+			"Razor Leaf",
+			"Slam"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Weepinbell",
+		"level up moves": [
+			"Growth",
+			"Vine Whip",
+			"Wrap",
+			"Wrap",
+			"PoisonPowder",
+			"Sleep Powder",
+			"Stun Spore",
+			"Acid",
+			"Razor Leaf",
+			"Slam"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Victreebel",
+		"level up moves": [
+			"Acid",
+			"Razor Leaf",
+			"Sleep Powder",
+			"Stun Spore",
+			"Wrap",
+			"PoisonPowder",
+			"Sleep Powder",
+			"Normal",
+			"Normal",
+			"Grass"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Tentacool",
+		"level up moves": [
+			"Acid",
+			"Supersonic",
+			"Wrap",
+			"Poison Sting",
+			"Water Gun",
+			"Constrict",
+			"Barrier",
+			"Screech",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Cut",
+			"Surf"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Mega Drain",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Tentacruel",
+		"level up moves": [
+			"Acid",
+			"Supersonic",
+			"Wrap",
+			"Supersonic",
+			"Wrap",
+			"Poison Sting",
+			"Water Gun",
+			"Constrict",
+			"Barrier",
+			"Screech",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Cut",
+			"Surf"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Geodude",
+		"level up moves": [
+			"Tackle",
+			"Defense Curl",
+			"Rock Throw",
+			"Selfdestruct",
+			"Harden",
+			"Earthquake",
+			"Explosion"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Selfdestruct",
+			"Fire Blast",
+			"Rest",
+			"Explosion",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Graveler",
+		"level up moves": [
+			"Defense Curl",
+			"Tackle",
+			"Defense Curl",
+			"Rock Throw",
+			"Selfdestruct",
+			"Harden",
+			"Earthquake",
+			"Explosion"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Selfdestruct",
+			"Fire Blast",
+			"Rest",
+			"Explosion",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Golem",
+		"level up moves": [
+			"Defense Curl",
+			"Tackle",
+			"Defense Curl",
+			"Rock Throw",
+			"Selfdestruct",
+			"Harden",
+			"Earthquake",
+			"Explosion"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Selfdestruct",
+			"Fire Blast",
+			"Rest",
+			"Explosion",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Ponyta",
+		"level up moves": [
+			"Ember",
+			"Tail Whip",
+			"Stomp",
+			"Growl",
+			"Fire Spin",
+			"Take Down",
+			"Agility"
+		],
+		"hm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Rapidash",
+		"level up moves": [
+			"Ember",
+			"Growl",
+			"Stomp",
+			"Tail Whip",
+			"Tail Whip",
+			"Stomp",
+			"Growl",
+			"Fire Spin",
+			"Take Down",
+			"Agility"
+		],
+		"hm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Slowpoke",
+		"level up moves": [
+			"Confusion",
+			"Disable",
+			"Headbutt",
+			"Growl",
+			"Water Gun",
+			"Amnesia",
+			"Psychic"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Pay Day",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Slowbro",
+		"level up moves": [
+			"Confusion",
+			"Disable",
+			"Headbutt",
+			"Disable",
+			"Headbutt",
+			"Growl",
+			"Water Gun",
+			"Withdraw",
+			"Amnesia",
+			"Psychic"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "SlowbroMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Magnemite",
+		"level up moves": [
+			"Tackle",
+			"SonicBoom",
+			"ThunderShock",
+			"Supersonic",
+			"Thunder Wave",
+			"Swift",
+			"Screech"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Magneton",
+		"level up moves": [
+			"SonicBoom",
+			"Tackle",
+			"ThunderShock",
+			"SonicBoom",
+			"ThunderShock",
+			"Supersonic",
+			"Thunder Wave",
+			"Swift",
+			"Screech"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Farfetch",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Doduo",
+		"level up moves": [
+			"Peck",
+			"Growl",
+			"Fury Attack",
+			"Drill Peck",
+			"Rage",
+			"Tri Attack",
+			"Agility"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Whirlwind",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Sky Attack",
+			"Rest",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Dodrio",
+		"level up moves": [
+			"Fury Attack",
+			"Growl",
+			"Peck",
+			"Growl",
+			"Fury Attack",
+			"Drill Peck",
+			"Rage",
+			"Tri Attack",
+			"Agility"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Whirlwind",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Sky Attack",
+			"Rest",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Seel",
+		"level up moves": [
+			"Headbutt",
+			"Growl",
+			"Aurora Beam",
+			"Rest",
+			"Take Down",
+			"Ice Beam"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Pay Day",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Dewgong",
+		"level up moves": [
+			"Aurora Beam",
+			"Growl",
+			"Headbutt",
+			"Growl",
+			"Aurora Beam",
+			"Rest",
+			"Take Down",
+			"Ice Beam"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Grimer",
+		"level up moves": [
+			"Disable",
+			"Pound",
+			"Poison Gas",
+			"Minimize",
+			"Sludge",
+			"Harden",
+			"Screech",
+			"Acid Armor"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Rage",
+			"Mega Drain",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Selfdestruct",
+			"Fire Blast",
+			"Rest",
+			"Explosion",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Muk",
+		"level up moves": [
+			"Disable",
+			"Poison Gas",
+			"Pound",
+			"Poison Gas",
+			"Minimize",
+			"Sludge",
+			"Harden",
+			"Screech",
+			"Acid Armor"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Selfdestruct",
+			"Fire Blast",
+			"Rest",
+			"Explosion",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Shellder",
+		"level up moves": [
+			"Tackle",
+			"Withdraw",
+			"Supersonic",
+			"Clamp",
+			"Aurora Beam",
+			"Leer",
+			"Ice Beam"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Selfdestruct",
+			"Swift",
+			"Rest",
+			"Explosion",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Cloyster",
+		"level up moves": [
+			"Aurora Beam",
+			"Clamp",
+			"Supersonic",
+			"Withdraw",
+			"Spike Cannon",
+			"Ice",
+			"Normal",
+			"Normal"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Selfdestruct",
+			"Swift",
+			"Rest",
+			"Explosion",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Gastly",
+		"level up moves": [
+			"Confuse Ray",
+			"Lick",
+			"Night Shade",
+			"Hypnosis",
+			"Dream Eater"
+		],
+		"hm moves": [
+			"Toxic",
+			"Rage",
+			"Mega Drain",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Selfdestruct",
+			"Dream Eater",
+			"Rest",
+			"Psywave",
+			"Explosion",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Haunter",
+		"level up moves": [
+			"Confuse Ray",
+			"Lick",
+			"Night Shade",
+			"Hypnosis",
+			"Dream Eater"
+		],
+		"hm moves": [
+			"Toxic",
+			"Rage",
+			"Mega Drain",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Selfdestruct",
+			"Dream Eater",
+			"Rest",
+			"Psywave",
+			"Explosion",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Gengar",
+		"level up moves": [
+			"Confuse Ray",
+			"Lick",
+			"Night Shade",
+			"Hypnosis",
+			"Dream Eater"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Mega Drain",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Selfdestruct",
+			"Skull Bash",
+			"Dream Eater",
+			"Rest",
+			"Psywave",
+			"Explosion",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "GengarMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Onix",
+		"level up moves": [
+			"Screech",
+			"Tackle",
+			"Bind",
+			"Rock Throw",
+			"Rage",
+			"Slam",
+			"Harden"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Selfdestruct",
+			"Skull Bash",
+			"Rest",
+			"Explosion",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Drowzee",
+		"level up moves": [
+			"Hypnosis",
+			"Pound",
+			"Disable",
+			"Confusion",
+			"Headbutt",
+			"Poison Gas",
+			"Psychic",
+			"Meditate"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Dream Eater",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Hypno",
+		"level up moves": [
+			"Confusion",
+			"Disable",
+			"Hypnosis",
+			"Pound",
+			"Disable",
+			"Confusion",
+			"Headbutt",
+			"Poison Gas",
+			"Psychic",
+			"Meditate"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Dream Eater",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Krabby",
+		"level up moves": [
+			"Bubble",
+			"Leer",
+			"ViceGrip",
+			"Guillotine",
+			"Stomp",
+			"Crabhammer",
+			"Harden"
+		],
+		"hm moves": [
+			"Cut",
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Kingler",
+		"level up moves": [
+			"Bubble",
+			"Leer",
+			"ViceGrip",
+			"ViceGrip",
+			"Guillotine",
+			"Stomp",
+			"Crabhammer",
+			"Harden"
+		],
+		"hm moves": [
+			"Cut",
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Voltorb",
+		"level up moves": [
+			"Screech",
+			"Tackle",
+			"SonicBoom",
+			"Selfdestruct",
+			"Light Screen",
+			"Swift",
+			"Explosion"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Selfdestruct",
+			"Swift",
+			"Rest",
+			"Thunder Wave",
+			"Explosion",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Electrode",
+		"level up moves": [
+			"Screech",
+			"SonicBoom",
+			"Tackle",
+			"SonicBoom",
+			"Selfdestruct",
+			"Light Screen",
+			"Swift",
+			"Explosion"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Selfdestruct",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Explosion",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Exeggcute",
+		"level up moves": [
+			"Barrage",
+			"Hypnosis",
+			"Reflect",
+			"Leech Seed",
+			"Stun Spore",
+			"PoisonPowder",
+			"SolarBeam",
+			"Sleep Powder"
+		],
+		"hm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Selfdestruct",
+			"Egg Bomb",
+			"Rest",
+			"Psywave",
+			"Explosion",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Exeggutor",
+		"level up moves": [
+			"Barrage",
+			"Hypnosis",
+			"Stomp",
+			"Grass",
+			"Poison",
+			"Psychic",
+			"Grass",
+			"Grass",
+			"Grass"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Selfdestruct",
+			"Egg Bomb",
+			"Rest",
+			"Psywave",
+			"Explosion",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Cubone",
+		"level up moves": [
+			"Bone Club",
+			"Growl",
+			"Leer",
+			"Focus Energy",
+			"Thrash",
+			"Bonemerang",
+			"Rage"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Marowak",
+		"level up moves": [
+			"Bone Club",
+			"Focus Energy",
+			"Growl",
+			"Leer",
+			"Leer",
+			"Focus Energy",
+			"Thrash",
+			"Bonemerang",
+			"Rage"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Hitmonlee",
+		"level up moves": [
+			"Double Kick",
+			"Meditate",
+			"Rolling Kick",
+			"Jump Kick",
+			"Focus Energy",
+			"Hi Jump Kick",
+			"Mega Kick"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Hitmonchan",
+		"level up moves": [
+			"Agility",
+			"Comet Punch",
+			"Fire Punch",
+			"Ice Punch",
+			"ThunderPunch",
+			"Mega Punch",
+			"Counter"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Lickitung",
+		"level up moves": [
+			"Supersonic",
+			"Wrap",
+			"Stomp",
+			"Disable",
+			"Defense Curl",
+			"Slam",
+			"Screech"
+		],
+		"hm moves": [
+			"Cut",
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Swords Dance",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Koffing",
+		"level up moves": [
+			"Smog",
+			"Tackle",
+			"Sludge",
+			"SmokeScreen",
+			"Selfdestruct",
+			"Haze",
+			"Explosion"
+		],
+		"hm moves": [
+			"Toxic",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Selfdestruct",
+			"Fire Blast",
+			"Rest",
+			"Explosion",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Weezing",
+		"level up moves": [
+			"Sludge",
+			"Smog",
+			"Tackle",
+			"Sludge",
+			"SmokeScreen",
+			"Selfdestruct",
+			"Haze",
+			"Explosion"
+		],
+		"hm moves": [
+			"Toxic",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Selfdestruct",
+			"Fire Blast",
+			"Rest",
+			"Explosion",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Rhyhorn",
+		"level up moves": [
+			"Horn Attack",
+			"Stomp",
+			"Tail Whip",
+			"Fury Attack",
+			"Horn Drill",
+			"Leer",
+			"Take Down"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Rhydon",
+		"level up moves": [
+			"Fury Attack",
+			"Horn Attack",
+			"Stomp",
+			"Tail Whip",
+			"Stomp",
+			"Tail Whip",
+			"Fury Attack",
+			"Horn Drill",
+			"Leer",
+			"Take Down"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Chansey",
+		"level up moves": [
+			"DoubleSlap",
+			"Pound",
+			"Sing",
+			"Growl",
+			"Minimize",
+			"Defense Curl",
+			"Light Screen",
+			"Double-Edge"
+		],
+		"hm moves": [
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"SolarBeam",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Egg Bomb",
+			"Fire Blast",
+			"Skull Bash",
+			"Softboiled",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Tangela",
+		"level up moves": [
+			"Bind",
+			"Constrict",
+			"Absorb",
+			"PoisonPowder",
+			"Stun Spore",
+			"Sleep Powder",
+			"Slam",
+			"Growth"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Kangaskhan",
+		"level up moves": [
+			"Comet Punch",
+			"Rage",
+			"Bite",
+			"Tail Whip",
+			"Mega Punch",
+			"Leer",
+			"Dizzy Punch"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "KangaskhanMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Horsea",
+		"level up moves": [
+			"Bubble",
+			"SmokeScreen",
+			"Leer",
+			"Water Gun",
+			"Agility",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Seadra",
+		"level up moves": [
+			"Bubble",
+			"SmokeScreen",
+			"SmokeScreen",
+			"Leer",
+			"Water Gun",
+			"Agility",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Goldeen",
+		"level up moves": [
+			"Peck",
+			"Tail Whip",
+			"Supersonic",
+			"Horn Attack",
+			"Fury Attack",
+			"Waterfall",
+			"Horn Drill",
+			"Agility"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Seaking",
+		"level up moves": [
+			"Peck",
+			"Supersonic",
+			"Tail Whip",
+			"Supersonic",
+			"Horn Attack",
+			"Fury Attack",
+			"Waterfall",
+			"Horn Drill",
+			"Agility"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Staryu",
+		"level up moves": [
+			"Tackle",
+			"Water Gun",
+			"Harden",
+			"Recover",
+			"Swift",
+			"Minimize",
+			"Light Screen",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Starmie",
+		"level up moves": [
+			"Harden",
+			"Tackle",
+			"Water Gun",
+			"Water",
+			"Psychic",
+			"Normal",
+			"Normal",
+			"Normal"
+		],
+		"hm moves": [
+			"Surf",
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Mr",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Scyther",
+		"level up moves": [
+			"Quick Attack",
+			"Leer",
+			"Focus Energy",
+			"Double Team",
+			"Slash",
+			"Swords Dance",
+			"Agility"
+		],
+		"hm moves": [
+			"Cut"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Jynx",
+		"level up moves": [
+			"Lovely Kiss",
+			"Pound",
+			"Lick",
+			"DoubleSlap",
+			"Ice Punch",
+			"Body Slam",
+			"Thrash",
+			"Blizzard"
+		],
+		"hm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Skull Bash",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Electabuzz",
+		"level up moves": [
+			"Leer",
+			"Quick Attack",
+			"ThunderShock",
+			"Screech",
+			"ThunderPunch",
+			"Light Screen",
+			"Thunder"
+		],
+		"hm moves": [
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Magmar",
+		"level up moves": [
+			"Ember",
+			"Leer",
+			"Confuse Ray",
+			"Fire Punch",
+			"SmokeScreen",
+			"Smog",
+			"Flamethrower"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Metronome",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Pinsir",
+		"level up moves": [
+			"ViceGrip",
+			"Seismic Toss",
+			"Guillotine",
+			"Focus Energy",
+			"Harden",
+			"Slash",
+			"Swords Dance"
+		],
+		"hm moves": [
+			"Cut",
+			"Strength"
+		],
+		"tm moves": [
+			"Swords Dance",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Submission",
+			"Seismic Toss",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "PinsirMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Tauros",
+		"level up moves": [
+			"Tackle",
+			"Stomp",
+			"Tail Whip",
+			"Leer",
+			"Rage",
+			"Take Down"
+		],
+		"hm moves": [
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Mimic",
+			"Double Team",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Magikarp",
+		"level up moves": [
+			"Splash",
+			"Tackle"
+		],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Gyarados",
+		"level up moves": [
+			"Bite",
+			"Dragon Rage",
+			"Hydro Pump",
+			"Leer",
+			"Bite",
+			"Dragon Rage",
+			"Leer",
+			"Hydro Pump",
+			"Hyper Beam",
+			"Normal",
+			"Normal"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Dragon Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "GyaradosMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Lapras",
+		"level up moves": [
+			"Growl",
+			"Water Gun",
+			"Sing",
+			"Mist",
+			"Body Slam",
+			"Confuse Ray",
+			"Ice Beam",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"SolarBeam",
+			"Dragon Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Psywave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Ditto",
+		"level up moves": [
+			"Transform"
+		],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Eevee",
+		"level up moves": [
+			"Sand-Attack",
+			"Tackle",
+			"Quick Attack",
+			"Tail Whip",
+			"Bite",
+			"Take Down"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Vaporeon",
+		"level up moves": [
+			"Quick Attack",
+			"Sand-Attack",
+			"Tackle",
+			"Water Gun",
+			"Quick Attack",
+			"Water Gun",
+			"Tail Whip",
+			"Bite",
+			"Acid Armor",
+			"Haze",
+			"Mist",
+			"Hydro Pump",
+			"Normal"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Jolteon",
+		"level up moves": [
+			"Quick Attack",
+			"Sand-Attack",
+			"Tackle",
+			"ThunderShock",
+			"Quick Attack",
+			"ThunderShock",
+			"Tail Whip",
+			"Thunder Wave",
+			"Double Kick",
+			"Agility",
+			"Pin Missile",
+			"Thunder",
+			"Normal",
+			"Normal"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Flareon",
+		"level up moves": [
+			"Ember",
+			"Quick Attack",
+			"Sand-Attack",
+			"Tackle",
+			"Quick Attack",
+			"Ember",
+			"Tail Whip",
+			"Bite",
+			"Leer",
+			"Fire Spin",
+			"Rage",
+			"Flamethrower",
+			"Normal"
+		],
+		"hm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Porygon",
+		"level up moves": [
+			"Conversion",
+			"Sharpen",
+			"Tackle",
+			"Psybeam",
+			"Recover",
+			"Agility",
+			"Tri Attack"
+		],
+		"hm moves": [
+			"Flash"
+		],
+		"tm moves": [
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Omanyte",
+		"level up moves": [
+			"Water Gun",
+			"Withdraw",
+			"Horn Attack",
+			"Leer",
+			"Spike Cannon",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Omastar",
+		"level up moves": [
+			"Horn Attack",
+			"Water Gun",
+			"Withdraw",
+			"Horn Attack",
+			"Leer",
+			"Spike Cannon",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Seismic Toss",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Kabuto",
+		"level up moves": [
+			"Harden",
+			"Scratch",
+			"Absorb",
+			"Slash",
+			"Leer",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Kabutops",
+		"level up moves": [
+			"Absorb",
+			"Harden",
+			"Scratch",
+			"Absorb",
+			"Slash",
+			"Leer",
+			"Hydro Pump"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Swords Dance",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Submission",
+			"Seismic Toss",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Skull Bash",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Aerodactyl",
+		"level up moves": [
+			"Agility",
+			"Wing Attack",
+			"Supersonic",
+			"Bite",
+			"Take Down",
+			"Hyper Beam"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Dragon Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "AerodactylMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Snorlax",
+		"level up moves": [
+			"Amnesia",
+			"Headbutt",
+			"Rest",
+			"Body Slam",
+			"Harden",
+			"Double-Edge",
+			"Hyper Beam"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"SolarBeam",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Psychic",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Selfdestruct",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Psywave",
+			"Rock Slide",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Articuno",
+		"level up moves": [
+			"Ice Beam",
+			"Peck",
+			"Blizzard",
+			"Agility",
+			"Mist"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Zapdos",
+		"level up moves": [
+			"Drill Peck",
+			"ThunderShock",
+			"Thunder",
+			"Agility",
+			"Light Screen"
+		],
+		"hm moves": [
+			"Fly",
+			"Flash"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Moltres",
+		"level up moves": [
+			"Fire Spin",
+			"Peck",
+			"Leer",
+			"Agility",
+			"Sky Attack"
+		],
+		"hm moves": [
+			"Fly"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Whirlwind",
+			"Toxic",
+			"Take Down",
+			"Double-Edge",
+			"Hyper Beam",
+			"Rage",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Sky Attack",
+			"Rest",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Dratini",
+		"level up moves": [
+			"Leer",
+			"Wrap",
+			"Thunder Wave",
+			"Agility",
+			"Slam",
+			"Dragon Rage",
+			"Hyper Beam"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Dragon Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Dragonair",
+		"level up moves": [
+			"Leer",
+			"Thunder Wave",
+			"Wrap",
+			"Thunder Wave",
+			"Agility",
+			"Slam",
+			"Dragon Rage",
+			"Hyper Beam"
+		],
+		"hm moves": [
+			"Surf"
+		],
+		"tm moves": [
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Rage",
+			"Dragon Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Dragonite",
+		"level up moves": [
+			"Agility",
+			"Leer",
+			"Thunder Wave",
+			"Wrap",
+			"Thunder Wave",
+			"Agility",
+			"Slam",
+			"Dragon Rage",
+			"Hyper Beam"
+		],
+		"hm moves": [
+			"Surf",
+			"Strength"
+		],
+		"tm moves": [
+			"Razor Wind",
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Rage",
+			"Dragon Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "Mewtwo",
+		"level up moves": [
+			"Confusion",
+			"Disable",
+			"Psychic",
+			"Swift",
+			"Barrier",
+			"Psychic",
+			"Recover",
+			"Mist",
+			"Amnesia"
+		],
+		"hm moves": [
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Mega Kick",
+			"Toxic",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"SolarBeam",
+			"Thunderbolt",
+			"Thunder",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Selfdestruct",
+			"Fire Blast",
+			"Skull Bash",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Tri Attack",
+			"Substitute"
+		]
+	},
+	{
+		"pokemon": "MewtwoMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "MewtwoMega",
+		"level up moves": [],
+		"hm moves": [],
+		"tm moves": []
+	},
+	{
+		"pokemon": "Mew",
+		"level up moves": [
+			"Pound",
+			"Transform",
+			"Mega Punch",
+			"Metronome",
+			"Psychic"
+		],
+		"hm moves": [
+			"Cut",
+			"Fly",
+			"Surf",
+			"Strength",
+			"Flash"
+		],
+		"tm moves": [
+			"Mega Punch",
+			"Razor Wind",
+			"Swords Dance",
+			"Whirlwind",
+			"Mega Kick",
+			"Toxic",
+			"Horn Drill",
+			"Body Slam",
+			"Take Down",
+			"Double-Edge",
+			"BubbleBeam",
+			"Water Gun",
+			"Ice Beam",
+			"Blizzard",
+			"Hyper Beam",
+			"Pay Day",
+			"Submission",
+			"Counter",
+			"Seismic Toss",
+			"Rage",
+			"Mega Drain",
+			"SolarBeam",
+			"Dragon Rage",
+			"Thunderbolt",
+			"Thunder",
+			"Earthquake",
+			"Fissure",
+			"Dig",
+			"Psychic",
+			"Teleport",
+			"Mimic",
+			"Double Team",
+			"Reflect",
+			"Bide",
+			"Metronome",
+			"Selfdestruct",
+			"Egg Bomb",
+			"Fire Blast",
+			"Swift",
+			"Skull Bash",
+			"Softboiled",
+			"Dream Eater",
+			"Sky Attack",
+			"Rest",
+			"Thunder Wave",
+			"Psywave",
+			"Explosion",
+			"Rock Slide",
+			"Tri Attack",
+			"Substitute"
+		]
+	}
+]
