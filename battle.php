@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    <h1 style="  text-align: center;
-">Battle Screen (temp text)</h1>
+    <h1 style="  text-align: center; ">Battle Screen (temp text)</h1>
     <div class="room">
         <div class="battle-arena">
             <div class="health-bars-row">

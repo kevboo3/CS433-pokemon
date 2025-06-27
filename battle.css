@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-between; /* This pushes the two .pokemon-side divs apart */
   box-sizing: border-box;
-  margin: 0 auto; /*centers the arena*/
+  margin: 0 auto; /* centers the arena*/
 }
 
 .health-bars-row {
