@@ -15,9 +15,10 @@ function conLog($str) {
 // Checks for database and creates it if needed
 function setup() {
     try {
-        // PDO Setup
+        // PDO Init
         $pdo = new PDO("mysql:host=localhost", "root", "");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         // Database Check/Creation
         if (!$pdo->exec("CREATE DATABASE IF NOT EXISTS Proj3")) {
             return;
@@ -133,7 +134,8 @@ function setup() {
         die(conLog("ERROR - " . $e->getMessage()));
     }
 }
+
 conLog("Checking Database");
 setup();
-conLog("Database Ready!");
+conLog("Database Ready");
 ?>
