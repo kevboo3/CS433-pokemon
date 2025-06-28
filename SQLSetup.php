@@ -8,16 +8,17 @@ define("LEARNDATA", "learn_data.json");
 // conLog()
 // Logs messages to javascript console
 function conLog($str) {
-    echo "<script>console.log('SQLSetup: " . $str . "' );</script>";
+    echo "<script>console.log(\"SQLSetup: " . $str . "\" );</script>";
 }
 
 // setup()
 // Checks for database and creates it if needed
 function setup() {
     try {
-        // PDO Setup
+        // PDO Init
         $pdo = new PDO("mysql:host=localhost", "root", "");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         // Database Check/Creation
         if (!$pdo->exec("CREATE DATABASE IF NOT EXISTS Proj3")) {
             return;
@@ -31,7 +32,7 @@ function setup() {
         $file = fopen(FPATH . TYPEDATA, "r") or die(conLog("ERROR - " . TYPEDATA . " not found!"));
         $colArr = explode(",", fgets($file));  // List of column names
         $pdo->exec("CREATE TABLE typeBonus($colArr[0] VARCHAR(20) PRIMARY KEY);");
-        for ($i = 1; $i < (count($colArr)); $i++) {
+        for ($i = 1; $i < count($colArr); $i++) {
             $pdo->exec("ALTER TABLE typeBonus ADD $colArr[$i] DECIMAL(2,1);");
         }
         conLog("Type Bonus Table Created!");
@@ -50,7 +51,7 @@ function setup() {
         $file = fopen(FPATH . POKEDATA, "r") or die(conLog("ERROR - " . POKEDATA . " not found!"));
         $colArr = explode(",", fgets($file));  // List of column names
         $pdo->exec("CREATE TABLE Pokedex($colArr[0] INT PRIMARY KEY);");  // Column: Id
-        for ($i = 1; $i < (count($colArr)); $i++) {
+        for ($i = 1; $i < count($colArr); $i++) {
             $sql = "ALTER TABLE Pokedex ADD $colArr[$i] ";
             if ($i < 4) {  // Columns: Name, Type1, Type2
                 $sql .= "VARCHAR(20);";
@@ -97,7 +98,7 @@ function setup() {
         $file = fopen(FPATH . MOVEDATA, "r") or die(conLog("ERROR - " . MOVEDATA . " not found!"));
         $colArr = explode(",", fgets($file));  // List of column names
         $pdo->exec("CREATE TABLE Moves($colArr[0] VARCHAR(20) PRIMARY KEY);");  // Column: Name
-        for ($i = 1; $i < (count($colArr)); $i++) {
+        for ($i = 1; $i < count($colArr); $i++) {
             $sql = "ALTER TABLE Moves ADD $colArr[$i] ";
             if ($i == 1 or $i == 2) {  // Columns: Type, Category
                 $sql .= "VARCHAR(20);";
@@ -116,24 +117,52 @@ function setup() {
         // Load Move Data
         $colStr = implode(", ", $colArr);
         $valStr = "?" . str_repeat(",?", count($colArr) - 1);
+        $sql = "INSERT INTO Moves ($colStr) VALUES ($valStr)";
         while(!feof($file)) {                                // Read move_data.csv
             $dataArr = explode(",", fgets($file), 7);
             $dataArr[2] = trim($dataArr[2]);                 // Remove whitespace
-            $dataArr[6] = trim(trim($dataArr[6]), '"');      // Remove whitespace and quotes
-            $sql = "INSERT INTO Moves ($colStr) VALUES ($valStr)";
+            $dataArr[6] = trim(trim($dataArr[6]), '"') ?: NULL;      // Remove whitespace and quotes
             $pdo->prepare($sql)->execute($dataArr);
         }
         conLog("Moves Data Loaded");
 
         // Learn Table Creation
-        $file = fopen(FPATH . LEARNDATA, "r") or die(conLog("ERROR - " . LEARNDATA . " not found!"));
+        $colArr = ["Name", "Level", "Hm", "Tm"];
+        
+        $pdo->exec("CREATE TABLE Learn($colArr[0] VARCHAR(20) PRIMARY KEY);");
+        for ($i = 1; $i < count($colArr); $i++) {
+            $pdo->exec("ALTER TABLE Learn ADD $colArr[$i] VARCHAR(512);");
+        }
+        conLog("Learn Table Created");
 
+        // Load Learn Data
+        $colStr = implode(", ", $colArr);
+        $valStr = "?" . str_repeat(",?", count($colArr) - 1);
+        $file = fopen(FPATH . LEARNDATA, "r") or die(conLog("ERROR - " . LEARNDATA . " not found!"));
+        $jsonStr = "";
+        while(!feof($file)) {
+            $jsonStr .= fgets($file);
+        }
+        $jsonArr = json_decode($jsonStr, True);
+        $dataArr = ["", "", "", ""];
+        $sql = "INSERT INTO Learn ($colStr) VALUES ($valStr)";
+        for ($i = 0; $i < count($jsonArr); $i++) {
+            $dataArr[0] = $jsonArr[$i]["pokemon"];
+            $dataArr[1] = implode(",", array_unique($jsonArr[$i]["level up moves"]));
+            $dataArr[2] = implode(",", $jsonArr[$i]["hm moves"]) ?: NULL;
+            $dataArr[3] = implode(",", $jsonArr[$i]["tm moves"]) ?: NULL;
+            $pdo->prepare($sql)->execute($dataArr);
+        }
+        $pdo->exec("ALTER TABLE Learn ADD COLUMN Id INT FIRST;");
+        $pdo->exec("ALTER TABLE Learn ADD FOREIGN KEY (Id) REFERENCES Pokedex(Id);");
+        $pdo->exec("UPDATE Learn INNER JOIN Pokedex ON Learn.Name = Pokedex.Name Set Learn.Id = Pokedex.Id");
     }
     catch (PDOException $e) {
         die(conLog("ERROR - " . $e->getMessage()));
     }
 }
+
 conLog("Checking Database");
 setup();
-conLog("Database Ready!");
+conLog("Database Ready");
 ?>
