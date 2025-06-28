@@ -31,9 +31,9 @@ function setup() {
         // Type Bonus Table Creation
         $file = fopen(FPATH . TYPEDATA, "r") or die(conLog("ERROR - " . TYPEDATA . " not found!"));
         $colArr = explode(",", fgets($file));  // List of column names
-        $pdo->exec("CREATE TABLE typeBonus($colArr[0] VARCHAR(20) PRIMARY KEY);");
+        $pdo->exec("CREATE TABLE TypeBonus($colArr[0] VARCHAR(20) PRIMARY KEY);");
         for ($i = 1; $i < count($colArr); $i++) {
-            $pdo->exec("ALTER TABLE typeBonus ADD $colArr[$i] DECIMAL(2,1);");
+            $pdo->exec("ALTER TABLE TypeBonus ADD $colArr[$i] DECIMAL(2,1);");
         }
         conLog("Type Bonus Table Created!");
 
@@ -42,7 +42,7 @@ function setup() {
         $valStr = "?" . str_repeat(",?", count($colArr) - 1);
         while(!feof($file)) {  // Read type_bonus.csv
             $dataArr = explode(",", fgets($file));
-            $sql = "INSERT INTO typeBonus ($colStr) VALUES ($valStr)";
+            $sql = "INSERT INTO TypeBonus ($colStr) VALUES ($valStr)";
             $pdo->prepare($sql)->execute($dataArr);
         }
         conLog("Type Bonus Data Loaded");
@@ -64,8 +64,8 @@ function setup() {
             }
             $pdo->exec($sql);
         }
-        for ($i = 2; $i < 4; $i++) {  // Links Type1 and Type2 to typeBonus(Type)
-            $pdo->exec("ALTER TABLE Pokedex ADD FOREIGN KEY ($colArr[$i]) REFERENCES typeBonus(Type);");
+        for ($i = 2; $i < 4; $i++) {  // Links Type1 and Type2 to TypeBonus(Type)
+            $pdo->exec("ALTER TABLE Pokedex ADD FOREIGN KEY ($colArr[$i]) REFERENCES TypeBonus(Type);");
         }
         conLog("Pokedex Table Created");
 
@@ -111,17 +111,17 @@ function setup() {
             }
             $pdo->exec($sql);
         }
-        $pdo->exec("ALTER TABLE Moves ADD FOREIGN KEY ($colArr[1]) REFERENCES typeBonus(Type);"); // Links Type to typeBonus(Type)
+        $pdo->exec("ALTER TABLE Moves ADD FOREIGN KEY ($colArr[1]) REFERENCES TypeBonus(Type);"); // Links Type to TypeBonus(Type)
         conLog("Moves Table Created");
         
         // Load Move Data
         $colStr = implode(", ", $colArr);
         $valStr = "?" . str_repeat(",?", count($colArr) - 1);
         $sql = "INSERT INTO Moves ($colStr) VALUES ($valStr)";
-        while(!feof($file)) {                                // Read move_data.csv
+        while(!feof($file)) {                                    // Read move_data.csv
             $dataArr = explode(",", fgets($file), 7);
-            $dataArr[2] = trim($dataArr[2]);                 // Remove whitespace
-            $dataArr[6] = trim(trim($dataArr[6]), '"') ?: NULL;      // Remove whitespace and quotes
+            $dataArr[2] = trim($dataArr[2]);                     // Remove whitespace
+            $dataArr[6] = trim(trim($dataArr[6]), '"') ?: NULL;  // Remove whitespace and quotes
             $pdo->prepare($sql)->execute($dataArr);
         }
         conLog("Moves Data Loaded");
@@ -156,6 +156,7 @@ function setup() {
         $pdo->exec("ALTER TABLE Learn ADD COLUMN Id INT FIRST;");
         $pdo->exec("ALTER TABLE Learn ADD FOREIGN KEY (Id) REFERENCES Pokedex(Id);");
         $pdo->exec("UPDATE Learn INNER JOIN Pokedex ON Learn.Name = Pokedex.Name Set Learn.Id = Pokedex.Id");
+        conLog("Learn Data Loaded");
     }
     catch (PDOException $e) {
         die(conLog("ERROR - " . $e->getMessage()));
