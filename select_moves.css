@@ -1,0 +1,27 @@
+.move-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.active-pokemon {
+  max-width: 30%;
+  max-height: 30%;
+  margin-top: 20px;
+}
+.current-pokemon-info {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.move-label {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: flex-start;
+}
+.move-textbox {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  align-items: start;
+}
