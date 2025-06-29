@@ -1,48 +1,68 @@
 <?php
-$pokemonList = [
-    [
-        "img" => "./proj3_images/1st Generation/007Squirtle.png",
-        "name" => "Squirtle",
-        "types" => ["Water"],
-        "abilities" => ["Torrent", "Rain Dish"],
-        "stats" => [44, 48, 65, 50, 64, 43, 314]
-    ],
-    [
-        "img" => "./proj3_images/1st Generation/004Charmander.png",
-        "name" => "Charmander",
-        "types" => ["Fire"],
-        "abilities" => ["Blaze", "Solar Power"],
-        "stats" => [39, 52, 43, 60, 50, 65, 309]
-    ],
-    [
-        "img" => "./proj3_images/1st Generation/001Bulbasaur.png",
-        "name" => "Bulbasaur",
-        "types" => ["Grass", "Poison"],
-        "abilities" => ["Overgrow", "Chlorophyll"],
-        "stats" => [45, 49, 49, 65, 65, 45, 318]
-    ],
-    [
-        "img" => "./proj3_images/1st Generation/025Pikachu.png",
-        "name" => "Pikachu",
-        "types" => ["Electric"],
-        "abilities" => ["Static", "Lightning Rod"],
-        "stats" => [35, 55, 40, 50, 50, 90, 320]
-    ],
-    [
-        "img" => "./proj3_images/1st Generation/143Snorlax.png",
-        "name" => "Snorlax",
-        "types" => ["Normal"],
-        "abilities" => ["Immunity", "Thick Fat"],
-        "stats" => [160, 110, 65, 65, 110, 30, 540]
-    ],
-    [
-        "img" => "./proj3_images/1st Generation/150Mewtwo.png",
-        "name" => "Mewtwo",
-        "types" => ["Psychic"],
-        "abilities" => ["Pressure", "Unnerve"],
-        "stats" => [106, 110, 90, 154, 90, 130, 680]
-    ]
-];
+define("FPATH", "./proj3_images/1st_Generation/");
+// Generate 6 random IDs (between 1 and 151)
+$randomq = [];
+for ($i = 0; $i < 6; $i++) {
+    $randomq[] = rand(1, 151);
+}
+?>
+<!-- checking to see if IDs match to displayed pokemon -->
+<script>
+    const randomq = <?php echo json_encode($randomq); ?>;
+    console.log("Random IDs:", randomq);
+</script>
+
+<?php
+try {
+    // Connect to database
+    $pdo = new PDO("mysql:host=localhost;dbname=proj3", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Build IN clause
+    $placeholders = implode(",", array_fill(0, count($randomq), "?"));
+    $sql = "SELECT ID, NAME, TYPE1, TYPE2, TOTAL, HP, ATT, DEF, SPATT, SPDEF, SPEED
+            FROM pokedex
+            WHERE ID IN ($placeholders)";
+    
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($randomq);
+
+    // Fetch all matching rows into an array
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Build $pokemonList from $rows
+    $pokemonList = [];
+
+    foreach ($rows as $row) {
+        //adjusts '7'->'007' '10'->'010' and leave 3digit numbers alone
+        $id = str_pad($row['ID'], 3, "0", STR_PAD_LEFT);
+        $name = $row['NAME'];
+        $img = FPATH . "{$id}{$name}.png";
+
+        $types = [$row['TYPE1']];
+        if (!empty($row['TYPE2']) && $row['TYPE2'] !== $row['TYPE1']) {
+            $types[] = $row['TYPE2'];
+        }
+
+        $pokemonList[] = [
+            "img" => $img,
+            "name" => $name,
+            "types" => $types,
+            "stats" => [
+                $row['HP'],
+                $row['ATT'],
+                $row['DEF'],
+                $row['SPATT'],
+                $row['SPDEF'],
+                $row['SPEED'],
+                $row['TOTAL']
+            ]
+        ];
+    }
+
+} catch (PDOException $e) {
+    die("Database error: " . $e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,11 +77,11 @@ $pokemonList = [
 
     <!-- Header row -->
     <div class="bor header-row">
-        <span class="left1">Name Types Abilities</span>
+        <span class="left1">Name Types</span>
         <span class="right1">HP Atk Def SpA SpD Spe BST</span>
     </div>
 
-    <!-- Pokémon entries( not random static entries) -->
+    <!-- Pokémon entries randomized now -->
     <?php foreach ($pokemonList as $pokemon): ?>
         <div class="entry">
             <div class="left">
@@ -74,9 +94,6 @@ $pokemonList = [
                              alt="<?= $type ?>">
                     <?php endforeach; ?>
                 </span>
-                <span class="abilities">
-                    <?= implode(", ", $pokemon['abilities']) ?>
-                </span>
             </div>
             <div class="right">
                 <?php foreach ($pokemon['stats'] as $stat): ?>
@@ -85,5 +102,7 @@ $pokemonList = [
             </div>
         </div>
     <?php endforeach; ?>
+    <!-- be able to select the pokemon and then send it off somewhere -->
+
 </body>
 </html>
