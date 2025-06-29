@@ -1,7 +1,11 @@
-<?php
+﻿<?php
 session_start();
+require "scripts/utils.php";
 $team = $_SESSION["team"];
 $curPkm = $team[0];
+$allPosMoves = $_SESSION["posMoves"];
+$posMoves = $allPosMoves[0];
+var_dump($allPosMoves);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,33 +19,31 @@ $curPkm = $team[0];
     <title>Select your moves</title>
 </head>
 <body>
-    <div class="container">
+<div class="container">
     <h1>Select Your Pokemon's Moves!</h1>
     <div class="team">
         <span class="pokemon-buttons">
             <?php
-            for($i = 0; $i < 2; $i++) {
-                for($j = 0; $j < 3; $j++){
-                    echo "<span>" . $team[$j + $i * 3]["Name"] . "</span>";
+                for($i = 0; $i < 2; $i++) {
+                    for($j = 0; $j < 3; $j++){
+                        echo "<span>" . $team[$j + $i * 3]["Name"] . "</span>\n";
+                    }
+                    for($j = 0; $j < 3; $j++){
+                        echo "<button style='background-image: url(\"" . $team[$j + $i * 3]["Img"] . "\");' id='pkm". $j + $i * 3 ."'></button>";
+                    }
                 }
-                for($j = 0; $j < 3; $j++){
-                    echo "<button style=\"background-image: url('" . $team[$j + $i * 3]["Img"] . "');\" id='pkm". $j + $i * 3 ."'></button>";
-                }
-            }
             ?>
         </span>
     </div>
     <div class="current-pokemon">
-        <p style="text-align: center;">Selected Pokemon: </p>
-        <img id="currPkmImg" class="active-pokemon" src=<?php echo $curPkm["Img"]?>>
+        <p style="text-align: center;">Selecting Moves For:</p>
+        <img id="currPkmImg" class="active-pokemon" src=<?= $curPkm["Img"]?>>
         <div class="curr-name-type">
             <span>Name: 
-                <span id="nameTxt"><?php echo $curPkm["Name"]?></span>
+                <span id="nameTxt"><?= $curPkm["Name"]?></span>
             </span>
             <span>Type: 
-                <span id="typeTxt">
-                    <?php echo $curPkm["Attr"]["Type2"] ? $curPkm["Attr"]["Type1"] . " & " . $curPkm["Attr"]["Type2"] : $curPkm["Attr"]["Type1"]?>
-                </span>
+                <span id="typeTxt"><?= $curPkm["Attr"]["Type2"] ? $curPkm["Attr"]["Type1"] . " & " . $curPkm["Attr"]["Type2"] : $curPkm["Attr"]["Type1"]?></span>
             </span>
         </div>
         <div id="statsSpan">
@@ -59,29 +61,56 @@ $curPkm = $team[0];
             </thead>
             <tbody >
                 <tr>
-                    <td><?php echo $curPkm["Attr"]["Total"]?></td>
-                    <td><?php echo $curPkm["Attr"]["Hp"]?></td>
-                    <td><?php echo $curPkm["Attr"]["Att"]?></td>
-                    <td><?php echo $curPkm["Attr"]["Def"]?></td>
-                    <td><?php echo $curPkm["Attr"]["SpAtt"]?></td>
-                    <td><?php echo $curPkm["Attr"]["SpDef"]?></td>
-                    <td><?php echo $curPkm["Attr"]["Speed"]?></td>
+                <?php 
+                    foreach (array_slice($curPkm["Attr"], 2, 7) as $attr) {
+                        echo "<td>$attr</td>";
+                    }
+                ?>
                 </tr>
             <tbody>
             </table>
         </div>
         <div class="moves-selection">
             <label class="move-label">Selected Moves: </label>
-            <div class="moves-buttons">
+            <div class="moves-input">
             <?php 
-                foreach ($curPkm["Moves"] as $key => $move) {
-                    echo "<button id='move$key'>" . $move["Name"] ?? "None" . "</button>";
+                foreach ($curPkm["Moves"] as $key => $curMove) {
+                    echo "<input list='levelList$key' id='move$key' value='" . ($curMove["Name"] ?? "None") . "'>\n";
+                    echo "<datalist id ='levelList$key'>\n";
+                    foreach ($posMoves as $posMove) {
+                        $valid = True;
+                        foreach ($curPkm["Moves"] as $move) {
+                            if ($move["Name"] == $posMove["Name"]
+                                and $curMove["Name"] != $posMove["Name"]) {
+                                $valid = False;
+                                break;
+                            }
+                        }
+                        if ($valid) {
+                            echo "<option value='" . $posMove["Name"] . "'>\n";
+                        }
+                    }
+                    foreach ($curPkm["Moves"] as $move) {
+                        if ($move["Name"]
+                            or !$curMove["Name"]) {
+                            echo "<option value='None'>\n";
+                            break;
+                        }
+                    }
+                    echo "</datalist>\n";
                 }
             ?>
             </div>
+            <div id="navButtons">
+                <span>
+                    <button id="back">Change Team</button>
+                    <button id="update">Update Moves</button>
+                    <button id="next">Confirm Team</button>
+                </span>
+            </div>
         </div>
     </div>
-    <table class="move-list">
+    <table class="moves-table">
         <h3>Move Stats</h3>
         <thead>
             <th>Name</th>
@@ -94,26 +123,15 @@ $curPkm = $team[0];
         </thead>
         <tbody>
         <?php 
-            foreach ($curPkm["Moves"] as $key => $move) {
+            foreach ($posMoves as $key => $move) {
                 echo "<tr class='move-result'>";
-                if ($move["Name"]) {
-                    echo "<td id='moveName$key'>" . $move["Name"] . "</td>";
-                    echo "<td id='moveType$key'>" . $move["Type"] . "</td>";
-                    echo "<td id='moveCat$key'>" . $move["Category"] . "</td>";
-                    echo "<td id='movePow$key'>" . $move["Power"] . "</td>";
-                    echo "<td id='moveAcc$key'>" . $move["Accuracy"] . "</td>";
-                    echo "<td id='movePP$key'>" . $move["PP"] . "</td>";
-                    echo "<td id='moveEff$key'>" . ($move["Effect"] ?? "None") . "</td>";
-                }
-                else {
-                    echo "<td id='moveName$key'>None</td>";
-                    echo "<td id='moveType$key'>None</td>";
-                    echo "<td id='moveCat$key'>None</td>";
-                    echo "<td id='movePow$key'>0</td>";
-                    echo "<td id='moveAcc$key'>0</td>";
-                    echo "<td id='movePP$key'>0</td>";
-                    echo "<td id='moveEff$key'>None</td>";
-                }
+                echo "<td id='moveName$key'>" . $move["Name"] . "</td>";
+                echo "<td id='moveType$key'>" . $move["Type"] . "</td>";
+                echo "<td id='moveCat$key'>" . $move["Category"] . "</td>";
+                echo "<td id='movePow$key'>" . $move["Power"] . "</td>";
+                echo "<td id='moveAcc$key'>" . ($move["Accuracy"] == -1 ? "∞" : $move["Accuracy"]) . "</td>";
+                echo "<td id='movePP$key'>" . $move["PP"] . "</td>";
+                echo "<td id='moveEff$key'>" . ($move["Effect"] ?? "None") . "</td>";
                 echo "</tr>";
             }
         ?>

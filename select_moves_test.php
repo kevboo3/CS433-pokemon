@@ -1,17 +1,18 @@
 <?php
 session_start();
-require "setup.php";
+require "scripts/setup.php";
 ?>
 <!DOCTYPE html>
 <html>
 <?php setup();?>
 <head>
 <?php
-$team = [NULL, NULL, NULL, NULL, NULL, NULL];  // Team Array
+$team = [NULL, NULL, NULL, NULL, NULL, NULL];      // Team Array
+$posMoves = [NULL, NULL, NULL, NULL, NULL, NULL];  // Array of possible level up moves for each pokemon
 $pkmKeys = ["Id", "Name", "Attr", "Hp", "Status", "Moves", "Img"];
-$nums = range(1, 151);                         // All Pokedex Ids
-shuffle($nums);                                // Randomize Ids
-for ($i = 0; $i < 6; $i++) {                   // Assign Random Team of Pokedex Ids
+$nums = range(1, 151);                             // All Pokedex Ids
+shuffle($nums);                                    // Randomize Ids
+for ($i = 0; $i < 6; $i++) {                       // Assign Random Team of Pokedex Ids
     $team[$i] = ["Id" => intval($nums[$i])];
 }
 
@@ -26,7 +27,7 @@ for ($i = 0; $i < 6; $i++) {  // Iterates over team
     $team[$i][$pkmKeys[3]] = $team[$i][$pkmKeys[2]]["Hp"];
     $team[$i][$pkmKeys[4]] = NULL;
     $team[$i][$pkmKeys[5]] = NULL;
-    $team[$i][$pkmKeys[6]] = FPATH . IPATH . int2id($team[$i][$pkmKeys[0]]) . $team[$i][$pkmKeys[1]] . ".png";
+    $team[$i][$pkmKeys[6]] = FPATH . IPATH . int2id($team[$i][$pkmKeys[0]]) . str_replace(" ", "_", str_replace("'", "&#39", $team[$i][$pkmKeys[1]])) . ".png";
 }
 
 
@@ -57,7 +58,21 @@ for ($i = 0; $i < 6; $i++) {  // Iterates over team
         }
     }
 }
+
+// Generates list of all moves each pokemon can learn by level up
+for ($i = 0; $i < 6; $i++) {  // Iterates over team
+    $stmt = $pdo->prepare("SELECT Level FROM Learn WHERE Name = \"" . $team[$i]["Name"] . "\"");
+    $stmt->execute();
+    $posMoves[$i] = explode(",", $stmt->fetch(PDO::FETCH_NUM)[0]);
+    for ($j = 0; $j < count($posMoves[$i]); $j++) {
+        $stmt = $pdo->prepare("SELECT * FROM Moves WHERE Name = \"" . $posMoves[$i][$j] . "\"");
+        $stmt->execute();
+        $rslt = $stmt->fetch(PDO::FETCH_ASSOC);
+        $posMoves[$i][$j] = [$posMoves[$i][$j]] + $rslt;
+    }
+}
 $_SESSION["team"] = $team;
+$_SESSION["posMoves"] = $posMoves;
 ?>
 </head>
 <body>

@@ -31,7 +31,6 @@
     width: 350px;
 }
 
-
 .curr-name-type {
     display: flex;
     justify-content: space-between;
@@ -57,7 +56,7 @@ table.attr-table td {
     text-align: center;
 }
 
-.moves-buttons {
+.moves-input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -65,9 +64,17 @@ table.attr-table td {
     text-align: center;
 }
 
-.move-textbox {
-    display: flex;
-    flex-direction: row;
-    text-align: right;
-    align-items: start;
+table.moves-table {
+    border: 1px solid black;
+}
+
+table.moves-table thead,
+table.moves-table tbody {
+    align-content: center;
+}
+
+table.moves-table th,
+table.moves-table td {
+    text-align: center;
+    border: 1px solid black;
 }
