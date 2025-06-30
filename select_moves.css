@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    width: 454px;
+}
+
+.pokemon-buttons {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 20px 150px 20px 150px;
+    gap: 2px;
+    text-align: center;
+}
+
+.pokemon-buttons button {
+    display: table-cell;
+    background-size: 150px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.active-pokemon {
+    width: 350px;
+    width: 350px;
+}
+
+.curr-name-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+table.attr-table {
+    width: 350px;
+    border: 1px solid black;
+}
+
+table.attr-table thead,
+table.attr-table tbody {
+    align-content: center;
+}
+
+table.attr-table th,
+table.attr-table td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.moves-selection {
+    text-align: center;
+}
+
+.moves-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    text-align: center;
+}
+
+table.moves-table {
+    border: 1px solid black;
+}
+
+table.moves-table thead,
+table.moves-table tbody {
+    align-content: center;
+}
+
+table.moves-table th,
+table.moves-table td {
+    text-align: center;
+    border: 1px solid black;
+}
