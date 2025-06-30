@@ -96,7 +96,7 @@ function setup() {
             if ($i == 1 or $i == 2) {  // Columns: Type, Category
                 $sql .= "VARCHAR(20);";
             }
-            else if ($i == 6) {         // Column: Effect
+            else if ($i > 5) {         // Column: Effect
                 $sql .= "VARCHAR(255);";
             }
             else {                     // Columns: Power, Accuracy, PP
@@ -112,9 +112,10 @@ function setup() {
         $valStr = "?" . str_repeat(",?", count($colArr) - 1);
         $sql = "INSERT INTO Moves ($colStr) VALUES ($valStr)";
         while(!feof($file)) {                                    // Read move_data.csv
-            $dataArr = explode(",", fgets($file), 7);
+            $dataArr = explode(",", fgets($file));
             $dataArr[2] = trim($dataArr[2]);                     // Remove whitespace
-            $dataArr[6] = trim(trim($dataArr[6]), '"') ?: NULL;  // Remove whitespace and quotes
+            $dataArr[6] = str_replace("$", ",", trim(trim($dataArr[6]), '"')) ?: NULL;  // Remove whitespace and quotes
+            $dataArr[8] = trim($dataArr[8]) ?: NULL;
             $pdo->prepare($sql)->execute($dataArr);
         }
         conLog("Moves Data Loaded");
@@ -141,7 +142,7 @@ function setup() {
         $sql = "INSERT INTO Learn ($colStr) VALUES ($valStr)";
         for ($i = 0; $i < count($jsonArr); $i++) {
             $dataArr[0] = $jsonArr[$i]["pokemon"];
-            $dataArr[1] = implode(",", array_unique($jsonArr[$i]["level up moves"]));
+            $dataArr[1] = implode(",", array_unique($jsonArr[$i]["level up moves"])) ?: NULL;
             $dataArr[2] = implode(",", $jsonArr[$i]["hm moves"]) ?: NULL;
             $dataArr[3] = implode(",", $jsonArr[$i]["tm moves"]) ?: NULL;
             $pdo->prepare($sql)->execute($dataArr);

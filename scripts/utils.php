@@ -9,39 +9,40 @@ define("LEARNDATA", "learn_data.json");
 define("TEAMSIZE", 6);
 
 class Attributes {
-    public $total;
-    public $hp;
-    public $atk;
-    public $def;
-    public $spAtk;
-    public $spDef;
-    public $speed;
-    public $legendary;
+    public $total;      // Int
+    public $hp;         // Int
+    public $atk;        // Int
+    public $def;        // Int
+    public $spAtk;      // Int
+    public $spDef;      // Int
+    public $speed;      // Int
+    public $legendary;  // Bool
 }
 
 class Pokemon {
-    public $id;
-    public $name;
-    public $types;
-    public $attr;
-    public $hp;
-    public $status;
-    public $moves;
-    public $img;
+    public $id;      // Int
+    public $name;    // String
+    public $types;   // String[2]
+    public $attr;    // Attributes
+    public $hp;      // Int
+    public $status;  // String
+    public $moves;   // Move()[4]
+    public $img;     // String
 }
 
 class Team {
-    public $pkm;
+    public $pkm;  // Pokemon()[6]
 }
 
 class Move {
-    public $name;
-    public $type;
-    public $category;
-    public $power;
-    public $accuracy;
-    public $pp;
-    public $effect;
+    public $name;      // String
+    public $type;      // String
+    public $category;  // String
+    public $power;     // Int
+    public $accuracy;  // Int
+    public $pp;        // Int
+    public $effect;    // String
+    public $tags;      // String[2]
 }
 
 // makePDO()
@@ -77,6 +78,10 @@ function arr2move($arr) {
     $i = 0;
     foreach ($move as &$value) {
         $value = $arr[$i];
+        if ($i === 7) {
+            $value = [$arr[$i], $arr[$i + 1]];
+            break;
+        }
         $i++;
     }
     return $move;

@@ -1,11 +1,10 @@
 <?php
-session_start();              // Used to pass team data between pages
-
 require "scripts/setup.php";  // Helper Functions   !!!CHAGE TO "scripts/utils.php" AFTER MOVING setup()!!!
 setup();                      // Setup DB           !!!MOVE TO PARENT PAGE WHEN READY!!!
 
-// Generate 6 random IDs (between 1 and 151)
+// Generate 6 random IDs between 1 and 151 excluding 132 (Ditto has no moves)
 $randIds = range(1, 151);
+unset($randIds[131]);
 shuffle($randIds);
 $randIds = array_slice($randIds, 0, TEAMSIZE);
 
@@ -14,7 +13,7 @@ $team = new Team();
 for ($i = 0; $i < TEAMSIZE; $i++) {     
     $team->pkm[$i] = new Pokemon();
     $team->pkm[$i]->id = $randIds[$i];  // Assign random ids to pokemon
-}    
+}
 conLog("Random IDs: " . implode(", ", $randIds));
 $allMoves = [NULL, NULL, NULL, NULL, NULL, NULL];  // Array of possible moves for each pokemon
 
@@ -33,8 +32,7 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
     $pkm->hp = $pkm->attr->hp;
     $pkm->img = FPATH . IPATH . int2id($pkm->id) . str_replace(" ", "_", str_replace("'", "&#39", $pkm->name)) . ".png";
 }
-//$_SESSION["team"] = $team;
-//$_SESSION["posMoves"] = $posMoves;
+
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +44,7 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
     <link rel="stylesheet" href="styles/select6.css">
 </head>
 <body>
-    <h1>Choose one to add to your team</h1>
+    <h1>Choose Your Team</h1>
     <!-- Header row -->
     <div class="bor header-row">
         <span class="left">Name Types</span>
@@ -59,51 +57,34 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
         </span>
     </div>
     <!-- Pokémon entries randomized now -->
-    <?php foreach ($team->pkm as $pkm): ?>
-        <div class="entry"
+   <?php foreach ($team->pkm as $pkm): ?>
+    <button type="submit" class="entry"
         onmouseover="this.style.background='yellow';"
         onmouseout="this.style.background='white';">
-            <div class="left">
-                <img src="<?= $pkm->img ?>" alt="<?= $pkm->name ?>">
-                <span class="name"><?= $pkm->name ?></span>
-                <span class="types">
-                    <?php foreach ($pkm->types as $type): ?>
-                        <?php if ($type): ?>
-                            <img class="type-icon"
-                                 src="<?= FPATH . TPATH . strtolower($type) ?>.png"
-                                 alt="<?= $type ?>">
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </span>
-            </div>
-            <div class="right">
-                <?php foreach ($pkm->attr as $key => $stat): ?>
-                    <?php if ($key != "legendary"): ?>
-                        <span class="stat <?= $key ?>-stat"><?= $stat ?></span>
+        <div class="left">
+            <img src="<?= $pkm->img ?>" alt="<?= $pkm->name ?>">
+            <span class="name"><?= $pkm->name ?></span>
+            <span class="types">
+                <?php foreach ($pkm->types as $type): ?>
+                    <?php if ($type): ?>
+                        <img class="type-icon"
+                                src="<?= FPATH . TPATH . strtolower($type) ?>.png"
+                                alt="<?= $type ?>">
                     <?php endif; ?>
                 <?php endforeach; ?>
-            </div>
+            </span>
         </div>
-    <?php endforeach; ?>
-    <!-- be able to select the pokemon and then send it off somewhere -->
-<!--
-<?php foreach ($pokemonList as $pokemon): ?>
-  <form action="select_confirm.php" method="POST">
-    <input type="hidden" name="name" value="<?= $pokemon['name'] ?>">
-    <input type="hidden" name="img" value="<?= $pokemon['img'] ?>">
-    <input type="hidden" name="types" value="<?= implode(",", $pokemon['types']) ?>">
-    <input type="hidden" name="stats" value="<?= implode(",", $pokemon['stats']) ?>">
-  </form>
+        <div class="right">
+            <?php foreach ($pkm->attr as $key => $stat): ?>
+                <?php if ($key != "legendary"): ?>
+                    <span class="stat <?= $key ?>-stat"><?= $stat ?></span>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    </button>
 <?php endforeach; ?>
--->
-<!-- Need to update team in _SESSION or _POST when user clicks submit/next-page/confirm
-     I am using session right now becuase it is easier. Probably will have to use _POST.
-     Probably need JQuery sadly-->
-<?php
-$_SESSION['team'] = $team;
-?>
-<form method="POST" action="select_moves.php">
-  <input type="submit">
+<form method="POST" action="select_moves.php" >
+    <input type="hidden" name="team" value='<?= serialize($team) ?>'>
 </form>
 </body>
 </html>

@@ -1,7 +1,7 @@
 ﻿<?php
 require "scripts/utils.php";
-session_start();
-$team = $_SESSION["team"];
+var_dump($_POST["team"]);
+$team = unserialize($_POST["team"]);
 $curPkm = $team->pkm[0];
 $pdo = makePDO();
 
@@ -19,6 +19,9 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
         $stmt = $pdo->prepare("SELECT * FROM Moves WHERE Name = \"" . $allMoves[$i][$j] . "\"");
         $stmt->execute();
         $rslt = $stmt->fetch(PDO::FETCH_NUM);
+        if(!$rslt){
+            var_dump($stmt);
+        }
         $allMoves[$i][$j] = arr2move($rslt);
     }
     // Assigns default moves to team
@@ -54,7 +57,7 @@ $posMoves = $allMoves[0];
                     <span><?= $team->pkm[$j + $i * 3]->name ?></span>
                 <?php endfor; ?>
                 <?php for($j = 0; $j < 3; $j++): ?>
-                    <button class="<?= strtolower($team->pkm[$j + $i * 3]->types[0]) ?>-type" style="background-image: url('<?= $team->pkm[$j + $i * 3]->img ?>');" id="pkm<?= $j + $i * 3 ?>"></button>
+                    <button class="<?= strtolower($team->pkm[$j + $i * 3]->types[0]) ?>-type" style='background-image: url("<?= $team->pkm[$j + $i * 3]->img ?>");' id="pkm<?= $j + $i * 3 ?>"></button>
                 <?php endfor; ?>
             <?php endfor; ?>
         </span>
@@ -93,9 +96,9 @@ $posMoves = $allMoves[0];
             <span>Selected Moves: </span>
             <div class="moves-input">
             <?php 
-                foreach ($curPkm->moves as $curMove) {
-                    echo "<select id='move$key'>\n";
-                    foreach ($posMoves as $key => $posMove) {
+                foreach ($curPkm->moves as $i => $curMove) {
+                    echo "<select id='move$i'>\n";
+                    foreach ($posMoves as $j => $posMove) {
                         $valid = True;
                         foreach ($curPkm->moves as $move) {
                             if ($move->name == $posMove->name
@@ -105,7 +108,7 @@ $posMoves = $allMoves[0];
                             }
                         }
                         if ($valid) {
-                            echo "<option" . ($key === 1 ? "selected='selected'" : "") . ">" . $posMove->name . "</option>\n";
+                            echo "<option" . ($j === 0 ? " selected='selected'" : "") . ">" . $posMove->name . "</option>\n";
                         }
                     }
                     foreach ($curPkm->moves as $move) {

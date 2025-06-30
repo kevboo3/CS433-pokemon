@@ -367,8 +367,7 @@
         "level up moves": [
             "Sand Attack",
             "Wing Attack",
-            "Agility",
-            "Mirror Move"
+            "Agility"
         ],
         "hm moves": [
         ],
@@ -388,8 +387,7 @@
             "Sand Attack",
             "Sand Attack",
             "Wing Attack",
-            "Agility",
-            "Mirror Move"
+            "Agility"
         ],
         "hm moves": [
         ],
@@ -409,8 +407,7 @@
             "Sand Attack",
             "Sand Attack",
             "Wing Attack",
-            "Agility",
-            "Mirror Move"
+            "Agility"
         ],
         "hm moves": [
         ],
@@ -480,7 +477,6 @@
             "Peck",
             "Leer",
             "Fury Attack",
-            "Mirror Move",
             "Drill Peck",
             "Agility"
         ],
@@ -504,7 +500,6 @@
             "Peck",
             "Leer",
             "Fury Attack",
-            "Mirror Move",
             "Drill Peck",
             "Agility"
         ],
