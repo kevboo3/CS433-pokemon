@@ -1,6 +1,7 @@
 <?php
 define("FPATH", "./dataFiles/");
 define("IPATH", "gen1/");
+define("TPATH", "typeIcons/");
 define("POKEDATA", "pokemon_data.csv");
 define("TYPEDATA", "type_bonus.csv");
 define("MOVEDATA", "moves_data.csv");

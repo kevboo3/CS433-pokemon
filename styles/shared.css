@@ -1,0 +1,123 @@
+body {
+    background-color: #c52921;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #0a000f;
+    text-align: center;
+    font-size: 30px;
+}
+
+.type-icon {
+    width: 48px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.normal-type {
+    background-color: #A8A77A;
+    border: #A8A77A;
+}
+
+.fire-type {
+    background-color: #EE8130;
+    border: #EE8130;
+}
+
+.water-type {
+    background-color: #6390F0;
+    border: #6390F0;
+}
+
+.electric-type {
+    background-color: #F7D02C;
+    border: #F7D02C;
+}
+
+.grass-type {
+    background-color: #7AC74C;
+    border: #7AC74C;
+}
+
+.ice-type {
+    background-color: #96D9D6;
+    border: #96D9D6;
+}
+
+.fighting-type {
+    background-color: #C22E28;
+    border: #C22E28;
+}
+
+.poison-type {
+    background-color: #A33EA1;
+    border: #A33EA1;
+}
+
+.ground-type {
+    background-color: #E2BF65;
+    border: #E2BF65;
+}
+
+.flying-type {
+    background-color: #A98FF3;
+    border: #A98FF3;
+}
+
+.psychic-type {
+    background-color: #F95587;
+    border: #F95587;
+}
+
+.bug-type {
+    background-color: #A6B91A;
+    border: #A6B91A;
+}
+
+.rock-type {
+    background-color: #B6A136;
+    border: #B6A136;
+}
+
+.ghost-type {
+    background-color: #735797;
+    border: #735797;
+}
+
+.dragon-type {
+    background-color: #6F35FC;
+    border: #6F35FC;
+}
+
+.hp-stat {
+    background-color: #69DC12;
+    border: #69DC12;
+}
+
+.att-stat {
+    background-color: #EFCC18;
+    border: #EFCC18;
+}
+
+.def-stat {
+    background-color: #E86412;
+    border: #E86412;
+}
+
+.spatt-stat {
+    background-color: #14C3F1;
+    border: #14C3F1;
+}
+
+.spdef-stat {
+    background-color: #4A6ADF;
+    border: #4A6ADF;
+}
+
+.speed-stat {
+    background-color: #D51DAD;
+    border: #D51DAD;
+}
