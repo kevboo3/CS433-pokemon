@@ -1,8 +1,15 @@
 .container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
     flex-direction: column;
+    border-style: ridge;
+    border-color: black;
+    background: #d0d0d0;
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
 }
 
 .team {
@@ -22,22 +29,41 @@
 .pokemon-buttons button {
     display: table-cell;
     background-size: 150px;
-    color: #000000;
     cursor: pointer;
+    border-style: ridge;
+    border-color: black;
+    border-radius: 5px;
+}
+
+#nameTxt {
+    font-weight: bold;
+    float: left;
+}
+
+#typeIcons {
+    float: right;
+}
+
+.current-pokemon {
+    justify-content: center;
+    text-align: center;
 }
 
 .active-pokemon {
     width: 350px;
     width: 350px;
+    border-style: ridge;
+    border-color: black;
+    border-radius: 10px;
 }
 
 .curr-name-type {
-    display: flex;
     justify-content: space-between;
+    text-align: unset;
 }
 
 table.attr-table {
-    width: 350px;
+    width: 454px;
     border: 1px solid black;
 }
 
