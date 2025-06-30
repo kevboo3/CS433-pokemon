@@ -54,7 +54,7 @@ $posMoves = $allMoves[0];
                     <span><?= $team->pkm[$j + $i * 3]->name ?></span>
                 <?php endfor; ?>
                 <?php for($j = 0; $j < 3; $j++): ?>
-                    <button class="<?= strtolower($team->pkm[$j + $i * 3]->types[0]) ?>-type" style="background-image: url('<?= $team->pkm[$j + $i * 3]->img ?>');" id="pkm<?= $j + $i * 3 ?>"></button>
+                    <button class="<?= strtolower($team->pkm[$j + $i * 3]->types[0]) ?>-type" style='background-image: url("<?= $team->pkm[$j + $i * 3]->img ?>");' id="pkm<?= $j + $i * 3 ?>"></button>
                 <?php endfor; ?>
             <?php endfor; ?>
         </span>
