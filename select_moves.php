@@ -5,7 +5,6 @@ $team = $_SESSION["team"];
 $curPkm = $team[0];
 $allPosMoves = $_SESSION["posMoves"];
 $posMoves = $allPosMoves[0];
-var_dump($allPosMoves);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +14,8 @@ var_dump($allPosMoves);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="select_moves.css">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/select_moves.css">
     <title>Select your moves</title>
 </head>
 <body>
@@ -29,41 +29,44 @@ var_dump($allPosMoves);
                         echo "<span>" . $team[$j + $i * 3]["Name"] . "</span>\n";
                     }
                     for($j = 0; $j < 3; $j++){
-                        echo "<button style='background-image: url(\"" . $team[$j + $i * 3]["Img"] . "\");' id='pkm". $j + $i * 3 ."'></button>";
+                        echo "<button class='" . strtolower($team[$j + $i * 3]["Attr"]["Type1"]) . "-type' style='background-image: url(\"" . $team[$j + $i * 3]["Img"] . "\");' id='pkm". $j + $i * 3 ."'></button>";
                     }
                 }
             ?>
         </span>
     </div>
     <div class="current-pokemon">
-        <p style="text-align: center;">Selecting Moves For:</p>
-        <img id="currPkmImg" class="active-pokemon" src=<?= $curPkm["Img"]?>>
+        <div>Selecting Moves For:</div>
+        <img id="currPkmImg" class="active-pokemon <?= strtolower($team[0]["Attr"]["Type1"])?>-type" src=<?= $curPkm["Img"]?>>
         <div class="curr-name-type">
-            <span>Name: 
-                <span id="nameTxt"><?= $curPkm["Name"]?></span>
-            </span>
-            <span>Type: 
-                <span id="typeTxt"><?= $curPkm["Attr"]["Type2"] ? $curPkm["Attr"]["Type1"] . " & " . $curPkm["Attr"]["Type2"] : $curPkm["Attr"]["Type1"]?></span>
+            <span id="nameTxt"><?= $curPkm["Name"]?></span>
+            <span id="typeIcons">
+                <img class="type-icon" src='<?= FPATH . TPATH . strtolower($curPkm["Attr"]["Type1"])?>.png' alt='<?= $curPkm["Attr"]["Type1"] ?>'>
+                <?php 
+                    if ($curPkm["Attr"]["Type2"]) {
+                        echo "<img = class='type-icon' src='" . FPATH . TPATH . strtolower($curPkm["Attr"]["Type2"]) . ".png' alt='" . $curPkm["Attr"]["Type2"] . "'>";
+                    }
+                ?>
             </span>
         </div>
         <div id="statsSpan">
             <table id="attrTable" class="attr-table">
             <thead>
                 <tr>
-                    <th>Total</th>
-                    <th>Hp</th>
-                    <th>Attack</th>
-                    <th>Defense</th>
-                    <th>Sp. Att</th>
-                    <th>Sp. Def</th>
-                    <th>Speed</th>
+                    <th>BST</th>
+                    <th class="hp-stat">HP</th>
+                    <th class="att-stat">Atk</th>
+                    <th class="def-stat">Def</th>
+                    <th class="spatt-stat">SpA</th>
+                    <th class="spdef-stat">SpD</th>
+                    <th class="speed-stat">Spe</th>
                 </tr>
             </thead>
             <tbody >
                 <tr>
                 <?php 
-                    foreach (array_slice($curPkm["Attr"], 2, 7) as $attr) {
-                        echo "<td>$attr</td>";
+                    foreach (array_slice($curPkm["Attr"], 2, 7) as $key => $attr) {
+                        echo "<td class='" . strtolower($key) . "-stat'>$attr</td>";
                     }
                 ?>
                 </tr>
@@ -71,7 +74,7 @@ var_dump($allPosMoves);
             </table>
         </div>
         <div class="moves-selection">
-            <label class="move-label">Selected Moves: </label>
+            <span>Selected Moves: </span>
             <div class="moves-input">
             <?php 
                 foreach ($curPkm["Moves"] as $key => $curMove) {
@@ -126,7 +129,7 @@ var_dump($allPosMoves);
             foreach ($posMoves as $key => $move) {
                 echo "<tr class='move-result'>";
                 echo "<td id='moveName$key'>" . $move["Name"] . "</td>";
-                echo "<td id='moveType$key'>" . $move["Type"] . "</td>";
+                echo "<td id='moveType$key'><img class='type-icon' src='" . FPATH . TPATH . strtolower($move["Type"]) . ".png' alt='" . $curPkm["Attr"]["Type1"] . "'></td>";
                 echo "<td id='moveCat$key'>" . $move["Category"] . "</td>";
                 echo "<td id='movePow$key'>" . $move["Power"] . "</td>";
                 echo "<td id='moveAcc$key'>" . ($move["Accuracy"] == -1 ? "∞" : $move["Accuracy"]) . "</td>";
