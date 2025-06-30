@@ -96,7 +96,7 @@ function setup() {
             if ($i == 1 or $i == 2) {  // Columns: Type, Category
                 $sql .= "VARCHAR(20);";
             }
-            else if ($i == 6) {         // Column: Effect
+            else if ($i > 5) {         // Column: Effect
                 $sql .= "VARCHAR(255);";
             }
             else {                     // Columns: Power, Accuracy, PP
@@ -112,9 +112,9 @@ function setup() {
         $valStr = "?" . str_repeat(",?", count($colArr) - 1);
         $sql = "INSERT INTO Moves ($colStr) VALUES ($valStr)";
         while(!feof($file)) {                                    // Read move_data.csv
-            $dataArr = explode(",", fgets($file), 7);
+            $dataArr = explode(",", fgets($file));
             $dataArr[2] = trim($dataArr[2]);                     // Remove whitespace
-            $dataArr[6] = trim(trim($dataArr[6]), '"') ?: NULL;  // Remove whitespace and quotes
+            $dataArr[6] = str_replace("$", ",", trim(trim($dataArr[6]), '"')) ?: NULL;  // Remove whitespace and quotes
             $pdo->prepare($sql)->execute($dataArr);
         }
         conLog("Moves Data Loaded");
