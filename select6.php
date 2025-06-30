@@ -52,7 +52,7 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
         <span class="left">Name Types</span>
         <span class="right">
             <?php foreach ($team->pkm[0]->attr as $key => $stat): ?>
-                <?php if ($key <> "legendary"): ?>
+                <?php if ($key != "legendary"): ?>
                     <span class="stat <?= $key ?>-stat"><?= ucfirst($key) ?></span>
                 <?php endif; ?>
             <?php endforeach; ?>
@@ -78,7 +78,7 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
             </div>
             <div class="right">
                 <?php foreach ($pkm->attr as $key => $stat): ?>
-                    <?php if ($key <> "legendary"): ?>
+                    <?php if ($key != "legendary"): ?>
                         <span class="stat <?= $key ?>-stat"><?= $stat ?></span>
                     <?php endif; ?>
                 <?php endforeach; ?>
