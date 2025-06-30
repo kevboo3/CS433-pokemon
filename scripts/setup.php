@@ -115,6 +115,7 @@ function setup() {
             $dataArr = explode(",", fgets($file));
             $dataArr[2] = trim($dataArr[2]);                     // Remove whitespace
             $dataArr[6] = str_replace("$", ",", trim(trim($dataArr[6]), '"')) ?: NULL;  // Remove whitespace and quotes
+            $dataArr[8] = trim($dataArr[8]) ?: NULL;
             $pdo->prepare($sql)->execute($dataArr);
         }
         conLog("Moves Data Loaded");
@@ -141,7 +142,7 @@ function setup() {
         $sql = "INSERT INTO Learn ($colStr) VALUES ($valStr)";
         for ($i = 0; $i < count($jsonArr); $i++) {
             $dataArr[0] = $jsonArr[$i]["pokemon"];
-            $dataArr[1] = implode(",", array_unique($jsonArr[$i]["level up moves"]));
+            $dataArr[1] = implode(",", array_unique($jsonArr[$i]["level up moves"])) ?: NULL;
             $dataArr[2] = implode(",", $jsonArr[$i]["hm moves"]) ?: NULL;
             $dataArr[3] = implode(",", $jsonArr[$i]["tm moves"]) ?: NULL;
             $pdo->prepare($sql)->execute($dataArr);
