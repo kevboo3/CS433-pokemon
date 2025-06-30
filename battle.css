@@ -5,7 +5,7 @@
   border: 1px solid rgb(21, 24, 24);
   display: flex;
   flex-direction: column; /*our divs are sorted vertically*/
-  justify-content: space-between; /* This pushes the two pokemon divs apart evenly */
+  justify-content: space-between; /*This pushes the two pokemon divs apart evenly */
   box-sizing: border-box;
   margin: 0 auto; /* centers the arena*/
 }

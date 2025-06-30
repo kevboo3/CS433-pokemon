@@ -4,7 +4,7 @@ session_start();
 ?>
 
 
-<!-- todo -->
+<!-- todo: -->
 <!-- rename pokemon 1 to user-pokemon and pokemon2 to enemy-pokemon  -->
 <!-- add health bars to other party members  -->
 <!-- add background image  -->

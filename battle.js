@@ -91,6 +91,7 @@ async function initBattle() {
 initBattle();
 
 //battle
+
 /*
 todo
  -switch between the user turn to pick moves and the cpus turn ( prevent the user from clicking any buttons
@@ -147,6 +148,7 @@ window.onload = function () {
 };
 
 //battleEnd
+
 /*
  -if the user won provide assign them thier earn exp
  prompt them if they want to teach thier pokemon a new move/ forget one
