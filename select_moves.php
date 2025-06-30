@@ -5,45 +5,30 @@ $team = $_SESSION["team"];
 $curPkm = $team->pkm[0];
 $pdo = makePDO();
 
-// Gives each pokemon it's first 4 levelup moves by default
-// If pokemon has less than 4 levelup moves, sets remaining move names to NULL
+// Gets Move Data
 for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
-    $stmt = $pdo->prepare("SELECT Level FROM Learn WHERE Id = " . $team->pkm[$i]->id);
+    // Generates list of all moves each pokemon can learn by level up
+    $stmt = $pdo->prepare("SELECT * FROM Learn WHERE Id = " . $team->pkm[$i]->id);
     $stmt->execute();
-    $rslt = explode(",", $stmt->fetch(PDO::FETCH_ASSOC)["Level"]);
-    for ($j = 0; $j < 4; $j++) {  // Iterates over moves
-        $team->pkm[$i]->moves[$j] = new Move();
-        if ($j < count($rslt)) {
-            $team->pkm[$i]->moves[$j]->name = $rslt[$j];
-        }
-        else{
-            $team->pkm[$i]->moves[$j]->name = NULL;
-        }
+    $rslt = $stmt->fetch(PDO::FETCH_NUM);
+    $allMoves[$i] = [];
+    foreach (array_slice($rslt, 2) as $col) {
+        $allMoves[$i] += explode(",", $col);
     }
-}
-
-// Gets move stats for assigned moves
-for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
-    for ($j = 0; $j < 4; $j++) {  // Iterates over moves
-        if ($team->pkm[$i]->moves[$j]->name) {  // If name != NULL
-            $stmt = $pdo->prepare("SELECT * FROM Moves WHERE Name = \"" .  $team->pkm[$i]->moves[$j]->name . "\"");
-            $stmt->execute();
-            $rslt = $stmt->fetch(PDO::FETCH_NUM);
-            $team->pkm[$i]->moves[$j] = arr2move($rslt);
-        }
-    }
-}
-
-// Generates list of all moves each pokemon can learn by level up
-for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
-    $stmt = $pdo->prepare("SELECT Level FROM Learn WHERE Name = \"" . $team->pkm[$i]->name . "\"");
-    $stmt->execute();
-    $allMoves[$i] = explode(",", $stmt->fetch(PDO::FETCH_NUM)[0]);
-    for ($j = 0; $j < count($allMoves[$i]); $j++) {
+    for ($j = 0; $j < count($allMoves[$i]); $j++) {  // Iterates over all possible moves
         $stmt = $pdo->prepare("SELECT * FROM Moves WHERE Name = \"" . $allMoves[$i][$j] . "\"");
         $stmt->execute();
         $rslt = $stmt->fetch(PDO::FETCH_NUM);
         $allMoves[$i][$j] = arr2move($rslt);
+    }
+    // Assigns default moves to team
+    for ($j = 0; $j < 4; $j++) {  // Iterates over team moves
+        if ($j < count($allMoves[$i])) {
+            $team->pkm[$i]->moves[$j] = $allMoves[$i][$j];
+        }
+        else{
+            $team->pkm[$i]->moves[$j] = new Move();
+        }
     }
 }
 $posMoves = $allMoves[0];
@@ -90,7 +75,7 @@ $posMoves = $allMoves[0];
             <table id="attrTable" class="attr-table">
                 <thead>
                 <?php foreach ($curPkm->attr as $key => $stat): ?>
-                    <?php if ($key <> "legendary"): ?>
+                    <?php if ($key != "legendary"): ?>
                         <th class="<?= strtolower($key) ?>-stat"><?= ucfirst($key) ?></span>
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -108,10 +93,9 @@ $posMoves = $allMoves[0];
             <span>Selected Moves: </span>
             <div class="moves-input">
             <?php 
-                foreach ($curPkm->moves as $key => $curMove) {
-                    echo "<input list='levelList$key' id='move$key' value='" . ($curMove->name ?? "None") . "'>\n";
-                    echo "<datalist id ='levelList$key'>\n";
-                    foreach ($posMoves as $posMove) {
+                foreach ($curPkm->moves as $curMove) {
+                    echo "<select id='move$key'>\n";
+                    foreach ($posMoves as $key => $posMove) {
                         $valid = True;
                         foreach ($curPkm->moves as $move) {
                             if ($move->name == $posMove->name
@@ -121,24 +105,23 @@ $posMoves = $allMoves[0];
                             }
                         }
                         if ($valid) {
-                            echo "<option value='" . $posMove->name . "'>\n";
+                            echo "<option" . ($key === 1 ? "selected='selected'" : "") . ">" . $posMove->name . "</option>\n";
                         }
                     }
                     foreach ($curPkm->moves as $move) {
                         if ($move->name
                             or !$curMove->name) {
-                            echo "<option value='None'>\n";
+                            echo "<option>None</option>\n";
                             break;
                         }
                     }
-                    echo "</datalist>\n";
+                    echo "</select>\n";
                 }
             ?>
             </div>
             <div id="navButtons">
                 <span>
                     <button id="back">Change Team</button>
-                    <button id="update">Update Moves</button>
                     <button id="next">Confirm Team</button>
                 </span>
             </div>
@@ -156,19 +139,19 @@ $posMoves = $allMoves[0];
             <th>Effect</th>
         </thead>
         <tbody>
-        <?php 
-            foreach ($posMoves as $key => $move) {
-                echo "<tr class='move-result'>";
-                echo "<td id='moveName$key'>" . $move->name . "</td>";
-                echo "<td id='moveType$key'><img class='type-icon' src='" . FPATH . TPATH . strtolower($move->type) . ".png' alt='" . strtolower($move->type) . "'></td>";
-                echo "<td id='moveCat$key'>" . $move->category . "</td>";
-                echo "<td id='movePow$key'>" . $move->power . "</td>";
-                echo "<td id='moveAcc$key'>" . ($move->accuracy == -1 ? "∞" : $move->accuracy) . "</td>";
-                echo "<td id='movePP$key'>" . $move->pp . "</td>";
-                echo "<td id='moveEff$key'>" . ($move->effect ?? "None") . "</td>";
-                echo "</tr>";
-            }
-        ?>
+        <?php foreach ($posMoves as $key => $move): ?>
+            <tr class='move-result'>
+                <td id="moveName<?= $key ?>"> <?= $move->name ?></td>
+                <td id='moveType<?= $key ?>'>
+                    <img class="type-icon" src="<?= FPATH . TPATH . strtolower($move->type) ?>.png" alt="<?= strtolower($move->type) ?>">
+                </td>
+                <td id='moveCat$<?= $key ?>'><?= $move->category ?></td>
+                <td id='movePow<?= $key ?>'><?= $move->power ?></td>
+                <td id='moveAcc<?= $key ?>'><?= $move->accuracy == -1 ? "∞" : $move->accuracy ?></td>
+                <td id='movePP<?= $key ?>'><?= $move->pp ?></td>
+                <td id='moveEff<?= $key ?>'><?= $move->effect ?? "None" ?></td>
+            </tr>
+        <?php endforeach; ?>
         </tbody>
     </table>
 </div>
