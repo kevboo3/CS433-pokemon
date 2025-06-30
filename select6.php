@@ -14,7 +14,8 @@ $team = new Team();
 for ($i = 0; $i < TEAMSIZE; $i++) {     
     $team->pkm[$i] = new Pokemon();
     $team->pkm[$i]->id = $randIds[$i];  // Assign random ids to pokemon
-}    
+}
+$team->pkm[0]->id = 132;
 conLog("Random IDs: " . implode(", ", $randIds));
 $allMoves = [NULL, NULL, NULL, NULL, NULL, NULL];  // Array of possible moves for each pokemon
 
