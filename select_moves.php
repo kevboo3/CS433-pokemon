@@ -1,20 +1,7 @@
 ﻿<?php
 require "scripts/utils.php";
-session_start();
-
-$selectedId = $_POST['id'];
-$name = $_POST['name'];
-$types = explode(',', $_POST['types']);
-$stats = explode(',', $_POST['stats']);
-//$img = $_POST['img']; if you need it
-$team = $_SESSION["team"]= compact('selectedId', 'name', 'types', 'stats');
-//debugging to see if stats transferred over
-?>
-<script>
-    const team = <?= json_encode($_SESSION["team"]) ?>;
-    console.log("Team from session:", team);
-</script>
-<?php
+var_dump($_POST["team"]);
+$team = unserialize($_POST["team"]);
 $curPkm = $team->pkm[0];
 $pdo = makePDO();
 
