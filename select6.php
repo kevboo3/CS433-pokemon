@@ -59,10 +59,17 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
         </span>
     </div>
     <!-- Pokémon entries randomized now -->
-    <?php foreach ($team->pkm as $pkm): ?>
-        <div class="entry"
-        onmouseover="this.style.background='yellow';"
-        onmouseout="this.style.background='white';">
+   <?php foreach ($team->pkm as $pkm): ?>
+    <form method="POST" action="select_moves.php" >
+        <input type="hidden" name="id" value="<?= $pkm->id ?>">
+        <input type="hidden" name="name" value="<?= htmlspecialchars($pkm->name) ?>">
+        <input type="hidden" name="types" value="<?= implode(",", array_filter($pkm->types)) ?>">
+        <input type="hidden" name="stats" value="<?= implode(",", (array)$pkm->attr) ?>">
+        <!-- <input type="hidden" name="img" value="<?= $pkm->img ?>"> -->
+
+        <button type="submit" class="entry"
+          onmouseover="this.style.background='yellow';"
+          onmouseout="this.style.background='white';">
             <div class="left">
                 <img src="<?= $pkm->img ?>" alt="<?= $pkm->name ?>">
                 <span class="name"><?= $pkm->name ?></span>
@@ -83,27 +90,8 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-        </div>
-    <?php endforeach; ?>
-    <!-- be able to select the pokemon and then send it off somewhere -->
-<!--
-<?php foreach ($pokemonList as $pokemon): ?>
-  <form action="select_confirm.php" method="POST">
-    <input type="hidden" name="name" value="<?= $pokemon['name'] ?>">
-    <input type="hidden" name="img" value="<?= $pokemon['img'] ?>">
-    <input type="hidden" name="types" value="<?= implode(",", $pokemon['types']) ?>">
-    <input type="hidden" name="stats" value="<?= implode(",", $pokemon['stats']) ?>">
-  </form>
+        </button>
+    </form>
 <?php endforeach; ?>
--->
-<!-- Need to update team in _SESSION or _POST when user clicks submit/next-page/confirm
-     I am using session right now becuase it is easier. Probably will have to use _POST.
-     Probably need JQuery sadly-->
-<?php
-$_SESSION['team'] = $team;
-?>
-<form method="POST" action="select_moves.php">
-  <input type="submit">
-</form>
 </body>
 </html>
