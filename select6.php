@@ -32,7 +32,7 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
     $pkm->attr = arr2attr(array_slice($rslt, 4));
     $pkm->hp = $pkm->attr->hp;
     $pkm->img = FPATH . IPATH . int2id($pkm->id) . str_replace(" ", "_", str_replace("'", "&#39", $pkm->name)) . ".png";
-
+}
 //$_SESSION["team"] = $team;
 //$_SESSION["posMoves"] = $posMoves;
 ?>
@@ -96,7 +96,6 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
   </form>
 <?php endforeach; ?>
 -->
-=======
 <!-- Need to update team in _SESSION or _POST when user clicks submit/next-page/confirm
      I am using session right now becuase it is easier. Probably will have to use _POST.
      Probably need JQuery sadly-->
