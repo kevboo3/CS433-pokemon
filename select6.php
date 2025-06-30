@@ -1,9 +1,13 @@
 <?php
-define("FPATH", "./proj3_images/1st_Generation/");
+define("FPATH", "./dataFiles/gen1/");
 // Generate 6 random IDs (between 1 and 151)
 $randomq = [];
 for ($i = 0; $i < 6; $i++) {
-    $randomq[] = rand(1, 151);
+    $holder=rand(1, 151);
+    while(in_array($holder,$randomq)){
+            $holder=rand(1, 151);
+    }
+    $randomq[$i]= $holder;
 }
 ?>
 <!-- checking to see if IDs match to displayed pokemon -->
@@ -37,7 +41,8 @@ try {
         //adjusts '7'->'007' '10'->'010' and leave 3digit numbers alone
         $id = str_pad($row['ID'], 3, "0", STR_PAD_LEFT);
         $name = $row['NAME'];
-        $img = FPATH . "{$id}{$name}.png";
+        $tempName = str_replace([' ', "'", ], ['_', '&#39;'], $name);       
+        $img = FPATH . "{$id}{$tempName}.png";
 
         $types = [$row['TYPE1']];
         if (!empty($row['TYPE2']) && $row['TYPE2'] !== $row['TYPE1']) {
@@ -83,7 +88,10 @@ try {
 
     <!-- Pokémon entries randomized now -->
     <?php foreach ($pokemonList as $pokemon): ?>
-        <div class="entry">
+        <div class="entry"
+        onmouseover="this.style.background='yellow';"
+        onmouseout="this.style.background='white';"
+        >
             <div class="left">
                 <img src="<?= $pokemon['img'] ?>" alt="<?= $pokemon['name'] ?>">
                 <span class="name"><?= $pokemon['name'] ?></span>
@@ -103,6 +111,14 @@ try {
         </div>
     <?php endforeach; ?>
     <!-- be able to select the pokemon and then send it off somewhere -->
+<?php foreach ($pokemonList as $pokemon): ?>
+  <form action="select_confirm.php" method="POST">
+    <input type="hidden" name="name" value="<?= $pokemon['name'] ?>">
+    <input type="hidden" name="img" value="<?= $pokemon['img'] ?>">
+    <input type="hidden" name="types" value="<?= implode(",", $pokemon['types']) ?>">
+    <input type="hidden" name="stats" value="<?= implode(",", $pokemon['stats']) ?>">
+  </form>
+<?php endforeach; ?>
 
 </body>
 </html>
