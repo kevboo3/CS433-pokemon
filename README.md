@@ -17,12 +17,12 @@ similar to [PokeRogue](https://pokerogue.net/) where items,starting Pokémon,tra
 <!-- add anything we used  especially if it was ripped from somewhere -->
 
 ### Audio
-None of the audio used is of our own made a nice addition to our project.
+None of the audio used is of our own, but it made a nice addition to our project.
 
 #### Artists/IP holders
-Final Fantasy 15 audio: Yoko Shimomura
-Pokemon:Nintendo
-Octopath Music: Yasunori Nishiki
+- Final Fantasy 15 audio: Yoko Shimomura
+- Pokemon:Nintendo
+- Octopath Music: Yasunori Nishiki
 
 ## Authors
 - [@kevboo3](https://github.com/kevboo3)
