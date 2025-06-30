@@ -4,7 +4,6 @@
         "level up moves": [
             "Growl",
             "Tackle",
-            "Leech Seed",
             "Vine Whip",
             "Poison Powder",
             "Razor Leaf",
@@ -21,24 +20,16 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Ivysaur",
         "level up moves": [
             "Growl",
-            "Leech Seed",
             "Tackle",
-            "Leech Seed",
             "Vine Whip",
             "Poison Powder",
             "Razor Leaf",
@@ -55,25 +46,17 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Venusaur",
         "level up moves": [
             "Growl",
-            "Leech Seed",
             "Tackle",
             "Vine Whip",
-            "Leech Seed",
             "Vine Whip",
             "Poison Powder",
             "Razor Leaf",
@@ -90,16 +73,9 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -109,7 +85,6 @@
             "Scratch",
             "Ember",
             "Leer",
-            "Rage",
             "Slash",
             "Flamethrower",
             "Fire Spin"
@@ -127,20 +102,11 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Dragon Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -151,7 +117,6 @@
             "Scratch",
             "Ember",
             "Leer",
-            "Rage",
             "Slash",
             "Flamethrower",
             "Fire Spin"
@@ -169,20 +134,11 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Dragon Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -194,7 +150,6 @@
             "Scratch",
             "Ember",
             "Leer",
-            "Rage",
             "Slash",
             "Flamethrower",
             "Fire Spin"
@@ -211,24 +166,13 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Dragon Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -240,7 +184,6 @@
             "Water Gun",
             "Bite",
             "Withdraw",
-            "Skull Bash",
             "Hydro Pump"
         ],
         "hm moves": [
@@ -259,17 +202,8 @@
             "Ice Beam",
             "Blizzard",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -282,7 +216,6 @@
             "Water Gun",
             "Bite",
             "Withdraw",
-            "Skull Bash",
             "Hydro Pump"
         ],
         "hm moves": [
@@ -301,17 +234,8 @@
             "Ice Beam",
             "Blizzard",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -325,7 +249,6 @@
             "Water Gun",
             "Bite",
             "Withdraw",
-            "Skull Bash",
             "Hydro Pump"
         ],
         "hm moves": [
@@ -343,21 +266,10 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -388,7 +300,6 @@
             "Stun Spore",
             "Sleep Powder",
             "Supersonic",
-            "Whirlwind",
             "Psybeam",
             "Harden",
             "String Shot",
@@ -397,24 +308,14 @@
         "hm moves": [],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -441,9 +342,7 @@
         "level up moves": [
             "Fury Attack",
             "Fury Attack",
-            "Focus Energy",
             "Twineedle",
-            "Rage",
             "Pin Missile",
             "Agility",
             "Harden",
@@ -458,114 +357,71 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Pidgey",
         "level up moves": [
-            "Gust",
             "Sand Attack",
-            "Quick Attack",
-            "Whirlwind",
             "Wing Attack",
             "Agility",
             "Mirror Move"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Pidgeotto",
         "level up moves": [
-            "Gust",
             "Sand Attack",
             "Sand Attack",
-            "Quick Attack",
-            "Whirlwind",
             "Wing Attack",
             "Agility",
             "Mirror Move"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Pidgeot",
         "level up moves": [
-            "Gust",
-            "Quick Attack",
             "Sand Attack",
             "Sand Attack",
-            "Quick Attack",
-            "Whirlwind",
             "Wing Attack",
             "Agility",
             "Mirror Move"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -573,9 +429,7 @@
         "level up moves": [
             "Tackle",
             "Tail Whip",
-            "Quick Attack",
             "Hyper Fang",
-            "Focus Energy",
             "Super Fang"
         ],
         "hm moves": [],
@@ -587,28 +441,19 @@
             "Bubble Beam",
             "Water Gun",
             "Blizzard",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Raticate",
         "level up moves": [
-            "Quick Attack",
             "Tackle",
             "Tail Whip",
-            "Quick Attack",
             "Hyper Fang",
-            "Focus Energy",
             "Super Fang"
         ],
         "hm moves": [],
@@ -621,18 +466,11 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -647,22 +485,15 @@
             "Agility"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -678,23 +509,15 @@
             "Agility"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -716,18 +539,10 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -750,19 +565,10 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -771,7 +577,6 @@
             "Growl",
             "Thunder Shock",
             "Thunder Wave",
-            "Quick Attack",
             "Swift",
             "Agility",
             "Thunder"
@@ -786,21 +591,13 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Pay Day",
             "Submission",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -810,7 +607,6 @@
             "Thunder Shock",
             "Thunder Wave",
             "Agility",
-            "Quick Attack",
             "Swift",
             "Thunder"
         ],
@@ -824,22 +620,13 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -863,19 +650,11 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -899,21 +678,12 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -935,16 +705,10 @@
             "Take Down",
             "Double-Edge",
             "Blizzard",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -971,16 +735,10 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1014,25 +772,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -1042,7 +789,6 @@
             "Tackle",
             "Horn Attack",
             "Poison Sting",
-            "Focus Energy",
             "Fury Attack",
             "Horn Drill",
             "Double Kick"
@@ -1055,16 +801,10 @@
             "Take Down",
             "Double-Edge",
             "Blizzard",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1075,7 +815,6 @@
             "Tackle",
             "Horn Attack",
             "Poison Sting",
-            "Focus Energy",
             "Fury Attack",
             "Horn Drill",
             "Double Kick"
@@ -1091,16 +830,10 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1109,12 +842,9 @@
             "Horn Attack",
             "Poison Sting",
             "Tackle",
-            "Thrash",
             "Horn Attack",
             "Poison Sting",
-            "Thrash",
             "Double Kick",
-            "Focus Energy",
             "Fury Attack",
             "Horn Drill",
             "Leer"
@@ -1135,25 +865,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -1164,9 +883,7 @@
             "Sing",
             "Double Slap",
             "Minimize",
-            "Metronome",
-            "Defense Curl",
-            "Light Screen"
+            "Defense Curl"
         ],
         "hm moves": [
             "Strength",
@@ -1184,38 +901,25 @@
             "Ice Beam",
             "Blizzard",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Clefable",
         "level up moves": [
             "Double Slap",
-            "Metronome",
             "Minimize",
             "Sing",
             "Defense Curl",
             "Growl",
-            "Light Screen",
             "Pound"
         ],
         "hm moves": [
@@ -1233,28 +937,16 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -1262,8 +954,6 @@
         "level up moves": [
             "Ember",
             "Tail Whip",
-            "Quick Attack",
-            "Roar",
             "Confuse Ray",
             "Flamethrower",
             "Fire Spin"
@@ -1274,25 +964,16 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Ninetales",
         "level up moves": [
             "Ember",
-            "Quick Attack",
-            "Roar",
             "Tail Whip",
             "Confuse Ray",
             "Fire Spin",
@@ -1304,18 +985,10 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1323,7 +996,6 @@
         "level up moves": [
             "Sing",
             "Pound",
-            "Disable",
             "Defense Curl",
             "Double Slap",
             "Rest",
@@ -1346,32 +1018,21 @@
             "Ice Beam",
             "Blizzard",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Wigglytuff",
         "level up moves": [
             "Defense Curl",
-            "Disable",
             "Double Slap",
             "Sing",
             "Body Slam",
@@ -1394,95 +1055,65 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Zubat",
         "level up moves": [
-            "Leech Life",
             "Supersonic",
             "Bite",
             "Confuse Ray",
-            "Wing Attack",
-            "Haze"
+            "Wing Attack"
         ],
         "hm moves": [],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Golbat",
         "level up moves": [
             "Bite",
-            "Leech Life",
             "Screech",
             "Supersonic",
             "Bite",
             "Confuse Ray",
-            "Wing Attack",
-            "Haze"
+            "Wing Attack"
         ],
         "hm moves": [],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Oddish",
         "level up moves": [
-            "Absorb",
             "Poison Powder",
             "Stun Spore",
             "Sleep Powder",
             "Acid",
-            "Petal Dance",
             "Solar Beam"
         ],
         "hm moves": [
@@ -1493,28 +1124,20 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Gloom",
         "level up moves": [
-            "Absorb",
             "Poison Powder",
             "Stun Spore",
             "Poison Powder",
             "Stun Spore",
             "Sleep Powder",
             "Acid",
-            "Petal Dance",
             "Solar Beam"
         ],
         "hm moves": [
@@ -1525,28 +1148,20 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Vileplume",
         "level up moves": [
             "Acid",
-            "Petal Dance",
             "Sleep Powder",
             "Stun Spore",
             "Poison Powder",
             "Stun Spore",
             "Sleep Powder",
-            "Absorb",
             "Solar Beam"
         ],
         "hm moves": [
@@ -1558,16 +1173,9 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1575,7 +1183,6 @@
         "level up moves": [
             "Scratch",
             "Stun Spore",
-            "Leech Life",
             "Spore",
             "Slash",
             "Growth"
@@ -1589,27 +1196,17 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Parasect",
         "level up moves": [
-            "Leech Life",
             "Scratch",
             "Stun Spore",
             "Stun Spore",
-            "Leech Life",
             "Spore",
             "Slash",
             "Growth"
@@ -1623,27 +1220,16 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Venonat",
         "level up moves": [
-            "Disable",
             "Tackle",
             "Poison Powder",
-            "Leech Life",
             "Stun Spore",
             "Psybeam",
             "Sleep Powder",
@@ -1654,28 +1240,18 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Venomoth",
         "level up moves": [
-            "Disable",
-            "Leech Life",
             "Poison Powder",
             "Tackle",
             "Poison Powder",
-            "Leech Life",
             "Stun Spore",
             "Psybeam",
             "Sleep Powder",
@@ -1684,24 +1260,14 @@
         "hm moves": [],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1709,10 +1275,8 @@
         "level up moves": [
             "Scratch",
             "Growl",
-            "Dig",
             "Sand Attack",
-            "Slash",
-            "Earthquake"
+            "Slash"
         ],
         "hm moves": [],
         "tm moves": [
@@ -1720,29 +1284,20 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
         "pokemon": "Dugtrio",
         "level up moves": [
-            "Dig",
             "Growl",
             "Scratch",
             "Growl",
-            "Dig",
             "Sand Attack",
-            "Slash",
-            "Earthquake"
+            "Slash"
         ],
         "hm moves": [],
         "tm moves": [
@@ -1750,17 +1305,10 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -1769,7 +1317,6 @@
             "Growl",
             "Scratch",
             "Bite",
-            "Pay Day",
             "Screech",
             "Fury Swipes",
             "Slash"
@@ -1782,17 +1329,11 @@
             "Double-Edge",
             "Bubble Beam",
             "Water Gun",
-            "Pay Day",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1803,7 +1344,6 @@
             "Scratch",
             "Screech",
             "Bite",
-            "Pay Day",
             "Screech",
             "Fury Swipes",
             "Slash"
@@ -1816,18 +1356,11 @@
             "Double-Edge",
             "Bubble Beam",
             "Water Gun",
-            "Hyper Beam",
-            "Pay Day",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1835,7 +1368,6 @@
         "level up moves": [
             "Scratch",
             "Tail Whip",
-            "Disable",
             "Confusion",
             "Fury Swipes",
             "Hydro Pump"
@@ -1855,29 +1387,18 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Golduck",
         "level up moves": [
-            "Disable",
             "Scratch",
             "Tail Whip",
             "Tail Whip",
-            "Disable",
             "Confusion",
             "Fury Swipes",
             "Hydro Pump"
@@ -1897,20 +1418,10 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -1919,10 +1430,7 @@
             "Leer",
             "Scratch",
             "Karate Chop",
-            "Fury Swipes",
-            "Focus Energy",
-            "Seismic Toss",
-            "Thrash"
+            "Fury Swipes"
         ],
         "hm moves": [
             "Strength"
@@ -1934,23 +1442,13 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -1961,10 +1459,7 @@
             "Leer",
             "Scratch",
             "Karate Chop",
-            "Fury Swipes",
-            "Focus Energy",
-            "Seismic Toss",
-            "Thrash"
+            "Fury Swipes"
         ],
         "hm moves": [
             "Strength"
@@ -1976,31 +1471,19 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
         "pokemon": "Growlithe",
         "level up moves": [
             "Bite",
-            "Roar",
             "Ember",
             "Leer",
             "Take Down",
@@ -2013,18 +1496,11 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
             "Dragon Rage",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2032,7 +1508,6 @@
         "level up moves": [
             "Ember",
             "Leer",
-            "Roar",
             "Take Down",
             "Agility",
             "Bite",
@@ -2044,20 +1519,11 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
             "Dragon Rage",
-            "Dig",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2083,15 +1549,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2123,20 +1583,10 @@
             "Ice Beam",
             "Blizzard",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2167,28 +1617,16 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Abra",
         "level up moves": [
-            "Teleport"
         ],
         "hm moves": [
             "Flash"
@@ -2201,36 +1639,21 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Kadabra",
         "level up moves": [
             "Confusion",
-            "Disable",
-            "Teleport",
             "Confusion",
-            "Disable",
             "Psybeam",
             "Recover",
-            "Psychic",
-            "Reflect"
+            "Psychic"
         ],
         "hm moves": [
             "Flash"
@@ -2243,37 +1666,21 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Dig",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Alakazam",
         "level up moves": [
             "Confusion",
-            "Disable",
-            "Teleport",
             "Confusion",
-            "Disable",
             "Psybeam",
             "Recover",
-            "Psychic",
-            "Reflect"
+            "Psychic"
         ],
         "hm moves": [
             "Flash"
@@ -2285,35 +1692,19 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Dig",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Machop",
         "level up moves": [
             "Karate Chop",
-            "Low Kick",
             "Leer",
-            "Focus Energy",
-            "Seismic Toss",
             "Submission"
         ],
         "hm moves": [
@@ -2327,21 +1718,11 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -2349,11 +1730,7 @@
         "level up moves": [
             "Karate Chop",
             "Leer",
-            "Low Kick",
-            "Low Kick",
             "Leer",
-            "Focus Energy",
-            "Seismic Toss",
             "Submission"
         ],
         "hm moves": [
@@ -2367,21 +1744,11 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -2389,11 +1756,7 @@
         "level up moves": [
             "Karate Chop",
             "Leer",
-            "Low Kick",
-            "Low Kick",
             "Leer",
-            "Focus Energy",
-            "Seismic Toss",
             "Submission"
         ],
         "hm moves": [
@@ -2406,23 +1769,12 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -2446,15 +1798,9 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2479,15 +1825,9 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2513,16 +1853,9 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2551,15 +1884,8 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
-            "Mega Drain",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2590,16 +1916,8 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2610,7 +1928,6 @@
             "Rock Throw",
             "Self-Destruct",
             "Harden",
-            "Earthquake",
             "Explosion"
         ],
         "hm moves": [
@@ -2623,22 +1940,13 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Self-Destruct",
             "Fire Blast",
             "Rest",
             "Explosion",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -2650,7 +1958,6 @@
             "Rock Throw",
             "Self-Destruct",
             "Harden",
-            "Earthquake",
             "Explosion"
         ],
         "hm moves": [
@@ -2663,22 +1970,13 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Self-Destruct",
             "Fire Blast",
             "Rest",
             "Explosion",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -2690,7 +1988,6 @@
             "Rock Throw",
             "Self-Destruct",
             "Harden",
-            "Earthquake",
             "Explosion"
         ],
         "hm moves": [
@@ -2703,24 +2000,14 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Self-Destruct",
             "Fire Blast",
             "Rest",
             "Explosion",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -2741,16 +2028,10 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2774,24 +2055,16 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Slowpoke",
         "level up moves": [
             "Confusion",
-            "Disable",
             "Headbutt",
             "Growl",
             "Water Gun",
@@ -2812,34 +2085,21 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Pay Day",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Slowbro",
         "level up moves": [
             "Confusion",
-            "Disable",
             "Headbutt",
-            "Disable",
             "Headbutt",
             "Growl",
             "Water Gun",
@@ -2863,29 +2123,15 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -2906,18 +2152,12 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -2940,19 +2180,12 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -2966,26 +2199,18 @@
             "Slash"
         ],
         "hm moves": [
-            "Cut",
-            "Fly"
+            "Cut"
         ],
         "tm moves": [
             "Razor Wind",
             "Swords Dance",
-            "Whirlwind",
             "Toxic",
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -2995,29 +2220,19 @@
             "Growl",
             "Fury Attack",
             "Drill Peck",
-            "Rage",
             "Tri Attack",
             "Agility"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
-            "Whirlwind",
             "Toxic",
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Sky Attack",
             "Rest",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -3029,30 +2244,19 @@
             "Growl",
             "Fury Attack",
             "Drill Peck",
-            "Rage",
             "Tri Attack",
             "Agility"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
-            "Whirlwind",
             "Toxic",
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Sky Attack",
             "Rest",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -3079,14 +2283,8 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Pay Day",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -3115,21 +2313,13 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Grimer",
         "level up moves": [
-            "Disable",
             "Pound",
             "Poison Gas",
             "Minimize",
@@ -3142,24 +2332,18 @@
         "tm moves": [
             "Toxic",
             "Body Slam",
-            "Rage",
-            "Mega Drain",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Self-Destruct",
             "Fire Blast",
             "Rest",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
         "pokemon": "Muk",
         "level up moves": [
-            "Disable",
             "Poison Gas",
             "Pound",
             "Poison Gas",
@@ -3173,19 +2357,13 @@
         "tm moves": [
             "Toxic",
             "Body Slam",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Self-Destruct",
             "Fire Blast",
             "Rest",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3210,18 +2388,12 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Self-Destruct",
             "Swift",
             "Rest",
             "Explosion",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -3247,19 +2419,12 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Self-Destruct",
             "Swift",
             "Rest",
             "Explosion",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -3267,27 +2432,18 @@
         "level up moves": [
             "Confuse Ray",
             "Lick",
-            "Night Shade",
-            "Hypnosis",
-            "Dream Eater"
+            "Hypnosis"
         ],
         "hm moves": [],
         "tm moves": [
             "Toxic",
-            "Rage",
-            "Mega Drain",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Self-Destruct",
-            "Dream Eater",
             "Rest",
-            "Psywave",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3295,27 +2451,18 @@
         "level up moves": [
             "Confuse Ray",
             "Lick",
-            "Night Shade",
-            "Hypnosis",
-            "Dream Eater"
+            "Hypnosis"
         ],
         "hm moves": [],
         "tm moves": [
             "Toxic",
-            "Rage",
-            "Mega Drain",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Self-Destruct",
-            "Dream Eater",
             "Rest",
-            "Psywave",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3323,9 +2470,7 @@
         "level up moves": [
             "Confuse Ray",
             "Lick",
-            "Night Shade",
-            "Hypnosis",
-            "Dream Eater"
+            "Hypnosis"
         ],
         "hm moves": [
             "Strength"
@@ -3337,26 +2482,14 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Mega Drain",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Self-Destruct",
-            "Skull Bash",
-            "Dream Eater",
             "Rest",
-            "Psywave",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3366,7 +2499,6 @@
             "Tackle",
             "Bind",
             "Rock Throw",
-            "Rage",
             "Slam",
             "Harden"
         ],
@@ -3378,19 +2510,12 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Self-Destruct",
-            "Skull Bash",
             "Rest",
             "Explosion",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -3398,7 +2523,6 @@
         "level up moves": [
             "Hypnosis",
             "Pound",
-            "Disable",
             "Confusion",
             "Headbutt",
             "Poison Gas",
@@ -3416,33 +2540,19 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
-            "Dream Eater",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Hypno",
         "level up moves": [
             "Confusion",
-            "Disable",
             "Hypnosis",
             "Pound",
-            "Disable",
             "Confusion",
             "Headbutt",
             "Poison Gas",
@@ -3459,25 +2569,12 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
-            "Dream Eater",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -3506,12 +2603,8 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -3541,13 +2634,8 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -3557,7 +2645,6 @@
             "Tackle",
             "Sonic Boom",
             "Self-Destruct",
-            "Light Screen",
             "Swift",
             "Explosion"
         ],
@@ -3567,20 +2654,14 @@
         "tm moves": [
             "Toxic",
             "Take Down",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Self-Destruct",
             "Swift",
             "Rest",
             "Thunder Wave",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3591,7 +2672,6 @@
             "Tackle",
             "Sonic Boom",
             "Self-Destruct",
-            "Light Screen",
             "Swift",
             "Explosion"
         ],
@@ -3601,22 +2681,14 @@
         "tm moves": [
             "Toxic",
             "Take Down",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Self-Destruct",
             "Swift",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3624,8 +2696,6 @@
         "level up moves": [
             "Barrage",
             "Hypnosis",
-            "Reflect",
-            "Leech Seed",
             "Stun Spore",
             "Poison Powder",
             "Solar Beam",
@@ -3636,19 +2706,12 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Rage",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Self-Destruct",
             "Egg Bomb",
             "Rest",
-            "Psywave",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3657,9 +2720,7 @@
             "Barrage",
             "Hypnosis",
             "Stomp",
-            "Leech Seed",
             "Poison Powder",
-            "Reflect",
             "Sleep Powder",
             "Solar Beam",
             "Stun Spore"
@@ -3671,22 +2732,13 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Self-Destruct",
             "Egg Bomb",
             "Rest",
-            "Psywave",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3695,10 +2747,7 @@
             "Bone Club",
             "Growl",
             "Leer",
-            "Focus Energy",
-            "Thrash",
-            "Bonemerang",
-            "Rage"
+            "Bonemerang"
         ],
         "hm moves": [
             "Strength"
@@ -3715,33 +2764,20 @@
             "Ice Beam",
             "Blizzard",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Marowak",
         "level up moves": [
             "Bone Club",
-            "Focus Energy",
             "Growl",
             "Leer",
             "Leer",
-            "Focus Energy",
-            "Thrash",
-            "Bonemerang",
-            "Rage"
+            "Bonemerang"
         ],
         "hm moves": [
             "Strength"
@@ -3757,21 +2793,11 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -3780,9 +2806,6 @@
             "Double Kick",
             "Meditate",
             "Rolling Kick",
-            "Jump Kick",
-            "Focus Energy",
-            "High Jump Kick",
             "Mega Kick"
         ],
         "hm moves": [
@@ -3796,17 +2819,9 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -3817,8 +2832,7 @@
             "Fire Punch",
             "Ice Punch",
             "Thunder Punch",
-            "Mega Punch",
-            "Counter"
+            "Mega Punch"
         ],
         "hm moves": [
             "Strength"
@@ -3831,17 +2845,9 @@
             "Take Down",
             "Double-Edge",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -3850,7 +2856,6 @@
             "Supersonic",
             "Wrap",
             "Stomp",
-            "Disable",
             "Defense Curl",
             "Slam",
             "Screech"
@@ -3872,22 +2877,13 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -3898,23 +2894,18 @@
             "Sludge",
             "SmokeScreen",
             "Self-Destruct",
-            "Haze",
             "Explosion"
         ],
         "hm moves": [],
         "tm moves": [
             "Toxic",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Self-Destruct",
             "Fire Blast",
             "Rest",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3926,24 +2917,18 @@
             "Sludge",
             "SmokeScreen",
             "Self-Destruct",
-            "Haze",
             "Explosion"
         ],
         "hm moves": [],
         "tm moves": [
             "Toxic",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Self-Destruct",
             "Fire Blast",
             "Rest",
-            "Explosion",
-            "Substitute"
+            "Explosion"
         ]
     },
     {
@@ -3966,20 +2951,13 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -4012,25 +2990,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Dig",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -4042,7 +3009,6 @@
             "Growl",
             "Minimize",
             "Defense Curl",
-            "Light Screen",
             "Double-Edge"
         ],
         "hm moves": [
@@ -4060,30 +3026,18 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
             "Egg Bomb",
             "Fire Blast",
-            "Skull Bash",
             "Soft-Boiled",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -4091,7 +3045,6 @@
         "level up moves": [
             "Bind",
             "Constrict",
-            "Absorb",
             "Poison Powder",
             "Stun Spore",
             "Sleep Powder",
@@ -4107,23 +3060,15 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Kangaskhan",
         "level up moves": [
             "Comet Punch",
-            "Rage",
             "Bite",
             "Tail Whip",
             "Mega Punch",
@@ -4145,23 +3090,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -4185,14 +3121,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4217,15 +3148,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4252,14 +3177,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4287,15 +3207,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4307,7 +3221,6 @@
             "Recover",
             "Swift",
             "Minimize",
-            "Light Screen",
             "Hydro Pump"
         ],
         "hm moves": [
@@ -4322,22 +3235,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -4359,23 +3264,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -4383,11 +3279,8 @@
         "level up moves": [
             "Barrier",
             "Confusion",
-            "Light Screen",
             "Double Slap",
-            "Meditate",
-            "Substitute"
-
+            "Meditate"
         ],
         "hm moves": [
             "Flash"
@@ -4399,34 +3292,20 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Psywave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
         "pokemon": "Scyther",
         "level up moves": [
-            "Quick Attack",
             "Leer",
-            "Focus Energy",
             "Double Team",
             "Slash",
             "Swords Dance",
@@ -4440,15 +3319,9 @@
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4460,7 +3333,6 @@
             "Double Slap",
             "Ice Punch",
             "Body Slam",
-            "Thrash",
             "Blizzard"
         ],
         "hm moves": [],
@@ -4475,33 +3347,19 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
-            "Skull Bash",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Electabuzz",
         "level up moves": [
             "Leer",
-            "Quick Attack",
             "Thunder Shock",
             "Screech",
             "Thunder Punch",
-            "Light Screen",
             "Thunder"
         ],
         "hm moves": [
@@ -4515,26 +3373,14 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Psywave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -4558,31 +3404,18 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Metronome",
             "Fire Blast",
-            "Skull Bash",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Pinsir",
         "level up moves": [
             "Vise Grip",
-            "Seismic Toss",
             "Guillotine",
-            "Focus Energy",
             "Harden",
             "Slash",
             "Swords Dance"
@@ -4597,15 +3430,9 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
             "Submission",
-            "Seismic Toss",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4615,7 +3442,6 @@
             "Stomp",
             "Tail Whip",
             "Leer",
-            "Rage",
             "Take Down"
         ],
         "hm moves": [
@@ -4629,19 +3455,12 @@
             "Double-Edge",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Mimic",
             "Double Team",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4664,7 +3483,6 @@
             "Dragon Rage",
             "Leer",
             "Hydro Pump",
-            "Hyper Beam",
             "Splash",
             "Tackle"
         ],
@@ -4681,19 +3499,12 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
             "Dragon Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4702,7 +3513,6 @@
             "Growl",
             "Water Gun",
             "Sing",
-            "Mist",
             "Body Slam",
             "Confuse Ray",
             "Ice Beam",
@@ -4722,27 +3532,18 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
             "Solar Beam",
             "Dragon Rage",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Psywave",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Ditto",
         "level up moves": [
-            "Transform"
         ],
         "hm moves": [],
         "tm moves": []
@@ -4752,7 +3553,6 @@
         "level up moves": [
             "Sand Attack",
             "Tackle",
-            "Quick Attack",
             "Tail Whip",
             "Bite",
             "Take Down"
@@ -4763,31 +3563,21 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Vaporeon",
         "level up moves": [
-            "Quick Attack",
             "Sand Attack",
             "Tackle",
             "Water Gun",
-            "Quick Attack",
             "Water Gun",
             "Tail Whip",
             "Bite",
             "Acid Armor",
-            "Haze",
-            "Mist",
             "Hydro Pump",
             "Take Down"
         ],
@@ -4803,26 +3593,17 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Jolteon",
         "level up moves": [
-            "Quick Attack",
             "Sand Attack",
             "Tackle",
             "Thunder Shock",
-            "Quick Attack",
             "Thunder Shock",
             "Tail Whip",
             "Thunder Wave",
@@ -4841,35 +3622,25 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
         "pokemon": "Flareon",
         "level up moves": [
             "Ember",
-            "Quick Attack",
             "Sand Attack",
             "Tackle",
-            "Quick Attack",
             "Ember",
             "Tail Whip",
             "Bite",
             "Leer",
             "Fire Spin",
-            "Rage",
             "Flamethrower",
             "Take Down"
         ],
@@ -4879,23 +3650,15 @@
             "Body Slam",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Porygon",
         "level up moves": [
-            "Conversion",
             "Sharpen",
             "Tackle",
             "Psybeam",
@@ -4912,23 +3675,14 @@
             "Double-Edge",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
@@ -4953,13 +3707,8 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -4986,17 +3735,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Seismic Toss",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -5004,7 +3745,6 @@
         "level up moves": [
             "Harden",
             "Scratch",
-            "Absorb",
             "Slash",
             "Leer",
             "Hydro Pump"
@@ -5021,22 +3761,15 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
         "pokemon": "Kabutops",
         "level up moves": [
-            "Absorb",
             "Harden",
             "Scratch",
-            "Absorb",
             "Slash",
             "Leer",
             "Hydro Pump"
@@ -5056,17 +3789,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
             "Submission",
-            "Seismic Toss",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Skull Bash",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -5076,30 +3801,20 @@
             "Wing Attack",
             "Supersonic",
             "Bite",
-            "Take Down",
-            "Hyper Beam"
+            "Take Down"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
             "Dragon Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -5110,8 +3825,7 @@
             "Rest",
             "Body Slam",
             "Harden",
-            "Double-Edge",
-            "Hyper Beam"
+            "Double-Edge"
         ],
         "hm moves": [
             "Surf",
@@ -5128,30 +3842,17 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
             "Psychic",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
             "Self-Destruct",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
-            "Psywave",
-            "Rock Slide",
-            "Substitute"
+            "Rock Slide"
         ]
     },
     {
@@ -5160,15 +3861,12 @@
             "Ice Beam",
             "Peck",
             "Blizzard",
-            "Agility",
-            "Mist"
+            "Agility"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
@@ -5176,16 +3874,9 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -5194,32 +3885,22 @@
             "Drill Peck",
             "Thunder Shock",
             "Thunder",
-            "Agility",
-            "Light Screen"
+            "Agility"
         ],
         "hm moves": [
-            "Fly",
             "Flash"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Swift",
-            "Sky Attack",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -5228,29 +3909,19 @@
             "Fire Spin",
             "Peck",
             "Leer",
-            "Agility",
-            "Sky Attack"
+            "Agility"
         ],
         "hm moves": [
-            "Fly"
         ],
         "tm moves": [
             "Razor Wind",
-            "Whirlwind",
             "Toxic",
             "Take Down",
             "Double-Edge",
-            "Hyper Beam",
-            "Rage",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Sky Attack",
-            "Rest",
-            "Substitute"
+            "Rest"
         ]
     },
     {
@@ -5261,8 +3932,7 @@
             "Thunder Wave",
             "Agility",
             "Slam",
-            "Dragon Rage",
-            "Hyper Beam"
+            "Dragon Rage"
         ],
         "hm moves": [
             "Surf"
@@ -5276,20 +3946,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
             "Dragon Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -5301,8 +3965,7 @@
             "Thunder Wave",
             "Agility",
             "Slam",
-            "Dragon Rage",
-            "Hyper Beam"
+            "Dragon Rage"
         ],
         "hm moves": [
             "Surf"
@@ -5317,20 +3980,14 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Rage",
             "Dragon Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
@@ -5343,8 +4000,7 @@
             "Thunder Wave",
             "Agility",
             "Slam",
-            "Dragon Rage",
-            "Hyper Beam"
+            "Dragon Rage"
         ],
         "hm moves": [
             "Surf",
@@ -5361,34 +4017,25 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Rage",
             "Dragon Rage",
             "Thunderbolt",
             "Thunder",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
             "Rest",
-            "Thunder Wave",
-            "Substitute"
+            "Thunder Wave"
         ]
     },
     {
         "pokemon": "Mewtwo",
         "level up moves": [
             "Confusion",
-            "Disable",
             "Psychic",
             "Swift",
             "Barrier",
             "Psychic",
             "Recover",
-            "Mist",
             "Amnesia"
         ],
         "hm moves": [
@@ -5406,44 +4053,28 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
             "Solar Beam",
             "Thunderbolt",
             "Thunder",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
             "Self-Destruct",
             "Fire Blast",
-            "Skull Bash",
             "Rest",
             "Thunder Wave",
-            "Psywave",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     },
     {
         "pokemon": "Mew",
         "level up moves": [
             "Pound",
-            "Transform",
             "Mega Punch",
-            "Metronome",
             "Psychic"
         ],
         "hm moves": [
             "Cut",
-            "Fly",
             "Surf",
             "Strength",
             "Flash"
@@ -5452,7 +4083,6 @@
             "Mega Punch",
             "Razor Wind",
             "Swords Dance",
-            "Whirlwind",
             "Mega Kick",
             "Toxic",
             "Horn Drill",
@@ -5463,42 +4093,24 @@
             "Water Gun",
             "Ice Beam",
             "Blizzard",
-            "Hyper Beam",
-            "Pay Day",
             "Submission",
-            "Counter",
-            "Seismic Toss",
-            "Rage",
-            "Mega Drain",
             "Solar Beam",
             "Dragon Rage",
             "Thunderbolt",
             "Thunder",
-            "Earthquake",
             "Fissure",
-            "Dig",
             "Psychic",
-            "Teleport",
-            "Mimic",
             "Double Team",
-            "Reflect",
-            "Bide",
-            "Metronome",
             "Self-Destruct",
             "Egg Bomb",
             "Fire Blast",
             "Swift",
-            "Skull Bash",
             "Soft-Boiled",
-            "Dream Eater",
-            "Sky Attack",
             "Rest",
             "Thunder Wave",
-            "Psywave",
             "Explosion",
             "Rock Slide",
-            "Tri Attack",
-            "Substitute"
+            "Tri Attack"
         ]
     }
 ]
