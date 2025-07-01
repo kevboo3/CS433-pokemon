@@ -17,7 +17,7 @@ for ($i = 0; $i < TEAMSIZE; $i++) {
 
 // Loads pokemon team data given a set of Pokedex Ids, 
 foreach ($randIds as $key => $id) {  // Iterates over team
-    $team->pkm[$key] = makePokemon($id);
+    $team->pkm[$key] = makePokemon($team->pkm[$key]->id);
 }
 ?>
 
@@ -84,6 +84,6 @@ foreach ($randIds as $key => $id) {  // Iterates over team
     </div> 
 </div>
 </div>
-</form>
+<div id="teamJSON" hidden><?= json_encode($team) ?></div>
 </body>
 </html>
