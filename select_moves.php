@@ -37,8 +37,6 @@ $posMoves = $allMoves[0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<!-- our reference  -->
-<!-- https://play.pokemonshowdown.com/teambuilder -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,6 +63,34 @@ $posMoves = $allMoves[0];
                         <?php endfor; ?>
                     <?php endfor; ?>
                 </span>
+            <div class="moves-selection">
+            <span>Selected Moves: </span>
+            <div class="moves-input">
+            <?php foreach ($curPkm->moves as $i => $curMove): ?>
+                <select id='move <?= $i ?>'>
+                <?php foreach ($posMoves as $j => $posMove):
+                    $valid = True;
+                    foreach ($curPkm->moves as $move) {
+                        if ($move->name == $posMove->name
+                            and $curMove->name != $posMove->name) {
+                            $valid = False;
+                            break;
+                        }
+                    }
+                    if ($valid):  ?>
+                        <option <?= $j === 0 ? "selected='selected'" : "" ?>> <?= $posMove->name ?></option>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                <?php foreach ($curPkm->moves as $move):
+                    if ($move->name
+                        or !$curMove->name): ?>
+                        <option>None</option>
+                    <?php break; endif; ?>
+                <?php endforeach; ?>
+                </select>
+            <?php endforeach; ?>
+            </div>
+        </div>
             </div>
             <div class="current-pokemon">
                 <span>Selecting Moves For:</span>
@@ -98,73 +124,40 @@ $posMoves = $allMoves[0];
                 </div>
             </div>
         </div>
-        <div class="moves-selection">
-            <span>Selected Moves: </span>
-            <div class="moves-input">
-            <?php 
-                foreach ($curPkm->moves as $i => $curMove) {
-                    echo "<select id='move$i'>\n";
-                    foreach ($posMoves as $j => $posMove) {
-                        $valid = True;
-                        foreach ($curPkm->moves as $move) {
-                            if ($move->name == $posMove->name
-                                and $curMove->name != $posMove->name) {
-                                $valid = False;
-                                break;
-                            }
-                        }
-                        if ($valid) {
-                            echo "<option" . ($j === 0 ? " selected='selected'" : "") . ">" . $posMove->name . "</option>\n";
-                        }
-                    }
-                    foreach ($curPkm->moves as $move) {
-                        if ($move->name
-                            or !$curMove->name) {
-                            echo "<option>None</option>\n";
-                            break;
-                        }
-                    }
-                    echo "</select>\n";
-                }
-            ?>
-            </div>
-            <div id="navButtons">
-                <span>
-                    <button id="back">Change Team</button>
-                    <button id="next">Confirm Team</button>
-                </span>
-            </div>
+        <div class="moves-data">
+            <table class="moves-table">
+                <h3>Move Stats</h3>
+                <thead>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Power</th>
+                    <th>Accuracy</th>
+                    <th>PP</th>
+                    <th>Effect</th>
+                </thead>
+                <tbody>
+                <?php foreach ($posMoves as $key => $move): ?>
+                    <tr class='move-result'>
+                        <td id="moveName<?= $key ?>"> <?= $move->name ?></td>
+                        <td id='moveType<?= $key ?>'>
+                            <img class="type-icon" src="<?= FPATH . TPATH . strtolower($move->type) ?>.png" alt="<?= strtolower($move->type) ?>">
+                        </td>
+                        <td id='moveCat$<?= $key ?>'><?= $move->category ?></td>
+                        <td id='movePow<?= $key ?>'><?= $move->power ?></td>
+                        <td id='moveAcc<?= $key ?>'><?= $move->accuracy == -1 ? "∞" : $move->accuracy ?></td>
+                        <td id='movePP<?= $key ?>'><?= $move->pp ?></td>
+                        <td id='moveEff<?= $key ?>'><?= $move->effect ?? "None" ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
-        <table class="moves-table">
-            <h3>Move Stats</h3>
-            <thead>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Category</th>
-                <th>Power</th>
-                <th>Accuracy</th>
-                <th>PP</th>
-                <th>Effect</th>
-            </thead>
-            <tbody>
-            <?php foreach ($posMoves as $key => $move): ?>
-                <tr class='move-result'>
-                    <td id="moveName<?= $key ?>"> <?= $move->name ?></td>
-                    <td id='moveType<?= $key ?>'>
-                        <img class="type-icon" src="<?= FPATH . TPATH . strtolower($move->type) ?>.png" alt="<?= strtolower($move->type) ?>">
-                    </td>
-                    <td id='moveCat$<?= $key ?>'><?= $move->category ?></td>
-                    <td id='movePow<?= $key ?>'><?= $move->power ?></td>
-                    <td id='moveAcc<?= $key ?>'><?= $move->accuracy == -1 ? "∞" : $move->accuracy ?></td>
-                    <td id='movePP<?= $key ?>'><?= $move->pp ?></td>
-                    <td id='moveEff<?= $key ?>'><?= $move->effect ?? "None" ?></td>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
     </div>
     </div>
 </div>
 </div>
+<form method="POST" action="select6.php" >
+    <input type="hidden" name="team" value='<?= serialize($team) ?>'>
 </body>
 </html>

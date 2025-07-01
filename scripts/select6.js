@@ -81,7 +81,7 @@ function getPageData() {
             switch (j) {
                 case 0:
                     pkmArr[i].push(elm[j].name);
-                    img = "./" + elm[j].currentSrc.split(/\/(?=dataFiles)/)[1];
+                    img = elm[j].src;
                     break;
                 case 1:
                     pkmArr[i].push(elm[j].innerHTML);

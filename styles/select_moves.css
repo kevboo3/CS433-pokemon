@@ -36,6 +36,9 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+    background-color: antiquewhite;
+    padding: 10px;
+    border: 5px ridge black;
 }
 
 .active-pokemon {
@@ -70,13 +73,21 @@ table.attr-table td {
 
 .moves-selection {
     text-align: center;
+    margin-top: 10px;
 }
 
 .moves-input {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 150px 150px;
     grid-template-rows: 1fr 1fr;
     gap: 2px;
+    text-align: center;
+    justify-content: center;
+}
+
+.moves-data {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
