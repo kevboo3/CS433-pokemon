@@ -21,6 +21,15 @@ $(function () {
         form.submit();
     });
 
+    document.getElementById("back").addEventListener("click", function () {
+        let form = document.createElement("form");
+        form.style.visibility = "hidden";
+        form.method = "POST";
+        form.action = "./proj3.html";
+        document.body.appendChild(form);
+        form.submit();
+    });
+
     document.getElementById("reroll").addEventListener("click", function () {
         let ids = [];
         for (let i = 0; i < TEAMSIZE; i++) {

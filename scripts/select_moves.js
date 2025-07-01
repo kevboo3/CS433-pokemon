@@ -20,6 +20,19 @@ $(function () {
         form.submit();
     });
 
+    document.getElementById("back").addEventListener("click", function () {
+        let form = document.createElement("form");
+        form.style.visibility = "hidden";
+        form.method = "POST";
+        form.action = "./select6.php";
+        let ipt = document.createElement("input");
+        ipt.name = "team";
+        ipt.value = JSON.stringify(team);
+        form.appendChild(ipt);
+        document.body.appendChild(form);
+        form.submit();
+    });
+
     for (let i = 0; i < TEAMSIZE; i++) {
         document.getElementById("pkm" + i).addEventListener("click", function () {
             if (i != curPkmIndex) {
@@ -28,6 +41,20 @@ $(function () {
             }
         });
     }
+
+    elm = document.getElementById("movesInput").children;
+    for (let i = 0; i < NUMMOVES; i++) {
+        elm[i].addEventListener("change", function (e) {
+            console.log(e);
+            console.log(e.target);
+            let index = e.target.id.at(-1);
+            e.target.selectedIndex = -1;
+            for (let j = 0; j < e.target.children.length; j++) {
+                if (e.target.children[j])
+            }
+        })
+    }
+
 });
 
 function updatePage(i) {

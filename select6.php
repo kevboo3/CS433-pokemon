@@ -2,22 +2,27 @@
 require "scripts/setup.php";  // Helper Functions   !!!CHAGE TO "scripts/utils.php" AFTER MOVING setup()!!!
 setup();                      // Setup DB           !!!MOVE TO PARENT PAGE WHEN READY!!!
 
-// Generate 6 random IDs between 1 and 151 excluding 132 (Ditto has no moves)
-$randIds = range(1, 151);
-unset($randIds[131]);
-shuffle($randIds);
-$randIds = array_slice($randIds, 0, TEAMSIZE);
-
-// Populate team
-$team = new Team(); 
-for ($i = 0; $i < TEAMSIZE; $i++) {     
-    $team->pkm[$i] = new Pokemon();
-    $team->pkm[$i]->id = $randIds[$i];  // Assign random ids to pokemon
+if (array_key_exists("team", $_POST)){
+    $team = json_decode($_POST["team"]);
 }
+else {
+    // Generate 6 random IDs between 1 and 151 excluding 132 (Ditto has no moves)
+    $randIds = range(1, 151);
+    unset($randIds[131]);
+    shuffle($randIds);
+    $randIds = array_slice($randIds, 0, TEAMSIZE);
 
-// Loads pokemon team data given a set of Pokedex Ids, 
-foreach ($randIds as $key => $id) {  // Iterates over team
-    $team->pkm[$key] = makePokemon($team->pkm[$key]->id);
+    // Populate team
+    $team = new Team(); 
+    for ($i = 0; $i < TEAMSIZE; $i++) {     
+        $team->pkm[$i] = new Pokemon();
+        $team->pkm[$i]->id = $randIds[$i];  // Assign random ids to pokemon
+    }
+
+    // Loads pokemon team data given a set of Pokedex Ids, 
+    foreach ($randIds as $key => $id) {  // Iterates over team
+        $team->pkm[$key] = makePokemon($team->pkm[$key]->id);
+    }
 }
 ?>
 
