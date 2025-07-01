@@ -155,9 +155,13 @@ $posMoves = $allMoves[0];
         </div>
     </div>
     </div>
+    <div class="center"> 
+    <div class="menu">
+        <button type="button" class="back" id="back">Back</button>
+        <button type="button" class="confirm" id="confirm">Confirm Moves</button>
+    </div>
+    </div> 
 </div>
 </div>
-<form method="POST" action="select6.php" >
-    <input type="hidden" name="team" value='<?= serialize($team) ?>'>
 </body>
 </html>

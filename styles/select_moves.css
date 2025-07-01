@@ -89,9 +89,11 @@ table.attr-table td {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 table.moves-table {
+    width: 90%;
     border: 1px solid black;
 }
 
