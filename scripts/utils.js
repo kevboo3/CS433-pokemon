@@ -1,5 +1,8 @@
 const NUMPKM = 151;
 const DITTO = 132;
+const TEAMSIZE = 6;
+const NUMSTATS = 7;
+const NUMMOVES = 4;
 
 class Attributes {
     constructor(total, hp, atk, def, spAtk, spDef, speed, legendary) {

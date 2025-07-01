@@ -42,6 +42,9 @@ $posMoves = $allMoves[0];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/select_moves.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/select_moves.js"></script>
     <title>Select your moves</title>
 </head>
 

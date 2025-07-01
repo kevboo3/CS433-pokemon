@@ -1,17 +1,14 @@
-const TEAMSIZE = 6;
-const STATSARR = ["total", "hp", "atk", "def", "spAtk", "spDef", "speed"];
-const NUMSTATS = STATSARR.length;
-const MAXLOCKED = 3;
+const MAXLOCKED = 5;
 
 var team = new Team(null);
 var locked = new Array(6).fill(false);
 var numLocked = 0;
 
 $(function () {
-    team.pkm = getPageData();
-    console.log(team.pkm[0]);
+    team = JSON.parse(document.getElementById("teamJSON").innerHTML);
+    console.log(team);
+
     document.getElementById("confirm").addEventListener("click", function () {
-        let json = JSON.stringify(team);
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
@@ -20,6 +17,15 @@ $(function () {
         ipt.name = "team";
         ipt.value = JSON.stringify(team);
         form.appendChild(ipt);
+        document.body.appendChild(form);
+        form.submit();
+    });
+
+    document.getElementById("back").addEventListener("click", function () {
+        let form = document.createElement("form");
+        form.style.visibility = "hidden";
+        form.method = "POST";
+        form.action = "./proj3.html";
         document.body.appendChild(form);
         form.submit();
     });
@@ -62,49 +68,6 @@ $(function () {
         });
     });
 })
-
-function getPageData() {
-    let pkmArr = [];
-    let attrArr = [];
-    for (let i = 0; i < TEAMSIZE; i++) {
-        attrArr.push([]);
-        let elm = document.getElementById("pkm" + i).children[1];
-        for (let j = 0; j < NUMSTATS; j++) {
-            attrArr[i].push(elm.children[j].innerHTML);
-        }
-        attrArr[i].push(null);
-        attrArr[i] = new Attributes(...attrArr[i]);
-        elm = document.getElementById("pkm" + i).children[0].children;
-        pkmArr.push([]);
-        let img = "";
-        for (let j = 0; j < elm.length; j++) {
-            switch (j) {
-                case 0:
-                    pkmArr[i].push(elm[j].name);
-                    img = elm[j].src;
-                    break;
-                case 1:
-                    pkmArr[i].push(elm[j].innerHTML);
-                    break;
-                case 2:
-                    pkmArr[i].push(elm[j].innerHTML.match(/(?<=typeIcons\/).+(?=.png)/g));
-                    if (pkmArr[i][j].length !== j) {
-                        pkmArr[i][j].push(null);
-                    }
-                    else {
-                        pkmArr[i][j][1] = pkmArr[i][j][1].charAt(0).toUpperCase() + pkmArr[i][j][1].slice(1);
-                    }
-                    pkmArr[i][j][0] = pkmArr[i][j][0].charAt(0).toUpperCase() + pkmArr[i][j][0].slice(1);
-                    break;
-                default:
-                    console.log("Switch Statement Error! Unmatched Case " + j);
-            }
-        }
-        pkmArr[i].push(attrArr[i], attrArr[i][1], null, null, img);
-        pkmArr[i] = new Pokemon(...pkmArr[i]);
-    }
-    return pkmArr;
-}
 
 function setPokemon(newPkm) {
     let curNew = 0;
