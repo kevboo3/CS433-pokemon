@@ -1,38 +1,25 @@
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    border-style: ridge;
-    border-color: black;
-    background: #d0d0d0;
-    padding: 10px;
-    width: 80%;
-    margin: 0 auto;
-    font-size: 20px;
-}
-
 .team {
     display: flex;
-    flex-direction: row;
-    width: 454px;
+    flex-direction: column;
+    text-align: center;
 }
 
 .pokemon-buttons {
     display: grid;
     grid-template-columns: 150px 150px 150px;
     grid-template-rows: 20px 150px 20px 150px;
-    gap: 2px;
+    gap: 0px 5px;
     text-align: center;
+    background-color: antiquewhite;
+    padding: 10px;
+    border: 5px ridge black;
 }
 
 .pokemon-buttons button {
     display: table-cell;
     background-size: 150px;
     cursor: pointer;
-    border-style: ridge;
-    border-color: black;
-    border-radius: 5px;
+    border: 3px solid black;
 }
 
 #nameTxt {
@@ -45,25 +32,28 @@
 }
 
 .current-pokemon {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .active-pokemon {
+    height: 350px;
     width: 350px;
-    width: 350px;
-    border-style: ridge;
+    border-style: solid;
     border-color: black;
     border-radius: 10px;
 }
 
 .curr-name-type {
+    display: flex;
     justify-content: space-between;
-    text-align: unset;
+    width: 455px
 }
 
 table.attr-table {
-    width: 454px;
+    width: 455px;
     border: 1px solid black;
 }
 
@@ -103,4 +93,10 @@ table.moves-table th,
 table.moves-table td {
     text-align: center;
     border: 1px solid black;
+}
+
+.top-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

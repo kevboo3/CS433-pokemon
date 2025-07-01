@@ -1,22 +1,9 @@
-body {
-    background-color: #c52921;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-
-h1 {
-    color: #0a000f;
-    text-align: center;
-    font-size: 30px;
-}
-
 .bor {
     border-style: ridge;
     border-color: black;
     background: #d0d0d0;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     font-size: 20px;
     display: flex;
@@ -34,18 +21,20 @@ h1 {
     display: flex;
     gap: 8px;
 }
+
 .entry {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: white;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     margin: 6px auto 0px;
     font-size: 18px;
     border-radius: 4px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     box-sizing: unset;
+    cursor: pointer;
 }
 
 .entry .left {
@@ -64,7 +53,7 @@ h1 {
 
 .entry .name {
     font-weight: bold;
-    min-width: 100px;
+    width: 110px;
 }
 
 .entry .types {
@@ -97,4 +86,36 @@ img {
     border-color: black;
     border-radius: 10px;
     text-align: center;
+}
+
+.locked {
+    background-color: forestgreen;
+}
+
+.menu {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu button {
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    box-sizing: unset;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.back {
+    background-color: #CF0E0E;
+}
+
+.reroll {
+    background-color: #920ECF;
+}
+
+.confirm {
+    background-color: #130BC5;
 }

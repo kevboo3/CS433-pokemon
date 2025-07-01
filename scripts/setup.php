@@ -114,7 +114,7 @@ function setup() {
         while(!feof($file)) {                                    // Read move_data.csv
             $dataArr = explode(",", fgets($file));
             $dataArr[2] = trim($dataArr[2]);                     // Remove whitespace
-            $dataArr[6] = str_replace("$", ",", trim(trim($dataArr[6]), '"')) ?: NULL;  // Remove whitespace and quotes
+            $dataArr[6] = str_replace("$", ", ", trim(trim($dataArr[6]), '"')) ?: NULL;  // Remove whitespace and quotes
             $dataArr[8] = trim($dataArr[8]) ?: NULL;
             $pdo->prepare($sql)->execute($dataArr);
         }

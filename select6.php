@@ -14,25 +14,11 @@ for ($i = 0; $i < TEAMSIZE; $i++) {
     $team->pkm[$i] = new Pokemon();
     $team->pkm[$i]->id = $randIds[$i];  // Assign random ids to pokemon
 }
-conLog("Random IDs: " . implode(", ", $randIds));
-$allMoves = [NULL, NULL, NULL, NULL, NULL, NULL];  // Array of possible moves for each pokemon
-
-// Connect to database
-$pdo = makePDO();
 
 // Loads pokemon team data given a set of Pokedex Ids, 
-for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
-    $stmt = $pdo->prepare("SELECT * FROM Pokedex WHERE Id = " . $team->pkm[$i]->id);
-    $stmt->execute();
-    $rslt = $stmt->fetchAll(PDO::FETCH_NUM)[0];
-    $pkm = $team->pkm[$i];
-    $pkm->name = $rslt[1];
-    $pkm->types = array_slice($rslt, 2, 2);
-    $pkm->attr = arr2attr(array_slice($rslt, 4));
-    $pkm->hp = $pkm->attr->hp;
-    $pkm->img = FPATH . IPATH . int2id($pkm->id) . str_replace(" ", "_", str_replace("'", "&#39", $pkm->name)) . ".png";
+foreach ($randIds as $key => $id) {  // Iterates over team
+    $team->pkm[$key] = makePokemon($id);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -42,47 +28,62 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
     <title>Choose your Pokémon</title>
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/select6.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/select6.js"></script>
 </head>
 <body>
-    <h1>Choose Your Team</h1>
-    <!-- Header row -->
-    <div class="bor header-row">
-        <span class="left">Name Types</span>
-        <span class="right">
-            <?php foreach ($team->pkm[0]->attr as $key => $stat): ?>
-                <?php if ($key != "legendary"): ?>
-                    <span class="stat <?= $key ?>-stat"><?= ucfirst($key) ?></span>
-                <?php endif; ?>
+<div class="center">           <!-- Center block of content -->
+<div class="container">        <!-- Pokedex Grey Border -->
+    <h1>Choose Your Team</h1> 
+    <div class="center">       <!-- Center block of content -->
+    <div class="screen">       <!-- Pokedex Screen -->
+    <!-- Screen Content -->
+            <div class="bor header-row">
+                <span class="left">Pokemon Types</span>
+                <span class="right">
+                    <?php foreach ($team->pkm[0]->attr as $key => $stat): ?>
+                        <?php if ($key != "legendary"): ?>
+                            <span class="stat <?= $key ?>-stat"><?= ucfirst($key) ?></span>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </span>
+            </div>
+            <?php foreach ($team->pkm as $i => $pkm): ?>
+                <button type="button" class="entry" id="pkm<?= $i ?>">
+                    <div class="left">
+                        <img src="<?= $pkm->img ?>" name="<?= $pkm->id ?>">
+                        <span class="name"><?= $pkm->name ?></span>
+                        <span class="types">
+                            <?php foreach ($pkm->types as $type): ?>
+                                <?php if ($type): ?>
+                                    <img class="type-icon"
+                                            src="<?= FPATH . TPATH . strtolower($type) ?>.png"
+                                            alt="<?= $type ?>">
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </span>
+                    </div>
+                    <div class="right">
+                        <?php foreach ($pkm->attr as $j => $stat): ?>
+                            <?php if ($j != "legendary"): ?>
+                                <span class="stat <?= $j ?>-stat" name="stat<?= $j ?>"><?= $stat ?></span>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                </button>
             <?php endforeach; ?>
-        </span>
     </div>
-    <!-- Pokémon entries randomized now -->
-   <?php foreach ($team->pkm as $pkm): ?>
-    <button type="submit" class="entry"
-        onmouseover="this.style.background='yellow';"
-        onmouseout="this.style.background='white';">
-        <div class="left">
-            <img src="<?= $pkm->img ?>" alt="<?= $pkm->name ?>">
-            <span class="name"><?= $pkm->name ?></span>
-            <span class="types">
-                <?php foreach ($pkm->types as $type): ?>
-                    <?php if ($type): ?>
-                        <img class="type-icon"
-                                src="<?= FPATH . TPATH . strtolower($type) ?>.png"
-                                alt="<?= $type ?>">
-                    <?php endif; ?>
-                <?php endforeach; ?>
-            </span>
-        </div>
-        <div class="right">
-            <?php foreach ($pkm->attr as $key => $stat): ?>
-                <?php if ($key != "legendary"): ?>
-                    <span class="stat <?= $key ?>-stat"><?= $stat ?></span>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
-    </button>
-<?php endforeach; ?>
+    </div>
+    <div class="center"> 
+    <div class="menu">
+        <button type="button" class="back" id="back">Back</button>
+        <button type="button" class="reroll" id="reroll">Reroll Pokemon</button>
+        <button type="button" class="confirm" id="confirm">Confirm Team</button>
+    </div>
+    </div> 
+</div>
+</div>
 <form method="POST" action="select_moves.php" >
     <input type="hidden" name="team" value='<?= serialize($team) ?>'>
 </form>

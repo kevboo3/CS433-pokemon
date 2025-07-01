@@ -86,4 +86,19 @@ function arr2move($arr) {
     }
     return $move;
 }
+
+function makePokemon($id) {
+    $pdo = makePDO();
+    $stmt = $pdo->prepare("SELECT * FROM Pokedex WHERE Id = " . $id);
+    $stmt->execute();
+    $rslt = $stmt->fetchAll(PDO::FETCH_NUM)[0];
+    $pkm = new Pokemon();
+    $pkm->id = $id;
+    $pkm->name = $rslt[1];
+    $pkm->types = array_slice($rslt, 2, 2);
+    $pkm->attr = arr2attr(array_slice($rslt, 4));
+    $pkm->hp = $pkm->attr->hp;
+    $pkm->img = FPATH . IPATH . int2id($pkm->id) . str_replace(" ", "_", $pkm->name) . ".png";
+    return $pkm;
+}
 ?>
