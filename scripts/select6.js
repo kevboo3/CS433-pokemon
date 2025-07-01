@@ -7,6 +7,7 @@ var numLocked = 0;
 $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
     console.log(team);
+
     document.getElementById("confirm").addEventListener("click", function () {
         let form = document.createElement("form");
         form.style.visibility = "hidden";

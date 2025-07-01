@@ -7,6 +7,19 @@ $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
     allMoves = JSON.parse(document.getElementById("movesJSON").innerHTML);
 
+    document.getElementById("confirm").addEventListener("click", function () {
+        let form = document.createElement("form");
+        form.style.visibility = "hidden";
+        form.method = "POST";
+        form.action = "./battle.php";
+        let ipt = document.createElement("input");
+        ipt.name = "team";
+        ipt.value = JSON.stringify(team);
+        form.appendChild(ipt);
+        document.body.appendChild(form);
+        form.submit();
+    });
+
     for (let i = 0; i < TEAMSIZE; i++) {
         document.getElementById("pkm" + i).addEventListener("click", function () {
             if (i != curPkmIndex) {
@@ -25,6 +38,34 @@ function updatePage(i) {
     elm = document.getElementById("attrTableBR").children;
     for (let j = 0; j < NUMSTATS; j++) {
         elm[j].innerHTML = Object.values(team.pkm[i].attr)[j];
+    }
+
+    elm = document.getElementById("movesInput").children;
+    for (let j = 0; j < NUMMOVES; j++) {
+        elm[j].innerHTML = "";
+        let opt = document.createElement("option");
+        opt.selected = "selected";
+        if (team.pkm[i].moves[j].name) {
+            opt.innerHTML = team.pkm[i].moves[j].name;
+        }
+        else {
+            opt.innerHTML = "None";
+        }
+        elm[j].appendChild(opt);
+    }
+    for (let j = 0; j < NUMMOVES; j++) {
+        for (let k = 0; k < allMoves[i].length; k++) {
+            if (!team.pkm[i].moves.some(move => move.name == allMoves[i][k].name)) {
+                let opt = document.createElement("option");
+                opt.innerHTML = allMoves[i][k].name;
+                elm[j].appendChild(opt);
+            }
+            if (!team.pkm[i].moves.some(move => move.name != "None") {
+                let opt = document.createElement("option");
+                opt.innerHTML = "None";
+                elm[j].appendChild(opt);
+            }
+        }
     }
 
 
@@ -51,5 +92,4 @@ function updatePage(i) {
         }
         elm.appendChild(tr);
     }
-    console.log(elm);
 }

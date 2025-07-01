@@ -68,7 +68,7 @@ $posMoves = $allMoves[0];
                 </span>
             <div class="moves-selection">
             <span>Selected Moves:</span>
-            <div class="moves-input">
+            <div id="movesInput" class="moves-input">
             <?php foreach ($curPkm->moves as $i => $curMove): ?>
                 <select id='move <?= $i ?>'>
                 <?php foreach ($posMoves as $j => $posMove):
