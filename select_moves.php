@@ -81,7 +81,7 @@ $posMoves = $allMoves[0];
                         }
                     }
                     if ($valid):  ?>
-                        <option <?= $j === 0 ? "selected='selected'" : "" ?>> <?= $posMove->name ?></option>
+                        <option <?= $j === 0 ? "selected" : "" ?>><?= $posMove->name ?></option>
                     <?php endif; ?>
                 <?php endforeach; ?>
                 <?php foreach ($curPkm->moves as $move):
