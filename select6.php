@@ -84,8 +84,6 @@ foreach ($randIds as $key => $id) {  // Iterates over team
     </div> 
 </div>
 </div>
-<form method="POST" action="select_moves.php" >
-    <input type="hidden" name="team" value='<?= serialize($team) ?>'>
 </form>
 </body>
 </html>
