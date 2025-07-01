@@ -48,9 +48,12 @@ $(function () {
             console.log(e);
             console.log(e.target);
             let index = e.target.id.at(-1);
+            console.log(e.target.selectedIndex);
             e.target.selectedIndex = -1;
             for (let j = 0; j < e.target.children.length; j++) {
-                if (e.target.children[j])
+                if (e.target.children[j]) {
+
+                }
             }
         })
     }
