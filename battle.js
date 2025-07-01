@@ -12,33 +12,100 @@ isPlayer1TeamDead = false;
 */
 function printTeam(session) {
   for (i = 0; i < 6; i++) {
-    console.log(" pokemon " + i + " name: " + " " + session.team.pkm[i].name);
-    console.log(" pokemon " + i + " type 1: " + session.team.pkm[i].types[0]);
-    console.log(" pokemon " + i + " type 2: " + session.team.pkm[i].types[1]);
+    console.log(" pokemon " + i + " name: " + " " + session.team[i].Name);
+
+    console.log(
+      " pokemon " +
+        i +
+        " attributes: " +
+        "attack: " +
+        session.team[i].Attr.Att +
+        " hp: " +
+        session.team[i].Attr.Hp +
+        " def: " +
+        session.team[i].Attr.Def +
+        " spAtt: " +
+        session.team[i].Attr.SpAtt +
+        " spDef: " +
+        session.team[i].Attr.SpDef +
+        " speed: " +
+        session.team[i].Attr.Speed +
+        " legendary: " +
+        session.team[i].Attr.Legendary +
+        " Type1: " +
+        session.team[i].Attr.Type1 +
+        " Type2: " +
+        session.team[i].Attr.Type2 +
+        " Total: " +
+        session.team[i].Attr.Total
+    );
+    console.log(" pokemon " + i + " hp: " + " " + session.team.Hp);
+    console.log(" pokemon " + i + " status: " + " " + session.team.Status);
+    console.log(" ==pokemon " + i + " moves== ");
+
+    //[!] consider none moves
+    for (k = 0; k < 4; k++) {
+      console.log(
+        " pokemon " +
+          i +
+          " move " +
+          k +
+          " name: " +
+          session.team[i].Moves[k].Name +
+          " type: " +
+          session.team[i].Moves[k].Type +
+          " category: " +
+          session.team[i].Moves[k].Category +
+          " power: " +
+          session.team[i].Moves[k].Power +
+          " accuracy: " +
+          session.team[i].Moves[k].Accuracy +
+          " pp: " +
+          session.team[i].Moves[k].PP +
+          " effect: " +
+          session.team[i].Moves[k].Effect
+      );
+    }
+    console.log("pokemon " + i + " img: " + session.team[i].Img);
+    console.log("=============================== ");
+  }
+}
+
+function printEnemyTeam(session) {
+  for (i = 0; i < 6; i++) {
+    console.log(
+      " pokemon " + i + " name: " + " " + session.enemyTeam.pkm[i].name
+    );
+    console.log(
+      " pokemon " + i + " type 1: " + session.enemyTeam.pkm[i].types[0]
+    );
+    console.log(
+      " pokemon " + i + " type 2: " + session.enemyTeam.pkm[i].types[1]
+    );
     console.log(
       " pokemon " +
         i +
         " attributes: " +
         "total: " +
-        session.team.pkm[i].attr.total +
+        session.enemyTeam.pkm[i].attr.total +
         " hp: " +
-        session.team.pkm[i].attr.hp +
+        session.enemyTeam.pkm[i].attr.hp +
         " atk: " +
-        session.team.pkm[i].attr.atk +
+        session.enemyTeam.pkm[i].attr.atk +
         " def: " +
-        session.team.pkm[i].attr.def +
+        session.enemyTeam.pkm[i].attr.def +
         " spAtk: " +
-        session.team.pkm[i].attr.spAtk +
+        session.enemyTeam.pkm[i].attr.spAtk +
         " spDef: " +
-        session.team.pkm[i].attr.spDef +
+        session.enemyTeam.pkm[i].attr.spDef +
         " speed: " +
-        session.team.pkm[i].attr.speed +
+        session.enemyTeam.pkm[i].attr.speed +
         " legendary: " +
-        session.team.pkm[i].attr.legendary
+        session.enemyTeam.pkm[i].attr.legendary
     );
-    console.log(" pokemon " + i + " hp: " + " " + session.team.pkm[i].hp);
+    console.log(" pokemon " + i + " hp: " + " " + session.enemyTeam.pkm[i].hp);
     console.log(
-      " pokemon " + i + " status: " + " " + session.team.pkm[i].status
+      " pokemon " + i + " status: " + " " + session.enemyTeam.pkm[i].status
     );
     console.log(" ==pokemon " + i + " moves== ");
 
@@ -50,42 +117,49 @@ function printTeam(session) {
           " move " +
           k +
           " name: " +
-          session.team.pkm[i].moves[k].name +
+          session.enemyTeam.pkm[i].moves[k].name +
           " type: " +
-          session.team.pkm[i].moves[k].type +
+          session.enemyTeam.pkm[i].moves[k].type +
           " category: " +
-          session.team.pkm[i].moves[k].category +
+          session.enemyTeam.pkm[i].moves[k].category +
           " power: " +
-          session.team.pkm[i].moves[k].power +
+          session.enemyTeam.pkm[i].moves[k].power +
           " accuracy: " +
-          session.team.pkm[i].moves[k].accuracy +
+          session.enemyTeam.pkm[i].moves[k].accuracy +
           " pp: " +
-          session.team.pkm[i].moves[k].pp +
+          session.enemyTeam.pkm[i].moves[k].pp +
           " effect: " +
-          session.team.pkm[i].moves[k].effect
+          session.enemyTeam.pkm[i].moves[k].effect
       );
     }
-    console.log("pokemon " + i + " img: " + session.team.pkm[i].img);
+    console.log("pokemon " + i + " img: " + session.enemyTeam.pkm[i].img);
     console.log("=============================== ");
   }
 }
+
 async function initBattle() {
-  const json = "./encode_session.php";
+  // const json = "./encode_session.php";
+
+  team = JSON.parse(document.getElementById("teamJSON")).innerHTML;
+  console.log("team");
 
   //check if the json file can be reached
-  try {
-    // fetch is used for making http request and since are ssession is at a link we an access it
-    const response = await fetch(json);
+  // try {
+  //   // fetch is used for making http request and since are ssession is at a link we an access it
+  //   const response = await fetch(json);
 
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-    //parse encoded json
-    const session = await response.json();
-    printTeam(session);
-  } catch (error) {
-    console.log("Error:", error);
-  }
+  //   if (!response.ok) {
+  //     throw new Error(`Response status: ${response.status}`);
+  //   }
+  //   //parse encoded json
+  //   const session = await response.json();
+  //   // printTeam(session);
+  //   // printEnemyTeam(session);
+  //   console.log(session);
+  //   // document.getElementById("pokemon1-name").innerHTML = "";
+  // } catch (error) {
+  //   console.log("Error:", error);
+  // }
 }
 
 initBattle();
