@@ -34,6 +34,34 @@ h1 {
     margin: 20px;
 }
 
+.menu {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu button {
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    box-sizing: unset;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.back {
+    background-color: #CF0E0E;
+}
+
+.reroll {
+    background-color: #920ECF;
+}
+
+.confirm {
+    background-color: #130BC5;
+}
+
 .type-icon {
     width: 48px;
     height: 20px;
