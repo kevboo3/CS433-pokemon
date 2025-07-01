@@ -60,9 +60,9 @@ function updatePage(i) {
                 opt.innerHTML = allMoves[i][k].name;
                 elm[j].appendChild(opt);
             }
-            if (!team.pkm[i].moves.some(move => move.name != "None") {
+            if (!team.pkm[i].moves.some(move => move.name != "None")) {
                 let opt = document.createElement("option");
-                opt.innerHTML = "None";
+                opt.innerHTML = "";
                 elm[j].appendChild(opt);
             }
         }
