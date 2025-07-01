@@ -1,6 +1,6 @@
 <?php
 // Start the session
-session_start();
+$team = json_decode($_POST["team"]);
 ?>
 
 
@@ -31,7 +31,7 @@ session_start();
                 <div class="pokemon-health-display">
                     <p class="pokemon1-name">Squirtle <small>L5</small></p>
                     <div class="w3-light-grey w3-round-large" style="width:100%;">
-                        <div class="w3-container w3-green w3-round-xlarge" style="width:20%">20%</div>
+                        <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@ session_start();
                 <div class="pokemon-health-display pokemon2-health">
                     <p class="pokemon2-name">Charmander <small>L6</small></p>
                     <div class="w3-light-grey w3-round-large" style="width:100%;">
-                        <div class="w3-container w3-green w3-round-xlarge" style="width:80%">80%</div>
+                        <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@ session_start();
     </div>
 
 
-
+    <div id="teamJSON" hidden><?= json_encode($team) ?></div>
 </body>
 
 </html>
