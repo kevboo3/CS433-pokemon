@@ -45,16 +45,23 @@ $(function () {
     elm = document.getElementById("movesInput").children;
     for (let i = 0; i < NUMMOVES; i++) {
         elm[i].addEventListener("change", function (e) {
-            console.log(e);
-            console.log(e.target);
             let index = e.target.id.at(-1);
-            console.log(e.target.selectedIndex);
-            e.target.selectedIndex = -1;
+            let old;
             for (let j = 0; j < e.target.children.length; j++) {
-                if (e.target.children[j]) {
-
+                if (e.target.children[j].hasAttribute("selected")) {
+                    old = e.target.children[j].innerHTML;
+                }
+                if (e.target.children[j].innerHTML == e.target.value) {
+                    e.target.children[j].setAttribute("selected", "");   
                 }
             }
+            boxes = document.getElementById("movesInput").children;
+            for (let j = 0; j < NUMMOVES; j++) {
+                if (j != index) {
+                    boxes[j].remo
+                } 
+            }
+            console.log(e.target);
         })
     }
 

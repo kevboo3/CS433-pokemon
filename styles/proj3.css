@@ -12,7 +12,7 @@ body {
   width: 100%;
   z-index: -1;
 
-  background: url('./images/background2.jpg') no-repeat; /* made a change to file path*/
+  background: url('../dataFiles/images/background2.jpg') no-repeat; /* made a change to file path*/
   background-size: cover;
   filter: blur(3px);
 

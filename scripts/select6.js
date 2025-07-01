@@ -6,7 +6,6 @@ var numLocked = 0;
 
 $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
-    console.log(team);
 
     document.getElementById("confirm").addEventListener("click", function () {
         let form = document.createElement("form");
@@ -34,7 +33,7 @@ $(function () {
         let ids = [];
         for (let i = 0; i < TEAMSIZE; i++) {
             if (locked[i]) {
-                ids.push(team.pkm[i].id);
+                ids.push(parseInt(team.pkm[i].id));
             }
         }
         let newIds = [];
@@ -46,6 +45,8 @@ $(function () {
             while (newIds.includes(n) || ids.includes(n));
             newIds.push(n);
         }
+        console.log(ids);
+        console.log(newIds);
         newIds = newIds.join(",");
         $.get("./scripts/get_pokemon.php", { "ids": newIds }, setPokemon, "json");
     });
@@ -63,7 +64,7 @@ $(function () {
                 numLocked++;
             }
             else if (numLocked === MAXLOCKED) {
-                window.alert("Only 3 Pokemon can be locked at a time!");
+                window.alert("Only 5 Pokemon can be locked at a time!");
             }
         });
     });
