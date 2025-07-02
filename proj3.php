@@ -24,7 +24,7 @@ else {
 </head>
 <body>
 <audio id="bgMusic" muted loop hidden>
-    <source src="dataFiles/audio/songs/Pokemon_HeartGold_&_SoulSilver_OST.mp3">
+    <source src="dataFiles/audio/songs/Pokémon_X &_Y_-_Title_Screen_(HQ).mp3">
 </audio>
 <audio id="btnClk" muted hidden>
     <source src="dataFiles/audio/songs/Button.mp3">

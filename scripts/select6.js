@@ -7,6 +7,7 @@ var numLocked = 0;
 
 $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
+
     volume = JSON.parse(document.getElementById("volumeJSON").innerHTML);
     muted = JSON.parse(document.getElementById("mutedJSON").innerHTML);
 
@@ -51,6 +52,7 @@ $(function () {
         ipt.value = muted;
         form.appendChild(ipt);
         document.body.appendChild(form);
+
         form.submit();
     });
 
@@ -73,6 +75,7 @@ $(function () {
         ipt.value = JSON.stringify(muted);
         form.appendChild(ipt);
         document.body.appendChild(form);
+
         form.submit();
     });
 

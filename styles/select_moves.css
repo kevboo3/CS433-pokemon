@@ -52,12 +52,16 @@
 .curr-name-type {
     display: flex;
     justify-content: space-between;
-    width: 455px
+    width: 455px;
+    height: 25px;
+    padding-top: 5px;
 }
 
 table.attr-table {
     width: 455px;
+    line-height: 20px;
     border: 1px solid black;
+    font-size: 12px;
 }
 
 table.attr-table thead,
@@ -69,6 +73,8 @@ table.attr-table th,
 table.attr-table td {
     text-align: center;
     border: 1px solid black;
+    padding: 100px, 100px;
+    margin: 100px, 100px;
 }
 
 .moves-selection {
