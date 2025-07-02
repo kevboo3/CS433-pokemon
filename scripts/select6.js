@@ -1,4 +1,5 @@
 const MAXLOCKED = 5;
+const BGSCALER = 0.3;
 
 var team = new Team(null);
 var locked = new Array(6).fill(false);
@@ -8,9 +9,26 @@ $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
     volume = JSON.parse(document.getElementById("volumeJSON").innerHTML);
     muted = JSON.parse(document.getElementById("mutedJSON").innerHTML);
-    console.log(muted);
-    console.log(typeof muted);
+
+    music = document.getElementById('bgMusic');
+    music.volume = volume * VSCALER * BGSCALER;
+    music.muted = muted;
+    click = document.getElementById('btnClk');
+    click.volume = volume * VSCALER;
+    click.muted = muted;
+
+    if (!muted) {
+        music.play();
+    }
+
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => {
+            playSound(click, muted);
+        });
+    });
+
     document.getElementById("confirm").addEventListener("click", function () {
+        playSound(click, muted);
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
@@ -37,6 +55,7 @@ $(function () {
     });
 
     document.getElementById("back").addEventListener("click", function () {
+        playSound(click, muted);
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
@@ -96,7 +115,50 @@ $(function () {
             }
         });
     });
-})
+
+    document.getElementById("sound").addEventListener("click", function () {
+        if (muted) {
+            music.muted = false;
+            click.muted = false;
+            muted = false;
+            music.currentTime = 0;
+            music.play();
+        }
+        else {
+            music.muted = true;
+            click.muted = true;
+            muted = true;
+        }
+    });
+
+    document.getElementById("up").addEventListener("click", function () {
+        if (!muted) {
+            volume = volume + 5;
+
+            if (volume > MAXV) {
+                window.alert("Max Volume");
+            }
+            else {
+                music.volume = volume * VSCALER * BGSCALER;
+                click.volume = volume * VSCALER;
+            }
+        }
+    });
+
+    document.getElementById("down").addEventListener("click", function () {
+        if (!muted) {
+            volume = volume - 5;
+
+            if (volume < MINV) {
+                window.alert("Minimum Volume");
+            }
+            else {
+                music.volume = volume * VSCALER * BGSCALER;
+                click.volume = volume * VSCALER;
+            }
+        }
+    });
+});
 
 function setPokemon(newPkm) {
     let curNew = 0;

@@ -35,11 +35,18 @@ $muted = $_POST["muted"];
     <title>Choose your Pokémon</title>
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/select6.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./scripts/utils.js"></script>
     <script src="./scripts/select6.js"></script>
 </head>
 <body>
+<audio id="bgMusic" muted loop hidden>
+    <source src="dataFiles/audio/songs/Route 8-XY.mp3">
+</audio>
+<audio id="btnClk" muted hidden>
+    <source src="dataFiles/audio/songs/Button.mp3">
+</audio>
 <div class="center">           <!-- Center block of content -->
 <div class="container">        <!-- Pokedex Grey Border -->
     <h1>Choose Your Team</h1> 
@@ -85,6 +92,9 @@ $muted = $_POST["muted"];
     <div class="center"> 
     <div class="menu">
         <button type="button" class="back" id="back">Back</button>
+        <button id="sound">Toggle Sound</button>
+        <button id="up">Volume Up</button>
+        <button id="down">Volume Down</button>
         <button type="button" class="reroll" id="reroll">Reroll Pokemon</button>
         <button type="button" class="confirm" id="confirm">Confirm Team</button>
     </div>

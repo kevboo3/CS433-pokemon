@@ -10,36 +10,26 @@ $(function () {
 
     if (muted === 1) {
         muted = true;
-        music.muted = muted;
-        click.muted = muted;
+        
     }
     else if (muted === 0) {
         muted = false;
-        music.muted = muted;
-        click.muted = muted;
     }
     else {
-        music.muted = muted;
-        click.muted = muted;
         if (!muted) {
             music.play();
         }
     }
+    music.muted = muted;
+    click.muted = muted;
 
     document.getElementById("button-container").addEventListener("click", function () {
-        if (!muted) {
-            if (!click.paused) { 
-                click.pause(); 
-                click.currentTime = 0; 
-                click.play(); 
-            } else {
-                click.play(); 
-            }
-        }
+        playSound(click, muted);
     });
 
     // Posts team data to batttle.php via form
     document.getElementById("start-btn").addEventListener("click", function () {
+        playSound(click, muted);
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
