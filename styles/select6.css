@@ -5,19 +5,20 @@
     padding: 10px;
     width: 90%;
     margin: 0 auto;
-    font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .bor .left {
-    padding-left: 50px;
+    font-size: 15px;
+    padding-left: 40px;
     text-align: left;
-    word-spacing: 60px;
+    word-spacing: 35px;
 }
 
 .bor .right {
+    font-size: 12px;
     display: flex;
     gap: 8px;
 }

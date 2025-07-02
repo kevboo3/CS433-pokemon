@@ -1,6 +1,15 @@
 <?php
 require "scripts/setup.php";
 setup();                      // Setup DB
+
+if (isset($_POST["volume"])) {
+    $volume = $_POST["volume"];
+    $muted = $_POST["muted"];
+}
+else {
+    $volume = 50;
+    $muted = true;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +40,7 @@ setup();                      // Setup DB
         <button id="down">Volume Down</button>
     </div>
 </div>
-
+<div id="volumeJSON" hidden><?= $volume ?></div>
+<div id="mutedJSON" hidden><?= $muted ?></div>
 </body>
 </html>

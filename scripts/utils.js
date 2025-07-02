@@ -64,3 +64,15 @@ function genId() {
     while (n == DITTO);
     return n;
 }
+
+function playSound(sound, muted) {
+    if (!muted) {
+        if (!sound.paused) {
+            sound.pause();
+            sound.currentTime = 0;
+            sound.play();
+        } else {
+            sound.play();
+        }
+    }
+}

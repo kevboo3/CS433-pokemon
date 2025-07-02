@@ -1,6 +1,6 @@
 body {
     background-color: #c52921;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 20px 0px;
 }
@@ -41,27 +41,26 @@ h1 {
 }
 
 .menu button {
-    color: white;
-    font-weight: bolder;
-    font-size: large;
+    background-color: #ffcb05;
+    color: #3b4cca;
+    border: 3px solid #3b4cca;
     box-sizing: unset;
     width: 150px;
     height: 50px;
-    border-radius: 50px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
-.back {
-    background-color: #CF0E0E;
+.menu button:hover {
+    background-color: #3b4cca;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #fff;
 }
-
-.reroll {
-    background-color: #920ECF;
-}
-
-.confirm {
-    background-color: #130BC5;
-}
-
 .type-icon {
     width: 48px;
     height: 20px;
@@ -158,12 +157,12 @@ h1 {
     border: #E86412;
 }
 
-.spatk-stat {
+.spAtk-stat {
     background-color: #14C3F1;
     border: #14C3F1;
 }
 
-.spdef-stat {
+.spDef-stat {
     background-color: #4A6ADF;
     border: #4A6ADF;
 }
