@@ -54,7 +54,6 @@ $(function () {
             let index = e.target.id.at(-1);
             let old;
 
-
             // Change selected box
             for (let j = 0; j < e.target.children.length; j++) {         // Iterate over all options
                 if (e.target.children[j].hasAttribute("selected")) {     // Remove old selection
@@ -127,9 +126,15 @@ $(function () {
                     }
                 } 
             }
+            // Update team object
+            for (let j = 0; j < allMoves[curPkmIndex].length; j++) {
+                if (allMoves[curPkmIndex][j].name == e.target.value) {
+                    team.pkm[curPkmIndex].moves[index] = allMoves[curPkmIndex][j];
+                    break;
+                }
+            }
         })
     }
-
 });
 
 function updatePage(i) {
