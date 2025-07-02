@@ -6,15 +6,31 @@ var numLocked = 0;
 
 $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
-
+    volume = JSON.parse(document.getElementById("volumeJSON").innerHTML);
+    muted = JSON.parse(document.getElementById("mutedJSON").innerHTML);
+    console.log(muted);
+    console.log(typeof muted);
     document.getElementById("confirm").addEventListener("click", function () {
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
         form.action = "./select_moves.php";
+
         let ipt = document.createElement("input");
         ipt.name = "team";
         ipt.value = JSON.stringify(team);
+        form.appendChild(ipt);
+        document.body.appendChild(form);
+
+        ipt = document.createElement("input");
+        ipt.name = "volume";
+        ipt.value = JSON.stringify(volume);
+        form.appendChild(ipt);
+        document.body.appendChild(form);
+
+        ipt = document.createElement("input");
+        ipt.name = "muted";
+        ipt.value = muted;
         form.appendChild(ipt);
         document.body.appendChild(form);
         form.submit();
@@ -24,7 +40,19 @@ $(function () {
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
-        form.action = "./proj3.html";
+        form.action = "./proj3.php";
+        document.body.appendChild(form);
+
+        ipt = document.createElement("input");
+        ipt.name = "volume";
+        ipt.value = JSON.stringify(volume);
+        form.appendChild(ipt);
+        document.body.appendChild(form);
+
+        ipt = document.createElement("input");
+        ipt.name = "muted";
+        ipt.value = JSON.stringify(muted);
+        form.appendChild(ipt);
         document.body.appendChild(form);
         form.submit();
     });

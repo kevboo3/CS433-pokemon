@@ -23,6 +23,9 @@ else {
         $team->pkm[$key] = makePokemon($team->pkm[$key]->id);
     }
 }
+
+$volume = $_POST["volume"];
+$muted = $_POST["muted"];
 ?>
 
 <!DOCTYPE html>
@@ -89,5 +92,7 @@ else {
 </div>
 </div>
 <div id="teamJSON" hidden><?= json_encode($team) ?></div>
+<div id="volumeJSON" hidden><?= $volume ?></div>
+<div id="mutedJSON" hidden><?= $muted ?></div>
 </body>
 </html>
