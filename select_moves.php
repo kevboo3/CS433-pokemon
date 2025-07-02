@@ -71,19 +71,19 @@ $posMoves = $allMoves[0];
             <div id="movesInput" class="moves-input">
             <?php foreach ($curPkm->moves as $i => $curMove): ?>
                 <select id='move<?= $i ?>'>
-                <?php foreach ($posMoves as $j => $posMove):
+                <?php for ($j = 0; $j < count($posMoves); $j++):
                     $valid = True;
                     foreach ($curPkm->moves as $move) {
-                        if ($move->name == $posMove->name
-                            and $curMove->name != $posMove->name) {
+                        if ($move->name == $posMoves[$j]->name
+                            and $curMove->name != $posMoves[$j]->name) {
                             $valid = False;
                             break;
                         }
                     }
-                    if ($valid):  ?>
-                        <option <?= $j === 0 ? "selected" : "" ?>><?= $posMove->name ?></option>
+                    if ($valid): ?>
+                        <option <?= $j - $i === 0 ? "selected" : "" ?>><?= $posMoves[$j]->name ?></option>
                     <?php endif; ?>
-                <?php endforeach; ?>
+                <?php endfor; ?>
                 <?php foreach ($curPkm->moves as $move):
                     if ($move->name
                         or !$curMove->name): ?>
