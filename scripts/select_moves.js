@@ -7,7 +7,9 @@ $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
     allMoves = JSON.parse(document.getElementById("movesJSON").innerHTML);
 
+    // Confirm Button Listener
     document.getElementById("confirm").addEventListener("click", function () {
+        // Posts team data to batttle.php via form
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
@@ -20,7 +22,9 @@ $(function () {
         form.submit();
     });
 
+    // Back Button Listener
     document.getElementById("back").addEventListener("click", function () {
+        // Posts team data to /select6.php via form
         let form = document.createElement("form");
         form.style.visibility = "hidden";
         form.method = "POST";
@@ -33,6 +37,7 @@ $(function () {
         form.submit();
     });
 
+    // Pokemon Button Listeners
     for (let i = 0; i < TEAMSIZE; i++) {
         document.getElementById("pkm" + i).addEventListener("click", function () {
             if (i != curPkmIndex) {
@@ -42,6 +47,7 @@ $(function () {
         });
     }
 
+    // Moves Selection Listener
     elm = document.getElementById("movesInput").children;
     for (let i = 0; i < NUMMOVES; i++) {
         elm[i].addEventListener("change", function (e) {
@@ -127,20 +133,24 @@ $(function () {
 });
 
 function updatePage(i) {
+    // Update main image
     let elm = document.getElementById("currPkmImg");
     elm.src = team.pkm[i].img;
     elm.classList.remove(team.pkm[curPkmIndex].types[0].toLowerCase() + "-type")
     elm.classList.add(team.pkm[i].types[0].toLowerCase() + "-type");
+    
+    // Update stats
     elm = document.getElementById("attrTableBR").children;
     for (let j = 0; j < NUMSTATS; j++) {
         elm[j].innerHTML = Object.values(team.pkm[i].attr)[j];
     }
 
+    // Update moves select
     elm = document.getElementById("movesInput").children;
     for (let j = 0; j < NUMMOVES; j++) {
         elm[j].innerHTML = "";
         let opt = document.createElement("option");
-        opt.selected = "selected";
+        opt.setAttribute("selected", "");
         if (team.pkm[i].moves[j].name) {
             opt.innerHTML = team.pkm[i].moves[j].name;
         }
@@ -156,15 +166,13 @@ function updatePage(i) {
                 opt.innerHTML = allMoves[i][k].name;
                 elm[j].appendChild(opt);
             }
-            if (!team.pkm[i].moves.some(move => move.name != "None")) {
-                let opt = document.createElement("option");
-                opt.innerHTML = "";
-                elm[j].appendChild(opt);
-            }
         }
+        let opt = document.createElement("option");
+        opt.innerHTML = "None";
+        elm[j].appendChild(opt);
     }
 
-
+    // Update Moves Table
     elm = document.getElementById("movesTableBody");
     elm.innerHTML = "";
     for (let j = 0; j < allMoves[i].length; j++) {
