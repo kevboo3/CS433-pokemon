@@ -29,8 +29,8 @@ body {
 }
 
 #logo {
-  width: 200px;
-  height: 150px;
+  width: 652px;
+  height: 200px;
   max-width: 80%;
   margin-bottom: 5px; 
 }
@@ -42,6 +42,7 @@ h1 {
   color: #ffcb05;
   text-shadow: 2px 2px #3b4cca;
 }
+
 
 #button-container {
   display: flex;
