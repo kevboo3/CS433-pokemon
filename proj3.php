@@ -31,8 +31,8 @@ else {
 </audio>
 <div id="background-blur"></div>
 <div id="start-screen">
-    <h1>Pokémon Battle</h1>
     <img src="dataFiles/images/International-Pokemon-logo.png" alt="Game Logo" id="logo">
+    <h1>Pokémon Battle</h1>
     <div id="button-container">
         <button id="start-btn">Start Game</button>
         <button id="sound">Toggle Sound</button>
