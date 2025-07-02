@@ -20,6 +20,10 @@ $(function () {
         music.play();
     }
 
+    document.getElementById("menu").addEventListener('click', function () {
+        playSound(click, muted);
+    });
+
     // Confirm Button Listener
     document.getElementById("confirm").addEventListener("click", function () {
         // Posts team data to batttle.php via form
