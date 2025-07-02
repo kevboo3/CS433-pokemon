@@ -94,8 +94,6 @@ $team = json_decode($_POST["team"]);
     </div>
 
     <script src="./battle.js"></script>
-    <button id="testButton">test Script</button>
-
     <div id="teamJSON" hidden><?= json_encode($team) ?></div>
 
 </body>
