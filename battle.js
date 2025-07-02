@@ -251,9 +251,13 @@ const getTypeAdvantage = (attackerType, defenderType) => {
 
 function initBattle() {
 
-  team = JSON.parse(document.getElementById("teamJSON").innerHTML);
-  console.log(team);
+  let newIds = [];
+  // $.get("./scripts/get_pokemon.php", { "ids": newIds }, setPokemon, "json");
 
+  team = JSON.parse(document.getElementById("teamJSON").innerHTML);
+  enemyTeam = JSON.parse(document.getElementById("enemyTeamJSON").innerHTML);
+  console.log(team);
+  console.log(enemyTeam);
 
 
   document.getElementById("pokemon1-name").innerHTML = team.pkm[0].name;
@@ -279,13 +283,16 @@ function initBattle() {
   document.getElementById("pokemon6-img").src = team.pkm[5].img;
   document.getElementById("pokemon6-img-name").innerHTML = team.pkm[5].name;
 
-
-
   // query the db for a ran pokemon and give it 4 random moves
+  //enemy pokemon
+  document.getElementById("enemy-pokemon-name").innerHTML = enemyTeam.pkm[0].name;
+  document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+  document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp/enemyTeam.pkm[0].hp)*100)+"%";
+  document.getElementById("player2-active-pokemon").src = enemyTeam.pkm[0].img;
+  
+  // query the db for a rand pokemon and give it 4 random moves
 
 }
-
-// initBattle();
 
 //battle
 
@@ -319,7 +326,7 @@ function Battle() {
 
     const move1 = document.getElementById("move1");
     move1.addEventListener("click", function () {
-      console.log("move1 was selected");
+    console.log("move1 was selected");
 
       //check if move pp is not 0
 

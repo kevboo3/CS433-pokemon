@@ -1,6 +1,59 @@
 <?php
-// Start the session
+// receive the json containing the team
+require "scripts/utils.php";
+// require "scripts/get_pokemon.php";
+
 $team = json_decode($_POST["team"]);
+$pdo = makePDO();
+//generate a pokemon
+$randIds = range(1, 151);
+unset($randIds[131]);
+shuffle($randIds);
+$randIds = array_slice($randIds, 0, TEAMSIZE);
+
+// Populate team
+$enemyTeam = new team(); 
+for ($i = 0; $i < TEAMSIZE; $i++) {     
+    $enemyTeam->pkm[$i] = new Pokemon();
+    $enemyTeam->pkm[$i]->id = $randIds[$i];  // Assign random ids to pokemon
+}
+
+// Loads pokemon team data given a set of Pokedex Ids, 
+foreach ($randIds as $key => $id) {  // Iterates over team
+    $enemyTeam->pkm[$key] = makePokemon($enemyTeam->pkm[$key]->id);
+}
+
+
+// Gets Move Data
+for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
+    // Generates list of all moves each pokemon can learn by level up
+    $stmt = $pdo->prepare("SELECT * FROM Learn WHERE Id = " . $enemyTeam->pkm[$i]->id);
+    $stmt->execute();
+    $rslt = $stmt->fetch(PDO::FETCH_NUM);
+    $allMoves[$i] = [];
+    foreach (array_slice($rslt, 2) as $col) {
+        $allMoves[$i] += explode(",", $col);
+    }
+    for ($j = 0; $j < count($allMoves[$i]); $j++) {  // Iterates over all possible moves
+        $stmt = $pdo->prepare("SELECT * FROM Moves WHERE Name = \"" . $allMoves[$i][$j] . "\"");
+        $stmt->execute();
+        $rslt = $stmt->fetch(PDO::FETCH_NUM);
+        if(!$rslt){
+            var_dump($stmt);
+        }
+        $allMoves[$i][$j] = arr2move($rslt);
+    }
+    // Assigns default moves to team
+    for ($j = 0; $j < 4; $j++) {  // Iterates over team moves
+        if ($j < count($allMoves[$i])) {
+            $enemyTeam->pkm[$i]->moves[$j] = $allMoves[$i][$j];
+        }
+        else{
+            $enemyTeam->pkm[$i]->moves[$j] = new Move();
+        }
+    }
+}
+
 ?>
 
 
@@ -35,11 +88,11 @@ $team = json_decode($_POST["team"]);
                     </div>
                 </div>
 
-                <!-- pokemon2-health -->
-                <div class="pokemon-health-display pokemon2-health">
-                    <p class="pokemon2-name">Charmander <small>L6</small></p>
+                <!-- enemy-pokemon-health -->
+                <div class="pokemon-health-display enemy-pokemon-health">
+                    <p class="enemy-pokemon-name" id="enemy-pokemon-name"></p>
                     <div class="w3-light-grey w3-round-large" style="width:100%;">
-                        <div class="w3-container w3-green w3-round-xlarge" style="width:100%">100%</div>
+                        <div class="w3-container w3-green w3-round-xlarge" style="width:100%" id="enemy-pokemon-hp">100%</div>
                     </div>
                 </div>
             </div>
@@ -95,7 +148,9 @@ $team = json_decode($_POST["team"]);
 
     <script src="./battle.js"></script>
     <div id="teamJSON" hidden><?= json_encode($team) ?></div>
+    <div id="enemyTeamJSON" hidden><?= json_encode($enemyTeam) ?></div>
 
+    <script src="./battle.js"></script>
 </body>
 
 </html>
