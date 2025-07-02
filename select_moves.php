@@ -168,7 +168,7 @@ $muted = $_POST["muted"];
             </div>
         </div>
         <div class="center"> 
-            <div class="menu">
+            <div id="menu" class="menu">
                 <button type="button" class="back" id="back">Back</button>
                 <button id="sound">Toggle Sound</button>
                 <button id="up">Volume Up</button>
