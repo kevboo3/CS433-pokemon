@@ -1,6 +1,5 @@
 <?php
-require "scripts/setup.php";  // Helper Functions   !!!CHAGE TO "scripts/utils.php" AFTER MOVING setup()!!!
-setup();                      // Setup DB           !!!MOVE TO PARENT PAGE WHEN READY!!!
+require "scripts/utils.php";
 
 if (array_key_exists("team", $_POST)){
     $team = json_decode($_POST["team"]);
