@@ -45,7 +45,7 @@ $muted = $_POST["muted"];
     <source src="dataFiles/audio/songs/Route_8-XY.mp3">
 </audio>
 <audio id="btnClk" muted hidden>
-    <source src="dataFiles/audio/songs/Button.mp3">
+    <source src="dataFiles/audio/sfx/Pokemon_(A_Button).mp3">
 </audio>
 <div class="center">           <!-- Center block of content -->
 <div class="container">        <!-- Pokedex Grey Border -->

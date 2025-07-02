@@ -27,7 +27,7 @@ else {
     <source src="dataFiles/audio/songs/Pokémon_X &_Y_-_Title_Screen_(HQ).mp3">
 </audio>
 <audio id="btnClk" muted hidden>
-    <source src="dataFiles/audio/songs/Button.mp3">
+    <source src="dataFiles/audio/sfx/Pokemon_(A_Button).mp3">
 </audio>
 <div id="background-blur"></div>
 <div id="start-screen">
