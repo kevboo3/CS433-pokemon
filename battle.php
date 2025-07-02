@@ -146,12 +146,11 @@ for ($i = 0; $i < TEAMSIZE; $i++) {  // Iterates over team
             pkmn6</button>
     </div>
 
-
+    <script src="./battle.js"></script>
     <div id="teamJSON" hidden><?= json_encode($team) ?></div>
     <div id="enemyTeamJSON" hidden><?= json_encode($enemyTeam) ?></div>
-    
-    <script src="./battle.js"></script>
 
+    <script src="./battle.js"></script>
 </body>
 
 </html>
