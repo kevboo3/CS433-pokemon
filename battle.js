@@ -10,159 +10,43 @@ isPlayer1TeamDead = false;
 
 - store them in a local arr or reference the $session arr
 */
-function printTeam(session) {
-  for (i = 0; i < 6; i++) {
-    console.log(" pokemon " + i + " name: " + " " + session.team[i].Name);
 
-    console.log(
-      " pokemon " +
-        i +
-        " attributes: " +
-        "attack: " +
-        session.team[i].Attr.Att +
-        " hp: " +
-        session.team[i].Attr.Hp +
-        " def: " +
-        session.team[i].Attr.Def +
-        " spAtt: " +
-        session.team[i].Attr.SpAtt +
-        " spDef: " +
-        session.team[i].Attr.SpDef +
-        " speed: " +
-        session.team[i].Attr.Speed +
-        " legendary: " +
-        session.team[i].Attr.Legendary +
-        " Type1: " +
-        session.team[i].Attr.Type1 +
-        " Type2: " +
-        session.team[i].Attr.Type2 +
-        " Total: " +
-        session.team[i].Attr.Total
-    );
-    console.log(" pokemon " + i + " hp: " + " " + session.team.Hp);
-    console.log(" pokemon " + i + " status: " + " " + session.team.Status);
-    console.log(" ==pokemon " + i + " moves== ");
+function initBattle() {
+  team = JSON.parse(document.getElementById("teamJSON").innerHTML);
+  console.log(team);
 
-    //[!] consider none moves
-    for (k = 0; k < 4; k++) {
-      console.log(
-        " pokemon " +
-          i +
-          " move " +
-          k +
-          " name: " +
-          session.team[i].Moves[k].Name +
-          " type: " +
-          session.team[i].Moves[k].Type +
-          " category: " +
-          session.team[i].Moves[k].Category +
-          " power: " +
-          session.team[i].Moves[k].Power +
-          " accuracy: " +
-          session.team[i].Moves[k].Accuracy +
-          " pp: " +
-          session.team[i].Moves[k].PP +
-          " effect: " +
-          session.team[i].Moves[k].Effect
-      );
-    }
-    console.log("pokemon " + i + " img: " + session.team[i].Img);
-    console.log("=============================== ");
-  }
+
+
+  document.getElementById("pokemon1-name").innerHTML = team.pkm[0].name;
+  document.getElementById("pokemon1-hp").innerHTML = team.pkm[0].hp;
+  document.getElementById("pokemon1-hp").style.width = ((team.pkm[0].hp/team.pkm[0].hp)*100)+"%";
+  document.getElementById("player1-active-pokemon").src = team.pkm[0].img;
+  document.getElementById("move1").innerHTML = team.pkm[0].moves[0].name+"<br>"+team.pkm[0].moves[0].type;
+  document.getElementById("move2").innerHTML = team.pkm[0].moves[1].name+"<br>"+team.pkm[0].moves[1].type;
+  document.getElementById("move3").innerHTML = team.pkm[0].moves[2].name+"<br>"+team.pkm[0].moves[2].type;
+  document.getElementById("move4").innerHTML = team.pkm[0].moves[3].name+"<br>"+team.pkm[0].moves[3].type;
+
+  // [!] fix icons not showing up
+  document.getElementById("pokemon1-img").src = team.pkm[0].img;
+  document.getElementById("pokemon1-img-name").innerHTML = team.pkm[0].name;
+  document.getElementById("pokemon2-img").src = team.pkm[1].img;
+  document.getElementById("pokemon2-img-name").innerHTML = team.pkm[1].name;
+  document.getElementById("pokemon3-img").src = team.pkm[2].img;
+  document.getElementById("pokemon3-img-name").innerHTML = team.pkm[2].name;
+  document.getElementById("pokemon4-img").src = team.pkm[3].img;
+  document.getElementById("pokemon4-img-name").innerHTML = team.pkm[3].name;
+  document.getElementById("pokemon5-img").src = team.pkm[4].img;
+  document.getElementById("pokemon5-img-name").innerHTML = team.pkm[4].name;
+  document.getElementById("pokemon6-img").src = team.pkm[5].img;
+  document.getElementById("pokemon6-img-name").innerHTML = team.pkm[5].name;
+
+ 
+  
+  // query the db for a ran pokemon and give it 4 random moves
+  
 }
 
-function printEnemyTeam(session) {
-  for (i = 0; i < 6; i++) {
-    console.log(
-      " pokemon " + i + " name: " + " " + session.enemyTeam.pkm[i].name
-    );
-    console.log(
-      " pokemon " + i + " type 1: " + session.enemyTeam.pkm[i].types[0]
-    );
-    console.log(
-      " pokemon " + i + " type 2: " + session.enemyTeam.pkm[i].types[1]
-    );
-    console.log(
-      " pokemon " +
-        i +
-        " attributes: " +
-        "total: " +
-        session.enemyTeam.pkm[i].attr.total +
-        " hp: " +
-        session.enemyTeam.pkm[i].attr.hp +
-        " atk: " +
-        session.enemyTeam.pkm[i].attr.atk +
-        " def: " +
-        session.enemyTeam.pkm[i].attr.def +
-        " spAtk: " +
-        session.enemyTeam.pkm[i].attr.spAtk +
-        " spDef: " +
-        session.enemyTeam.pkm[i].attr.spDef +
-        " speed: " +
-        session.enemyTeam.pkm[i].attr.speed +
-        " legendary: " +
-        session.enemyTeam.pkm[i].attr.legendary
-    );
-    console.log(" pokemon " + i + " hp: " + " " + session.enemyTeam.pkm[i].hp);
-    console.log(
-      " pokemon " + i + " status: " + " " + session.enemyTeam.pkm[i].status
-    );
-    console.log(" ==pokemon " + i + " moves== ");
-
-    //[!] consider none moves
-    for (k = 0; k < 4; k++) {
-      console.log(
-        " pokemon " +
-          i +
-          " move " +
-          k +
-          " name: " +
-          session.enemyTeam.pkm[i].moves[k].name +
-          " type: " +
-          session.enemyTeam.pkm[i].moves[k].type +
-          " category: " +
-          session.enemyTeam.pkm[i].moves[k].category +
-          " power: " +
-          session.enemyTeam.pkm[i].moves[k].power +
-          " accuracy: " +
-          session.enemyTeam.pkm[i].moves[k].accuracy +
-          " pp: " +
-          session.enemyTeam.pkm[i].moves[k].pp +
-          " effect: " +
-          session.enemyTeam.pkm[i].moves[k].effect
-      );
-    }
-    console.log("pokemon " + i + " img: " + session.enemyTeam.pkm[i].img);
-    console.log("=============================== ");
-  }
-}
-
-async function initBattle() {
-  // const json = "./encode_session.php";
-
-  team = JSON.parse(document.getElementById("teamJSON")).innerHTML;
-  console.log("team");
-
-  //check if the json file can be reached
-  // try {
-  //   // fetch is used for making http request and since are ssession is at a link we an access it
-  //   const response = await fetch(json);
-
-  //   if (!response.ok) {
-  //     throw new Error(`Response status: ${response.status}`);
-  //   }
-  //   //parse encoded json
-  //   const session = await response.json();
-  //   // printTeam(session);
-  //   // printEnemyTeam(session);
-  //   console.log(session);
-  //   // document.getElementById("pokemon1-name").innerHTML = "";
-  // } catch (error) {
-  //   console.log("Error:", error);
-  // }
-}
-
-initBattle();
+// initBattle();
 
 //battle
 
@@ -219,6 +103,7 @@ function Battle() {
 
 window.onload = function () {
   Battle();
+  initBattle();
 };
 
 //battleEnd
