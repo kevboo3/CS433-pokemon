@@ -7,6 +7,11 @@ $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
     allMoves = JSON.parse(document.getElementById("movesJSON").innerHTML);
 
+    audio = document.getElementById('bgMusic');
+    audio.muted = false;
+    audio.volume = .2 //starts audio at 20%
+    audio.play();
+
     // Confirm Button Listener
     document.getElementById("confirm").addEventListener("click", function () {
         // Posts team data to batttle.php via form

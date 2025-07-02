@@ -1,0 +1,36 @@
+<?php
+require "scripts/setup.php";
+setup();                      // Setup DB
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Battle</title>
+    <link rel="stylesheet" href="styles/proj3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/proj3.js"></script>
+</head>
+<body>
+<audio id="bgMusic" muted loop hidden>
+    <source src="dataFiles/audio/songs/Pokemon_HeartGold_&_SoulSilver_OST.mp3">
+</audio>
+<audio id="btnClk" muted hidden>
+    <source src="dataFiles/audio/songs/Button.mp3">
+</audio>
+<div id="background-blur"></div>
+<div id="start-screen">
+    <h1>Pokémon Battle</h1>
+    <img src="dataFiles/images/International-Pokemon-logo.png" alt="Game Logo" id="logo">
+    <div id="button-container">
+        <button id="start-btn">Start Game</button>
+        <button id="sound">Toggle Sound</button>
+        <button id="up">Volume Up</button>
+        <button id="down">Volume Down</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -3,6 +3,12 @@ const DITTO = 132;
 const TEAMSIZE = 6;
 const NUMSTATS = 7;
 const NUMMOVES = 4;
+const VSCALER = 0.01;
+const MAXV = 100;
+const MINV = 0;
+
+var muted = true;
+var volume = 50;
 
 class Attributes {
     constructor(total, hp, atk, def, spAtk, spDef, speed, legendary) {

@@ -48,6 +48,9 @@ $posMoves = $allMoves[0];
     <title>Select your moves</title>
 </head>
 <body>
+<audio id="bgMusic" autoplay controls muted loop hidden>
+  <source src="dataFiles/audio/songs/Pokemon_HeartGold_&_SoulSilver_OST.mp3">
+</audio>
 <div class="center">           <!-- Center block of content -->
 <div class="container">        <!-- Pokedex Grey Border -->
     <h1>Select Your Pokemon's Moves!</h1>
