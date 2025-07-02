@@ -7,7 +7,6 @@ var numLocked = 0;
 
 $(function () {
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);
-
     volume = JSON.parse(document.getElementById("volumeJSON").innerHTML);
     muted = JSON.parse(document.getElementById("mutedJSON").innerHTML);
 
