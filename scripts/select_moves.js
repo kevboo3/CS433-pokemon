@@ -47,21 +47,80 @@ $(function () {
         elm[i].addEventListener("change", function (e) {
             let index = e.target.id.at(-1);
             let old;
-            for (let j = 0; j < e.target.children.length; j++) {
-                if (e.target.children[j].hasAttribute("selected")) {
+
+
+            // Change selected box
+            for (let j = 0; j < e.target.children.length; j++) {         // Iterate over all options
+                if (e.target.children[j].hasAttribute("selected")) {     // Remove old selection
                     old = e.target.children[j].innerHTML;
-                }
-                if (e.target.children[j].innerHTML == e.target.value) {
-                    e.target.children[j].setAttribute("selected", "");   
+                    e.target.children[j].removeAttribute("selected");
+                } 
+                if (e.target.children[j].innerHTML == e.target.value) {  // Add new selection
+                    e.target.children[j].setAttribute("selected", "");
                 }
             }
-            boxes = document.getElementById("movesInput").children;
+
+            // Update other boxes
+            let boxes = document.getElementById("movesInput").children;
             for (let j = 0; j < NUMMOVES; j++) {
-                if (j != index) {
-                    boxes[j].remo
+                if (j != index) {                                                    // Avoid box that was changed
+                    if (e.target.value != "None") {
+                        // Remove new from other lists
+                        for (let k = 0; k < boxes[j].length; k++) {                  // Iterate over all options
+                            if (boxes[j].children[k].innerHTML == e.target.value) {  // Remove old
+                                boxes[j].removeChild(boxes[j].children[k]);
+                            }
+                        }
+
+                        // Check if "None" needs to be added 
+                        found = false;
+                        for (let k = 0; k < boxes[j].length; k++) {            // Iterate over all options
+                            if (boxes[j].children[k].innerHTML == "None") {    // Check for "None"
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) {                                          // Add "None" if needed
+                            newOpt = document.createElement("option");
+                            newOpt.innerHTML = "None";
+                            boxes[j].appendChild(newOpt);
+                            console.log("append");
+                        }
+                        if (old != "None") {                                   // Add old to other lists if needed
+                            newOpt = document.createElement("option");
+                            newOpt.innerHTML = old;
+                            boxes[j].appendChild(newOpt);
+                        }
+                    }
+                    else if (e.target.value == "None") {                           // Check if None needs to be removed
+                        count = 0;                                                 // Count "None"s selected
+                        for (let k = 0; k < NUMMOVES; k++) {                       // Iterate over all boxes
+                            for (let l = 0; l < boxes[k].length; l++) {            // Iterate over all options
+                                if (boxes[k].children[l].hasAttribute("selected")  // Check for selected "None"s
+                                    && boxes[k].children[l].innerHTML == "None") {
+                                    count++;
+                                    break
+                                }
+                            }
+                        }
+                        if (count == 3) {                                               // Remove "None" if 3 are selected
+                            for (let k = 0; k < NUMMOVES; k++) {                        // Iterate over all boxes
+                                for (let l = 0; l < boxes[k].length; l++) {             // Iterate over all options
+                                    if (!boxes[k].children[l].hasAttribute("selected")  // Remove "None" from remaining box
+                                        && boxes[k].children[l].innerHTML == "None") {
+                                        boxes[k].removeChild(boxes[k].children[l]);
+                                        break
+                                    }
+                                }
+                            }
+                        }
+                        // Add old to other lists
+                        newOpt = document.createElement("option");
+                        newOpt.innerHTML = old;
+                        boxes[j].appendChild(newOpt);
+                    }
                 } 
             }
-            console.log(e.target);
         })
     }
 
