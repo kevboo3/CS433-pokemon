@@ -251,9 +251,6 @@ const getTypeAdvantage = (attackerType, defenderType) => {
 
 function initBattle() {
 
-  const testButton = document.getElementById("testButton");
-  testButton.addEventListener("click", );
-
   team = JSON.parse(document.getElementById("teamJSON").innerHTML);
   console.log(team);
 
