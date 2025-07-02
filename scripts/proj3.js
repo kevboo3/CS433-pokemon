@@ -1,22 +1,26 @@
-
+/*
+ * File: proj3.js 
+ * Author: Justin C
+ * Description: Interactive content for proj3.php
+ * Requires utils.js to be in preceeding script tag 
+*/
 $(function () {
-    volume = JSON.parse(document.getElementById("volumeJSON").innerHTML);
-    muted = JSON.parse(document.getElementById("mutedJSON").innerHTML);
+    volume = JSON.parse(document.getElementById("volumeJSON").innerHTML);  // Gets volume setting
+    muted = JSON.parse(document.getElementById("mutedJSON").innerHTML);    // Gets muted setting
 
+    // Gets Audio Tags And Sets Volume
     music = document.getElementById('bgMusic');
     music.volume = volume * VSCALER;
+
     click = document.getElementById('btnClk');
     click.volume = volume * VSCALER;
 
-    if (muted === 1) {
+    // Read Muted In
+    if (muted === 1) {  //  Will be 1 first time loading the page
         muted = true;
-        
-    }
-    else if (muted === 0) {
-        muted = false;
     }
     else {
-        if (!muted) {
+        if (!muted) {  // 
             music.play();
         }
     }
