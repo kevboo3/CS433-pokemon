@@ -16,7 +16,6 @@ else {                                      // If redirected from proj3.php
     unset($randIds[131]);
     shuffle($randIds);
     $randIds = array_slice($randIds, 0, TEAMSIZE);
-
     // Populate team
     $team = new Team(); 
     for ($i = 0; $i < TEAMSIZE; $i++) {     

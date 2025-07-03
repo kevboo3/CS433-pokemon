@@ -1,4 +1,9 @@
-﻿<?php
+﻿<!-- 
+* File: select6.js 
+ * Author: Justin C & Tobias H 
+ * Description: Page where user selects their pokemon team
+-->
+<?php
 require "scripts/utils.php";
 $team = json_decode($_POST["team"]);
 $curPkm = $team->pkm[0];
@@ -150,7 +155,7 @@ $posMoves = $allMoves[0];   // List of move for default pokemon
                         </thead>
                         <tbody id="movesTableBody">                                                 <!-- Current Pokemon Move Data Table -->
                             <?php foreach ($posMoves as $key => $move): ?>            
-                                <tr class='move-result'>                                                 <!-- Current Pokemon Move Data Table -->
+                                <tr class='move-result'>                                                 <!-- Current Pokemon Move Data Table Entries -->
                                     <td><?= $move->name ?></td>
                                     <td>
                                         <img class="type-icon" src="<?= FPATH . TPATH . strtolower($move->type) ?>.png" alt="<?= strtolower($move->type) ?>">
