@@ -1,26 +1,20 @@
+
+//possible game states 
+//init battle
 isPlayer1Turn = true;
 isPlayerLeaderDead = false;
 isPlayer1TeamDead = false;
-//possible game states to
-//init battle
-/*
-
--recieve the users 6 pokemon and moves
--generate the random pokemon (1 or more to fight)
-
-- store them in a local arr or reference the $session arr
-*/
-
+currPkm = 0;
 
 //a sample do turn function
-const do_turn = (player, enemy) => {
-    activate_effects(player.active_pokemon);
-    use_move(player.active_pokemon, enemy.active_pokemon, player_select_move());
-}
+// const do_turn = (player, enemy) => {
+//     activate_effects(player.active_pokemon);
+//     use_move(player.active_pokemon, enemy.active_pokemon, player_select_move());
+// }
 
 //finds the move object in moves_data.csv based on the moves name
 async function get_move(target_move) {
-    const target = `http://localhost/CS433-pokemon/dataFiles/moves_data.csv`;
+    const target = `http://localhost/proj3/CS433-pokemon/dataFiles/moves_data.csv`;
 
     const res = await fetch(target, {
       method: 'get',
@@ -29,17 +23,20 @@ async function get_move(target_move) {
       }
     });
     if (res.status === 200) {
+
       var move_list = await res.text();
       move_list = move_list.split("\n")
       move_list = move_list.map(item => {
         return(item.split(","))
+        
       });
     } else {
       console.log(`Error code ${res.status}`);
     }
     return(move_list.find(move => {
         if(move[0] == target_move){
-          return(move);
+          const new_move = {name: move[0], type: move[1], category:move[2], power:move[3], accuracy:move[4], pp:move[5], effect:move[6], effect1:move[7], effect2:move[8]}
+          return(new_move);
         }
     }))
   }
@@ -71,24 +68,33 @@ const player_select_move = () => {
 
 //attempts to use a move
 const use_move = (caster, target, move) => {
+    console.log(caster);
+    console.log(target);
+    console.log(move);
+
     if (caster.sleep > 0) {
         caster.sleep -= 1;
         return (null);
     }
+
     if (caster.flinch) {
         caster.flinch = false;
         return (null)
     }
+
     if (caster.confuse && Math.random() <= 0.50) {
         //TODO: get the move pound instead of a string
         caster.health = Math.max(0, caster.health - damage(caster, caster, "Pound"))
     }
-    if (pokemon.freeze) {
+    if (caster.freeze) {
+
         return (null)
     }
+
     if (caster.paralyze && Math.random() <= 0.25) {
         return (null);
     }
+
     if (move.effect1 == "Multihit") {
         for (i = 0; i < move.effect2; i++) {
             if (moveHits(caster, target, move)) {
@@ -96,9 +102,16 @@ const use_move = (caster, target, move) => {
             }
         }
     }
+    
     if (moveHits(caster, target, move)) {
+            console.log(" [!] im it hit");
+
         move_effect(caster, target, move)
+    }else{
+
+      console.log(" move didnt didnt hit");
     }
+
 }
 
 //applies status effects and damage of a move
@@ -229,7 +242,13 @@ const move_effect = (caster, target, move) => {
 
 //calculates if a move hits
 const moveHits = (caster, target, move) => {
-    return (move.accuracy * caster.accuracy * target.evasion > Math.floor(Math.random() * 256));
+  console.log("im in move hits!");
+  console.log("move.accuracy "+move.accuracy);
+  let hitProb = move.accuracy * caster.accuracy * target.evasion ;
+  randNum = Math.floor(Math.random() * 256); 
+  console.log("hitprob "+hitprob);
+  console.log("randNum "+randNum);
+  return hitProb>randNum;
 }
 
 //calculates the damage of a move
@@ -249,9 +268,10 @@ const getTypeAdvantage = (attackerType, defenderType) => {
 }
 
 
+
 function initBattle() {
 
-  let newIds = [];
+  // let newIds = [];
   // $.get("./scripts/get_pokemon.php", { "ids": newIds }, setPokemon, "json");
 
   team = JSON.parse(document.getElementById("teamJSON").innerHTML);
@@ -290,8 +310,6 @@ function initBattle() {
   document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp/enemyTeam.pkm[0].hp)*100)+"%";
   document.getElementById("player2-active-pokemon").src = enemyTeam.pkm[0].img;
   
-  // query the db for a rand pokemon and give it 4 random moves
-
 }
 
 //battle
@@ -299,7 +317,7 @@ function initBattle() {
 /*
 todo
  -switch between the user turn to pick moves and the cpus turn ( prevent the user from clicking any buttons
- when its the cpius turn)
+ when its the cpus turn)
     -who goes first is based on what pokemon has a higher speed stay
 
  -check if  the users pokemon is dead (can only switch), if all pokemon are dead game over, if the cpus lead pokemon is dead or if
@@ -329,8 +347,17 @@ function Battle() {
     console.log("move1 was selected");
 
       //check if move pp is not 0
+      if(team.pkm[currPkm].moves[0].pp != 0){
+        console.log(team.pkm[currPkm].moves[0].name+" can be used pp is "+team.pkm[currPkm].moves[0].pp);
+        // console.log()
+        // query the db to see the type of move it is phys or state
+         let moveInfo = get_move(team.pkm[currPkm].moves[0].name);
+        //  console.log(moveInfo);
+         use_move(team.pkm[currPkm].name,enemyTeam.pkm[0].name,moveInfo);
+        
+      }
 
-      // query the db to see the type of move it is phys or state
+
 
       //store the damage and typing
 
@@ -345,6 +372,9 @@ function Battle() {
       //
     });
   }
+
+  //if its the cpus turn
+
 }
 
 window.onload = function () {
