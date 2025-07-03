@@ -116,9 +116,8 @@ const use_move = (caster, target, move) => {
 
 //applies status effects and damage of a move
 const move_effect = (caster, target, move) => {
-    console.log("in effects");
-    effect1 = move.effect1;
-    effect2 = move.effect2;
+    effect1 = move.tags[0];
+    effect2 = move.tags[1];
 
     if (effect1 == "Paralyze/Burn/Freeze") {
         if (Math.random() < 0.2) {
@@ -359,6 +358,7 @@ function Battle() {
                 //[!] home
                 moveInfo = team.pkm[currPkm].moves[0];
                 use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                console.log("enemy pokemon:", enemyTeam.pkm[0])
                 //show new heal and status effect
                 document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
                 document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
