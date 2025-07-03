@@ -1,6 +1,6 @@
 # CS433 Project 3:Pokémon Game
 ## Description
-The Goal is to create a Pokémon game using what we have learned up until this point(PHP,JavaScript,CSS,SQL,HMT,etc) 
+The Goal is to create a Pokémon game using what we have learned up until this point(PHP,JavaScript,CSS,SQL,HTML,etc) 
 with some additional project requirements
 
 Our version of a Pokémon game is going to be a [roguelike](https://en.wikipedia.org/wiki/Roguelike). Think something 
