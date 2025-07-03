@@ -11,7 +11,7 @@ $pdo = makePDO();
 
 // Generates List Of All Moves Each Pokemon Can Learn
 for ($i = 0; $i < TEAMSIZE; $i++) {                  // Iterates over team
-    // Quesries Database
+    // Queries Database
     $stmt = $pdo->prepare("SELECT * FROM Learn WHERE Id = " . $team->pkm[$i]->id);
     $stmt->execute();
     $rslt = $stmt->fetch(PDO::FETCH_NUM);
@@ -25,7 +25,12 @@ for ($i = 0; $i < TEAMSIZE; $i++) {                  // Iterates over team
         $stmt = $pdo->prepare("SELECT * FROM Moves WHERE Name = \"" . $allMoves[$i][$j] . "\"");
         $stmt->execute();
         $rslt = $stmt->fetch(PDO::FETCH_NUM);
-        $allMoves[$i][$j] = arr2move($rslt);         // Create Move object
+        if ($rslt) {
+            $allMoves[$i][$j] = arr2move($rslt);         // Create Move object
+        }
+    }
+    if (!$allMoves[$i][0]) {
+        array_shift($allMoves[$i]);
     }
     // Assigns default moves to team
     for ($j = 0; $j < 4; $j++) {                     // Iterates over team moves

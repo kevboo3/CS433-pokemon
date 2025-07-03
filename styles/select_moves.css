@@ -40,6 +40,7 @@
     background-color: antiquewhite;
     padding: 10px;
     border: 5px ridge black;
+    padding-bottom: 0px;
 }
 
 .active-pokemon {
@@ -85,11 +86,24 @@ table.attr-table td {
 
 .moves-input {
     display: grid;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 250px 250px;
     grid-template-rows: 1fr 1fr;
     gap: 2px;
     text-align: center;
     justify-content: center;
+}
+
+.moves-input select {
+    background-color: #ffcb05;
+    color: #3b4cca;
+    border: 3px solid #3b4cca;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    border-radius: 12px;
+    padding-top: 5px;
+    height: 40px;
 }
 
 .moves-data {
