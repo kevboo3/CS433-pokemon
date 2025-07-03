@@ -289,7 +289,7 @@ const getTypeAdvantage = async (attackerType, defenderType) => {
   const chart = await get_type_chart();
   if(chart==null)
     return(1);
-  return chart[attackerType]?.[defenderType];
+  return chart[attackerType][defenderType];
 
 };
 
