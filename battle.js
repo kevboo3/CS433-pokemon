@@ -358,6 +358,9 @@ function Battle() {
                 document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
                 console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
             }
 
         });
@@ -377,6 +380,9 @@ function Battle() {
                 document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
                 console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
             }
 
         });
@@ -395,6 +401,9 @@ function Battle() {
                 document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
                 console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
             }
 
         });
@@ -413,6 +422,10 @@ function Battle() {
                 document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
                 console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
+
             }
 
         });
@@ -420,7 +433,7 @@ function Battle() {
         const switch1 = document.getElementById("pokemon1-img-name");
         switch1.addEventListener("click", function () {
             console.log("switch1 was selected");
-            if(team.pkm[0].hp > 0){
+            if (team.pkm[0].hp > 0) {
                 currPkm = 0
             }
             updatePlayer1Pokemon()
@@ -429,7 +442,7 @@ function Battle() {
         const switch2 = document.getElementById("pokemon2-img-name");
         switch2.addEventListener("click", function () {
             console.log("switch2 was selected");
-            if(team.pkm[1].hp > 0){
+            if (team.pkm[1].hp > 0) {
                 currPkm = 1
             }
             updatePlayer1Pokemon()
@@ -438,8 +451,8 @@ function Battle() {
         const switch3 = document.getElementById("pokemon3-img-name");
         switch3.addEventListener("click", function () {
             console.log("switch3 was selected");
-            if(team.pkm[2].hp > 0){
-                currPkm = 2 
+            if (team.pkm[2].hp > 0) {
+                currPkm = 2
             }
             updatePlayer1Pokemon()
         })
@@ -447,7 +460,7 @@ function Battle() {
         const switch4 = document.getElementById("pokemon4-img-name");
         switch4.addEventListener("click", function () {
             console.log("switch4 was selected");
-            if(team.pkm[3].hp > 0){
+            if (team.pkm[3].hp > 0) {
                 currPkm = 3
             }
             updatePlayer1Pokemon()
@@ -456,7 +469,7 @@ function Battle() {
         const switch5 = document.getElementById("pokemon5-img-name");
         switch5.addEventListener("click", function () {
             console.log("switch5 was selected");
-            if(team.pkm[4].hp > 0){
+            if (team.pkm[4].hp > 0) {
                 currPkm = 4
             }
             updatePlayer1Pokemon()
@@ -465,7 +478,7 @@ function Battle() {
         const switch6 = document.getElementById("pokemon6-img-name");
         switch6.addEventListener("click", function () {
             console.log("switch6 was selected");
-            if(team.pkm[5].hp > 0){
+            if (team.pkm[5].hp > 0) {
                 currPkm = 5
             }
             updatePlayer1Pokemon()
