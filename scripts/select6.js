@@ -30,7 +30,7 @@ $(function () {
     click.volume = volume * VSCALER;
     click.muted = muted;
 
-    if (!muted) {  // Starts Music
+    if (!muted) {  // Starts music
         music.play();
     }
 
