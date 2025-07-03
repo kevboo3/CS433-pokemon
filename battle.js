@@ -43,14 +43,14 @@ async function get_move(target_move) {
 }
 
 //does damage effects to pokemon
-// const activate_effects = (pokemon) => {
-//     if (pokemon.burn) {
-//         pokemon.health = Math.max(0, pokemon.health - pokemon.health / 16);
-//     }
-//     if (pokemon.charge) {
-//         pokemon.health = Math.max(0, pokemon.health - pokemon.charge);
-//         pokemon.charge = 0;
-//     }
+const activate_effects = (pokemon) => {
+    if (pokemon.burn) {
+        pokemon.health = Math.max(0, pokemon.health - pokemon.health / 16);
+    }
+    if (pokemon.charge) {
+        pokemon.health = Math.max(0, pokemon.health - pokemon.charge);
+        pokemon.charge = 0;
+    }
 
     if (pokemon.DOT > 0) {
         pokemon.health = Math.max(0, pokemon.health - pokemon.DOT_damage);
@@ -318,7 +318,7 @@ function initBattle() {
   function cpuTurn(){
     console.log("====in cpu turn===");
     
-    cpuMove = Math.floor(Math.random()*3);
+    cpuMove = Math.floor(Math.random()*4);
 
     console.log("cpu used"+cpuMove);
     //check if move pp is not 0
@@ -328,9 +328,9 @@ function initBattle() {
         moveInfo = enemyTeam.pkm[currPkm].moves[cpuMove];
         use_move( enemyTeam.pkm[cpuMove],team.pkm[currPkm], moveInfo);
         //show new heal and status effect
-        document.getElementById("pokemon1-hp").innerHTML = team.pkm[0].hp;
-        document.getElementById("pokemon1-hp").style.width = ((team.pkm[0].hp / team.pkm[0].attr.hp) * 100) + "%";
-        console.log("width of health bar"+((team.pkm[0].hp / team.pkm[0].attr.hp) * 100));
+        document.getElementById("pokemon1-hp").innerHTML = team.pkm[currPkm].hp;
+        document.getElementById("pokemon1-hp").style.width = ((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100) + "%";
+        console.log("width of health bar"+((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100));
     }   
 
   }
@@ -407,6 +407,7 @@ function Battle() {
                 moveInfo.pp -= 1;
                 console.log("pp: ", moveInfo.pp)
             }
+            cpuTurn();
 
         });
         const move3 = document.getElementById("move3");
@@ -428,6 +429,7 @@ function Battle() {
                 moveInfo.pp -= 1;
                 console.log("pp: ", moveInfo.pp)
             }
+            cpuTurn();
 
         });
         const move4 = document.getElementById("move4");
@@ -450,6 +452,7 @@ function Battle() {
                 console.log("pp: ", moveInfo.pp)
 
             }
+            cpuTurn();
 
         });
 
