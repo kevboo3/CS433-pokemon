@@ -45,19 +45,20 @@ async function get_move(target_move) {
 //does damage effects to pokemon
 const activate_effects = (pokemon) => {
     if (pokemon.burn) {
-        pokemon.health = Math.max(0, pokemon.health - pokemon.health / 16);
+        console.log("burned: ", pokemon)
+        pokemon.hp = Math.max(0, pokemon.hp - pokemon.attr.hp / 16);
     }
     if (pokemon.charge) {
-        pokemon.health = Math.max(0, pokemon.health - pokemon.charge);
+        pokemon.hp = Math.max(0, pokemon.hp - pokemon.charge);
         pokemon.charge = 0;
     }
 
     if (pokemon.DOT > 0) {
-        pokemon.health = Math.max(0, pokemon.health - pokemon.DOT_damage);
+        pokemon.hp = Math.max(0, pokemon.hp - pokemon.DOT_damage);
         pokemon.DOT -= 1;
     }
     if (pokemon.poison) {
-        pokemon.health = Math.max(1, pokemon.health - pokemon.health / 16);
+        pokemon.hp = Math.max(1, pokemon.hp - pokemon.attr.hp / 16);
     }
 }
 
@@ -80,7 +81,7 @@ const use_move = (caster, target, move) => {
 
     if (caster.confuse && Math.random() <= 0.50) {
         //TODO: get the move pound instead of a string
-        caster.health = Math.max(0, caster.health - damage(caster, caster, "Pound"))
+        caster.hp = Math.max(0, caster.hp - damage(caster, caster, "Pound"))
     }
     if (caster.freeze) {
 
@@ -100,9 +101,9 @@ const use_move = (caster, target, move) => {
     }
 
     if (moveHits(caster, target, move)) {
-      
-      move_effect(caster, target, move)
-      console.log("the move hit!!!");
+
+        move_effect(caster, target, move)
+        console.log("the move hit!!!");
     } else {
 
         console.log(" move didnt didnt hit :(");
@@ -132,7 +133,7 @@ const move_effect = (caster, target, move) => {
     if (effect2 == "Maybe") {
         if (Math.random() < 0.2) {
             damage(caster, target, move);
-            target.health -= damage(caster, target, move);
+            target.hp -= damage(caster, target, move);
         }
     }
     if (effect1 == "A buff") {
@@ -166,10 +167,10 @@ const move_effect = (caster, target, move) => {
     }
     if (effect1 == "Flat") {
         if (effect2 > 1) {
-            target.health -= effect2;
+            target.hp -= effect2;
         }
         else {
-            target.health -= effect2 * target.health;
+            target.hp -= effect2 * target.hp;
         }
     }
     if (effect1 == "Flinch") {
@@ -180,14 +181,14 @@ const move_effect = (caster, target, move) => {
     }
     if (effect1 == "Heal") {
         if (effect2 > 1) {
-            caster.health += effect2;
+            caster.hp += effect2;
         }
         else {
-            caster.health += effect2 * target.health;
+            caster.hp += effect2 * target.hp;
         }
     }
     if (effect1 == "Insta") {
-        target.health = 0;
+        target.hp = 0;
     }
     if (effect1 == "Paralyze") {
         target.paralyze = true;
@@ -200,7 +201,7 @@ const move_effect = (caster, target, move) => {
         target.poison = true;
     }
     if (effect1 == "Recoil") {
-        caster.health = caster.health - caster.health * effect2;
+        caster.hp = caster.hp - caster.hp * effect2;
     }
     if (effect1 == "S buff") {
         caster.speed = value * 20;
@@ -308,32 +309,32 @@ function initBattle() {
     //enemy pokemon
     document.getElementById("enemy-pokemon-name").innerHTML = enemyTeam.pkm[0].name;
     document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
-    document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].hp) * 100) + "%";
+    document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
     document.getElementById("player2-active-pokemon").src = enemyTeam.pkm[0].img;
 
 }
 
- 
-  // //if its the cpus turn
-  function cpuTurn(){
-    console.log("====in cpu turn===");
-    
-    cpuMove = Math.floor(Math.random()*4);
 
-    console.log("cpu used"+cpuMove);
+// //if its the cpus turn
+function cpuTurn() {
+    console.log("====in cpu turn===");
+
+    cpuMove = Math.floor(Math.random() * 4);
+
+    console.log("cpu used" + cpuMove);
     //check if move pp is not 0
     if (enemyTeam.pkm[currPkm].moves[cpuMove].pp != 0) {
         console.log(enemyTeam.pkm[currPkm].moves[cpuMove].name + " can be used pp is " + enemyTeam.pkm[currPkm].moves[cpuMove].pp);
 
         moveInfo = enemyTeam.pkm[currPkm].moves[cpuMove];
-        use_move( enemyTeam.pkm[cpuMove],team.pkm[currPkm], moveInfo);
+        use_move(enemyTeam.pkm[cpuMove], team.pkm[currPkm], moveInfo);
         //show new heal and status effect
         document.getElementById("pokemon1-hp").innerHTML = team.pkm[currPkm].hp;
         document.getElementById("pokemon1-hp").style.width = ((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100) + "%";
-        console.log("width of health bar"+((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100));
-    }   
+        console.log("width of health bar" + ((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100));
+    }
 
-  }
+}
 //battle
 
 /*
@@ -376,6 +377,7 @@ function Battle() {
                 moveInfo = team.pkm[currPkm].moves[0];
                 use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
                 console.log("enemy pokemon:", enemyTeam.pkm[0])
+                console.log("your pokemon:", team.pkm[currPkm])
                 //show new heal and status effect
                 document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
                 document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
@@ -386,6 +388,8 @@ function Battle() {
                 console.log("pp: ", moveInfo.pp)
             }
             cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
         });
 
         const move2 = document.getElementById("move2");
@@ -408,6 +412,8 @@ function Battle() {
                 console.log("pp: ", moveInfo.pp)
             }
             cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
 
         });
         const move3 = document.getElementById("move3");
@@ -430,6 +436,8 @@ function Battle() {
                 console.log("pp: ", moveInfo.pp)
             }
             cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
 
         });
         const move4 = document.getElementById("move4");
@@ -453,6 +461,9 @@ function Battle() {
 
             }
             cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
+            updatePlayer1Pokemon();
 
         });
 
@@ -462,7 +473,10 @@ function Battle() {
             if (team.pkm[0].hp > 0) {
                 currPkm = 0
             }
-            updatePlayer1Pokemon()
+            cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
+            updatePlayer1Pokemon();
         })
 
         const switch2 = document.getElementById("pokemon2-img-name");
@@ -471,7 +485,10 @@ function Battle() {
             if (team.pkm[1].hp > 0) {
                 currPkm = 1
             }
-            updatePlayer1Pokemon()
+            cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
+            updatePlayer1Pokemon();
         })
 
         const switch3 = document.getElementById("pokemon3-img-name");
@@ -480,7 +497,10 @@ function Battle() {
             if (team.pkm[2].hp > 0) {
                 currPkm = 2
             }
-            updatePlayer1Pokemon()
+            cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
+            updatePlayer1Pokemon();
         })
 
         const switch4 = document.getElementById("pokemon4-img-name");
@@ -489,7 +509,10 @@ function Battle() {
             if (team.pkm[3].hp > 0) {
                 currPkm = 3
             }
-            updatePlayer1Pokemon()
+            cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
+            updatePlayer1Pokemon();
         })
 
         const switch5 = document.getElementById("pokemon5-img-name");
@@ -498,7 +521,10 @@ function Battle() {
             if (team.pkm[4].hp > 0) {
                 currPkm = 4
             }
-            updatePlayer1Pokemon()
+            cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
+            updatePlayer1Pokemon();
         })
 
         const switch6 = document.getElementById("pokemon6-img-name");
@@ -507,14 +533,17 @@ function Battle() {
             if (team.pkm[5].hp > 0) {
                 currPkm = 5
             }
-            updatePlayer1Pokemon()
+            cpuTurn();
+            activate_effects(enemyTeam.pkm[0]);
+            activate_effects(team.pkm[currPkm]);
+            updatePlayer1Pokemon();
         })
 
-        
+
     }
 
-    if(isPlayer1Turn ==false){
-      cpuTurn();
+    if (isPlayer1Turn == false) {
+        cpuTurn();
     }
 
 
@@ -527,13 +556,21 @@ function Battle() {
 function updatePlayer1Pokemon() {
     document.getElementById("pokemon1-name").innerHTML = team.pkm[currPkm].name;
     document.getElementById("pokemon1-hp").innerHTML = team.pkm[currPkm].hp;
-    document.getElementById("pokemon1-hp").style.width = ((team.pkm[currPkm].hp / team.pkm[currPkm].hp) * 100) + "%";
+    document.getElementById("pokemon1-hp").style.width = ((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100) + "%";
     document.getElementById("player1-active-pokemon").src = team.pkm[currPkm].img;
     document.getElementById("move1").innerHTML = team.pkm[currPkm].moves[0].name + "<br>" + team.pkm[currPkm].moves[0].type;
     document.getElementById("move2").innerHTML = team.pkm[currPkm].moves[1].name + "<br>" + team.pkm[currPkm].moves[1].type;
     document.getElementById("move3").innerHTML = team.pkm[currPkm].moves[2].name + "<br>" + team.pkm[currPkm].moves[2].type;
     document.getElementById("move4").innerHTML = team.pkm[currPkm].moves[3].name + "<br>" + team.pkm[currPkm].moves[3].type;
 }
+
+function updatePlayer2Pokemon() {
+    document.getElementById("enemy-pokemon-name").innerHTML = enemyTeam.pkm[0].name;
+    document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+    document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+    document.getElementById("player2-active-pokemon").src = enemyTeam.pkm[0].img;
+}
+
 
 window.onload = function () {
     Battle();
