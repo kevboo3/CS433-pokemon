@@ -264,9 +264,35 @@ const damage = (caster, target, move) => {
     return (damage);
 }
 // TODO get the type advantage
-const getTypeAdvantage = (attackerType, defenderType) => {
-    return (1);
+async function get_type_chart() {
+  try {
+    const response = await fetch('http://localhost/CS433-pokemon/dataFiles/type_bonus.csv');
+    const text = await response.text();
+    const lines = text.trim().split('\n');
+    const headers = lines[0].split(',').slice(1);
+    const chart = {};
+    for (let i = 1; i < lines.length; i++) {
+      const [attackingType, ...values] = lines[i].split(',');
+      chart[attackingType] = {};
+      values.forEach((val, j) => {
+        chart[attackingType][headers[j]] = parseFloat(val);
+      });
+    }
+    return chart;
+  } catch (error) {
+    console.error("Error fetching type chart:", error);
+    return {};
+  }
 }
+
+const getTypeAdvantage = async (attackerType, defenderType) => {
+  const chart = await get_type_chart();
+  if(chart==null)
+    return(1);
+  return chart[attackerType]?.[defenderType];
+
+};
+
 
 
 
