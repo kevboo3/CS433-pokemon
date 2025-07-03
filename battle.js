@@ -1,9 +1,11 @@
 
 //possible game states 
 //init battle
-isPlayer1Turn = true;
-isPlayerLeaderDead = false;
-isPlayer1TeamDead = false;
+let isPlayer1Turn = true;
+let isPlayerLeaderDead = false;
+let isPlayer1TeamDead = false;
+let isEnemyDead = false;
+
 currPkm = 0;
 
 //a sample do turn function
@@ -41,28 +43,24 @@ async function get_move(target_move) {
 }
 
 //does damage effects to pokemon
-const activate_effects = (pokemon) => {
-    if (pokemon.burn) {
-        pokemon.health = Math.max(0, pokemon.health - pokemon.health / 16);
-    }
-    if (pokemon.charge) {
-        pokemon.health = Math.max(0, pokemon.health - pokemon.charge);
-        pokemon.charge = 0;
-    }
+// const activate_effects = (pokemon) => {
+//     if (pokemon.burn) {
+//         pokemon.health = Math.max(0, pokemon.health - pokemon.health / 16);
+//     }
+//     if (pokemon.charge) {
+//         pokemon.health = Math.max(0, pokemon.health - pokemon.charge);
+//         pokemon.charge = 0;
+//     }
 
-    if (pokemon.DOT > 0) {
-        pokemon.health = Math.max(0, pokemon.health - pokemon.DOT_damage);
-        pokemon.DOT -= 1;
-    }
-    if (pokemon.poison) {
-        pokemon.health = Math.max(1, pokemon.health - pokemon.health / 16);
-    }
-}
+//     if (pokemon.DOT > 0) {
+//         pokemon.health = Math.max(0, pokemon.health - pokemon.DOT_damage);
+//         pokemon.DOT -= 1;
+//     }
+//     if (pokemon.poison) {
+//         pokemon.health = Math.max(1, pokemon.health - pokemon.health / 16);
+//     }
+// }
 
-//TODO get the users move
-const player_select_move = () => {
-
-};
 
 
 //attempts to use a move
@@ -104,12 +102,12 @@ const use_move = (caster, target, move) => {
     }
 
     if (moveHits(caster, target, move)) {
-        console.log(" [!] im in hit");
-
-        move_effect(caster, target, move)
+      
+      move_effect(caster, target, move)
+      console.log("the move hit!!!");
     } else {
 
-        console.log(" move didnt didnt hit");
+        console.log(" move didnt didnt hit :(");
     }
 
 }
@@ -242,7 +240,7 @@ const move_effect = (caster, target, move) => {
 
 //calculates if a move hits
 const moveHits = (caster, target, move) => {
-    console.log("im in move hits!");
+    console.log("im in move hits");
     console.log("move.accuracy " + move.accuracy);
     let hitProb = move.accuracy;
     let randNum = Math.floor(Math.random() * 256);
@@ -318,6 +316,27 @@ function initBattle() {
 
 }
 
+ 
+  // //if its the cpus turn
+  function cpuTurn(){
+    console.log("====in cpu turn===");
+    
+    cpuMove = Math.floor(Math.random()*3);
+
+    console.log("cpu used"+cpuMove);
+    //check if move pp is not 0
+    if (enemyTeam.pkm[currPkm].moves[cpuMove].pp != 0) {
+        console.log(enemyTeam.pkm[currPkm].moves[cpuMove].name + " can be used pp is " + enemyTeam.pkm[currPkm].moves[cpuMove].pp);
+
+        moveInfo = enemyTeam.pkm[currPkm].moves[cpuMove];
+        use_move( enemyTeam.pkm[cpuMove],team.pkm[currPkm], moveInfo);
+        //show new heal and status effect
+        document.getElementById("pokemon1-hp").innerHTML = team.pkm[0].hp;
+        document.getElementById("pokemon1-hp").style.width = ((team.pkm[0].hp / team.pkm[0].attr.hp) * 100) + "%";
+        console.log("width of health bar"+((team.pkm[0].hp / team.pkm[0].attr.hp) * 100));
+    }   
+
+  }
 //battle
 
 /*
@@ -365,7 +384,7 @@ function Battle() {
                 console.log("width of health bar"+((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
             }
-
+            cpuTurn();
         });
 
         const move2 = document.getElementById("move2");
@@ -423,12 +442,19 @@ function Battle() {
 
         });
 
-
+        
     }
 
-    //if its the cpus turn
+    if(isPlayer1Turn ==false){
+      cpuTurn();
+    }
+
+
+
 
 }
+
+
 
 window.onload = function () {
     Battle();
