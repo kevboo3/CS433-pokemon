@@ -355,33 +355,75 @@ function Battle() {
             //check if move pp is not 0
             if (team.pkm[currPkm].moves[0].pp != 0) {
                 console.log(team.pkm[currPkm].moves[0].name + " can be used pp is " + team.pkm[currPkm].moves[0].pp);
-                // console.log()
-                // query the db to see the type of move it is phys or state
-                // get_move(team.pkm[currPkm].moves[0].name).then((moveInfo) => {
-                //     console.log(moveInfo)
-                //     use_move(team.pkm[currPkm].name, enemyTeam.pkm[0].name, moveInfo);
-                // });
 
                 //[!] home
                 moveInfo = team.pkm[currPkm].moves[0];
                 use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar"+((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
             }
 
-
-
-            //store the damage and typing
-
-            //query the opponents type to finalize damage calculation
-
-            //attempt inflict damage by editing the oppenent hp value in $session
-
-            // query move description to see if it will inclict a status effect on the opponent
-
-            // decrease PP by 1
-
-            //
         });
+
+        const move2 = document.getElementById("move2");
+        move2.addEventListener("click", function () {
+            console.log("move2 was selected");
+
+            //check if move pp is not 0
+            if (team.pkm[currPkm].moves[1].pp != 0) {
+                console.log(team.pkm[currPkm].moves[1].name + " can be used pp is " + team.pkm[currPkm].moves[1].pp);
+
+                moveInfo = team.pkm[currPkm].moves[1];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar"+((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
+
+            }
+
+        });
+        const move3 = document.getElementById("move3");
+        move3.addEventListener("click", function () {
+            console.log("move2 was selected");
+
+            //check if move pp is not 0
+            if (team.pkm[currPkm].moves[2].pp != 0) {
+                console.log(team.pkm[currPkm].moves[2].name + " can be used pp is " + team.pkm[currPkm].moves[2].pp);
+
+                moveInfo = team.pkm[currPkm].moves[2];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar"+((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
+
+            }
+
+        });
+        const move4 = document.getElementById("move4");
+        move4.addEventListener("click", function () {
+            console.log("move2 was selected");
+
+            //check if move pp is not 0
+            if (team.pkm[currPkm].moves[3].pp != 0) {
+                console.log(team.pkm[currPkm].moves[3].name + " can be used pp is " + team.pkm[currPkm].moves[3].pp);
+
+                moveInfo = team.pkm[currPkm].moves[3];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar"+((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
+
+            }
+
+        });
+
+
     }
 
     //if its the cpus turn
