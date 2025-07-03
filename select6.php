@@ -30,8 +30,8 @@ else {                                      // If redirected from proj3.php
     }
 }
 
-$volume = $_POST["volume"]; // Get volume setting 
-$muted = $_POST["muted"];   // Get mute setting 
+$volume = $_POST["volume"]; // Get volume setting
+$muted = $_POST["muted"];   // Get mute setting
 ?>
 
 <!DOCTYPE html>
@@ -45,12 +45,13 @@ $muted = $_POST["muted"];   // Get mute setting
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./scripts/utils.js"></script>
     <script src="./scripts/select6.js"></script>
+    <title>Select Your Team</title>
 </head>
 <body>
-<audio id="bgMusic" muted loop hidden>
+<audio id="bgMusic" muted loop hidden>                            <!-- Background Music -->
     <source src="dataFiles/audio/songs/Route_8-XY.mp3">
 </audio>
-<audio id="btnClk" muted hidden>
+<audio id="btnClk" muted hidden>                                  <!-- Button Click SFX -->
     <source src="dataFiles/audio/sfx/Pokemon_(A_Button).mp3">
 </audio>
 <div class="center">                                              <!-- Center Block Of Content -->

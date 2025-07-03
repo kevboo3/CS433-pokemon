@@ -7,12 +7,13 @@
 .pokemon-buttons {
     display: grid;
     grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 20px 150px 20px 150px;
+    grid-template-rows: 20px 150px 30px 150px;
     gap: 0px 5px;
     text-align: center;
     background-color: antiquewhite;
     padding: 10px;
     border: 5px ridge black;
+    font-size: 13px;
 }
 
 .pokemon-buttons button {
@@ -118,4 +119,8 @@ table.moves-table td {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.middle-text{
+    padding-top: 10px;
 }

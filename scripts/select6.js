@@ -14,6 +14,7 @@ var team = new Team(null);              // The current team on screen
 var locked = new Array(6).fill(false);  // Array of which pokemon are locked
 var numLocked = 0;                      // Number of locked pokemon
 
+// Wait For Document to be ready
 $(function () {
     // Gets Data Passed From Previous Page
     team = JSON.parse(document.getElementById("teamJSON").innerHTML);      // Gets team data
@@ -158,6 +159,7 @@ $(function () {
     document.getElementById("up").addEventListener("click", function () {
         if (!muted) {             // Only updates if not muted
             volume = volume + 5;
+
             if (volume > MAXV) {  // Clamps volume and alerts user
                 volume = MAXV;
                 window.alert("Max Volume");
