@@ -14,7 +14,7 @@ currPkm = 0;
 
 //finds the move object in moves_data.csv based on the moves name
 async function get_move(target_move) {
-    const target = `http://localhost/CS433-pokemon/dataFiles/moves_data.csv`;
+    const target = `http://localhost/proj3/CS433-pokemon/dataFiles/moves_data.csv`;
 
     const res = await fetch(target, {
         method: 'get',
@@ -67,9 +67,10 @@ const player_select_move = () => {
 
 //attempts to use a move
 const use_move = (caster, target, move) => {
-    console.log(caster);
-    console.log(target);
-    console.log(move);
+
+    // console.log(caster);
+    // console.log(target);
+    // console.log(move);
 
     if (caster.sleep > 0) {
         caster.sleep -= 1;
@@ -103,7 +104,7 @@ const use_move = (caster, target, move) => {
     }
 
     if (moveHits(caster, target, move)) {
-        console.log(" [!] im it hit");
+        console.log(" [!] im in hit");
 
         move_effect(caster, target, move)
     } else {
@@ -115,6 +116,7 @@ const use_move = (caster, target, move) => {
 
 //applies status effects and damage of a move
 const move_effect = (caster, target, move) => {
+    console.log("in effects");
     effect1 = move.effect1;
     effect2 = move.effect2;
 
@@ -233,29 +235,37 @@ const move_effect = (caster, target, move) => {
         }
         target.sleep = true;
     }
-    target.health = Math.max(0, target.health - damage(caster, target, move));
+    console.log("targeting enemies health");
+    target.hp = Math.max(0, target.hp - damage(caster, target, move));
+    console.log(target.hp);
 }
 
 //calculates if a move hits
 const moveHits = (caster, target, move) => {
     console.log("im in move hits!");
     console.log("move.accuracy " + move.accuracy);
-    let hitProb = move.accuracy * caster.accuracy * target.evasion;
-    randNum = Math.floor(Math.random() * 256);
-    console.log("hitprob " + hitprob);
-    console.log("randNum " + randNum);
+    let hitProb = move.accuracy;
+    let randNum = Math.floor(Math.random() * 256);
     return hitProb > randNum;
 }
 
 //calculates the damage of a move
 const damage = (caster, target, move) => {
+    console.log("in damage");
     var level = 1;
-    var critThreshold = move.effect1 == "High Crit" || move.effect2 == "High Crit" ? Math.min(8 * Math.floor(caster.speed / 2), 255) : Math.floor(caster.speed / 2);
+    var critThreshold = move.effect1 == "High Crit" || move.effect2 == "High Crit" ? Math.min(8 * Math.floor(caster.attr.speed / 2), 255) : Math.floor(caster.attr.speed / 2);
+    console.log("in critThreshold "+critThreshold);
+    
     var crit = critThreshold > Math.floor(Math.random() * 256) ? 2 : 1;
-    var STAB = target.type1 == move.type || target.type2 == move.type ? 1.5 : 1;
-    var attack = move.type == "special" ? caster.specialAttack : caster.attack;
-    var defense = move.type == "special" ? caster.specialDefense : caster.defense;
-    var damage = (((2 * level / 5 * crit + 2) * move.power * attack / defense) / 50 + 2) * STAB * getTypeAdvantage(move.type, target.type1) * getTypeAdvantage(move.type, target.type2);
+    console.log("in crit "+crit);
+
+    var STAB = target.types[0] == move.type || target.types[1] == move.type ? 1.5 : 1;
+    console.log("in STAB "+STAB);
+
+    var attack = move.type == "special" ? caster.attr.spAtk : caster.attr.atk;
+    var defense = move.type == "special" ? caster.attr.spDef : caster.attr.def;
+    var damage = (((2 * level / 5 * crit + 2) * move.power * attack / defense) / 50 + 2) * STAB * getTypeAdvantage(move.type, target.types[0]) * getTypeAdvantage(move.type, target.types[1]);
+    console.log("damage is"+damage);
     return (damage);
 }
 // TODO get the type advantage
@@ -347,11 +357,14 @@ function Battle() {
                 console.log(team.pkm[currPkm].moves[0].name + " can be used pp is " + team.pkm[currPkm].moves[0].pp);
                 // console.log()
                 // query the db to see the type of move it is phys or state
-                get_move(team.pkm[currPkm].moves[0].name).then((data) => {
-                    console.log("data: ", data)
-                });
-                //  console.log(moveInfo);
-                //use_move(team.pkm[currPkm].name, enemyTeam.pkm[0].name, moveInfo);
+                // get_move(team.pkm[currPkm].moves[0].name).then((moveInfo) => {
+                //     console.log(moveInfo)
+                //     use_move(team.pkm[currPkm].name, enemyTeam.pkm[0].name, moveInfo);
+                // });
+
+                //[!] home
+                moveInfo = team.pkm[currPkm].moves[0];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
 
             }
 
