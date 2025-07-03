@@ -1,51 +1,49 @@
-isPlayer1Turn = true;
-isPlayerLeaderDead = false;
-isPlayer1TeamDead = false;
-//possible game states to
+
+//possible game states 
 //init battle
-/*
+let isPlayer1Turn = true;
+let isPlayerLeaderDead = false;
+let isPlayer1TeamDead = false;
+let isEnemyDead = false;
 
--recieve the users 6 pokemon and moves
--generate the random pokemon (1 or more to fight)
-
-- store them in a local arr or reference the $session arr
-*/
-
+currPkm = 0;
 
 //a sample do turn function
-const do_turn = (player, enemy) => {
-    activate_effects(player.active_pokemon);
-    use_move(player.active_pokemon, enemy.active_pokemon, player_select_move());
-}
+// const do_turn = (player, enemy) => {
+//     activate_effects(player.active_pokemon);
+//     use_move(player.active_pokemon, enemy.active_pokemon, player_select_move());
+// }
 
 //finds the move object in moves_data.csv based on the moves name
 async function get_move(target_move) {
-    const target = `http://localhost/CS433-pokemon/dataFiles/moves_data.csv`;
+    const target = `http://localhost/proj3/CS433-pokemon/dataFiles/moves_data.csv`;
 
     const res = await fetch(target, {
-      method: 'get',
-      headers: {
-        'content-type': 'text/csv;charset=UTF-8',
-      }
-    });
-    if (res.status === 200) {
-      var move_list = await res.text();
-      move_list = move_list.split("\n")
-      move_list = move_list.map(item => {
-        return(item.split(","))
-      });
-    } else {
-      console.log(`Error code ${res.status}`);
-    }
-    return(move_list.find(move => {
-        if(move[0] == target_move){
-          return(move);
+        method: 'get',
+        headers: {
+            'content-type': 'text/csv;charset=UTF-8',
         }
-    }))
-  }
+    });
 
-  //does damage effects to pokemon
-  const activate_effects = (pokemon) => {
+    const move_list = await res.text();
+    var found_move = await move_list.split("\n");
+    found_move = await found_move.map(item => {
+        return (item.split(","))
+    });
+
+    var found_move = await found_move.find(move => {
+        if (move[0] == target_move) {
+            return (move);
+        }
+    })
+    console.log("Found move: ", found_move)
+    const new_move = { name: found_move[0], type: found_move[1], category: found_move[2], power: found_move[3], accuracy: found_move[4], pp: found_move[5], effect: found_move[6], effect1: found_move[7], effect2: found_move[8] }
+
+    return (await new_move);
+}
+
+//does damage effects to pokemon
+const activate_effects = (pokemon) => {
     if (pokemon.burn) {
         pokemon.health = Math.max(0, pokemon.health - pokemon.health / 16);
     }
@@ -63,32 +61,36 @@ async function get_move(target_move) {
     }
 }
 
-//TODO get the users move
-const player_select_move = () => {
-
-};
-
-
 //attempts to use a move
 const use_move = (caster, target, move) => {
+
+    // console.log(caster);
+    // console.log(target);
+    // console.log(move);
+
     if (caster.sleep > 0) {
         caster.sleep -= 1;
         return (null);
     }
+
     if (caster.flinch) {
         caster.flinch = false;
         return (null)
     }
+
     if (caster.confuse && Math.random() <= 0.50) {
         //TODO: get the move pound instead of a string
         caster.health = Math.max(0, caster.health - damage(caster, caster, "Pound"))
     }
-    if (pokemon.freeze) {
+    if (caster.freeze) {
+
         return (null)
     }
+
     if (caster.paralyze && Math.random() <= 0.25) {
         return (null);
     }
+
     if (move.effect1 == "Multihit") {
         for (i = 0; i < move.effect2; i++) {
             if (moveHits(caster, target, move)) {
@@ -96,15 +98,22 @@ const use_move = (caster, target, move) => {
             }
         }
     }
+
     if (moveHits(caster, target, move)) {
-        move_effect(caster, target, move)
+      
+      move_effect(caster, target, move)
+      console.log("the move hit!!!");
+    } else {
+
+        console.log(" move didnt didnt hit :(");
     }
+
 }
 
 //applies status effects and damage of a move
 const move_effect = (caster, target, move) => {
-    effect1 = move.effect1;
-    effect2 = move.effect2;
+    effect1 = move.tags[0];
+    effect2 = move.tags[1];
 
     if (effect1 == "Paralyze/Burn/Freeze") {
         if (Math.random() < 0.2) {
@@ -131,9 +140,6 @@ const move_effect = (caster, target, move) => {
     }
     if (effect1 == "A debuff") {
         target.attack -= Math.max(value * 20, 0);
-    }
-    if (effect1 == "Ac debuff") {
-        target.accuracy -= Math.max(value * 20, 0);
     }
     if (effect1 == "Burn") {
         target.burn = true;
@@ -224,103 +230,141 @@ const move_effect = (caster, target, move) => {
         }
         target.sleep = true;
     }
-    target.health = Math.max(0, target.health - damage(caster, target, move));
+    console.log("targeting enemies health");
+    target.hp = Math.max(0, target.hp - damage(caster, target, move));
+    console.log(target.hp);
 }
 
 //calculates if a move hits
 const moveHits = (caster, target, move) => {
-    return (move.accuracy * caster.accuracy * target.evasion > Math.floor(Math.random() * 256));
+    console.log("im in move hits");
+    console.log("move.accuracy " + move.accuracy);
+    let hitProb = move.accuracy;
+    let randNum = Math.floor(Math.random() * 256);
+    return hitProb > randNum;
 }
 
 //calculates the damage of a move
 const damage = (caster, target, move) => {
+    console.log("in damage");
     var level = 1;
-    var critThreshold = move.effect1 == "High Crit" || move.effect2 == "High Crit" ? Math.min(8 * Math.floor(caster.speed / 2), 255) : Math.floor(caster.speed / 2);
+    var critThreshold = move.effect1 == "High Crit" || move.effect2 == "High Crit" ? Math.min(8 * Math.floor(caster.attr.speed / 2), 255) : Math.floor(caster.attr.speed / 2);
+    console.log("in critThreshold " + critThreshold);
+
     var crit = critThreshold > Math.floor(Math.random() * 256) ? 2 : 1;
-    var STAB = target.type1 == move.type || target.type2 == move.type ? 1.5 : 1;
-    var attack = move.type == "special" ? caster.specialAttack : caster.attack;
-    var defense = move.type == "special" ? caster.specialDefense : caster.defense;
-    var damage = (((2 * level / 5 * crit + 2) * move.power * attack / defense) / 50 + 2) * STAB * getTypeAdvantage(move.type, target.type1) * getTypeAdvantage(move.type, target.type2);
+    console.log("in crit " + crit);
+
+    var STAB = target.types[0] == move.type || target.types[1] == move.type ? 1.5 : 1;
+    console.log("in STAB " + STAB);
+
+    var attack = move.type == "special" ? caster.attr.spAtk : caster.attr.atk;
+    var defense = move.type == "special" ? caster.attr.spDef : caster.attr.def;
+    var damage = (((2 * level / 5 * crit + 2) * move.power * attack / defense) / 50 + 2) * STAB * getTypeAdvantage(move.type, target.types[0]) * getTypeAdvantage(move.type, target.types[1]);
+    console.log("damage is" + damage);
     return (damage);
 }
 // TODO get the type advantage
 async function get_type_chart() {
-  const response = await fetch('http://localhost/CS433-pokemon/dataFiles/type_bonus.csv');
-  const text = await response.text();
-
-  const lines = text.trim().split('\n');
-  const headers = lines[0].split(',').slice(1); //removes 'Type'
-  const chart = {};
-
-  for (let i = 1; i < lines.length; i++) {
-    const [attackingType, ...values] = lines[i].split(','); //gets rowName then numbers
-    chart[attackingType] = {};
-    values.forEach((val, j) => {
-      chart[attackingType][headers[j]] = parseFloat(val);
-    });
+  try {
+    const response = await fetch('http://localhost/CS433-pokemon/dataFiles/type_bonus.csv');
+    const text = await response.text();
+    const lines = text.trim().split('\n');
+    const headers = lines[0].split(',').slice(1);
+    const chart = {};
+    for (let i = 1; i < lines.length; i++) {
+      const [attackingType, ...values] = lines[i].split(',');
+      chart[attackingType] = {};
+      values.forEach((val, j) => {
+        chart[attackingType][headers[j]] = parseFloat(val);
+      });
+    }
+    return chart;
+  } catch (error) {
+    console.error("Error fetching type chart:", error);
+    return {};
   }
+}
 
-  return chart; //returns with a full chart[atker][defder]
-}
 const getTypeAdvantage = async (attackerType, defenderType) => {
-   const chart = await get_type_chart();
-   console.log(chart[attackerType][defenderType]);
-   return chart[attackerType][defenderType];
-   
-}
+  const chart = await get_type_chart();
+  if(chart==null)
+    return(1);
+  return chart[attackerType]?.[defenderType];
+
+};
+
 
 
 function initBattle() {
 
-  let newIds = [];
-  // $.get("./scripts/get_pokemon.php", { "ids": newIds }, setPokemon, "json");
+    // let newIds = [];
+    // $.get("./scripts/get_pokemon.php", { "ids": newIds }, setPokemon, "json");
 
-  team = JSON.parse(document.getElementById("teamJSON").innerHTML);
-  enemyTeam = JSON.parse(document.getElementById("enemyTeamJSON").innerHTML);
-  console.log(team);
-  console.log(enemyTeam);
+    team = JSON.parse(document.getElementById("teamJSON").innerHTML);
+    enemyTeam = JSON.parse(document.getElementById("enemyTeamJSON").innerHTML);
+    console.log(team);
+    console.log(enemyTeam);
 
 
-  document.getElementById("pokemon1-name").innerHTML = team.pkm[0].name;
-  document.getElementById("pokemon1-hp").innerHTML = team.pkm[0].hp;
-  document.getElementById("pokemon1-hp").style.width = ((team.pkm[0].hp / team.pkm[0].hp) * 100) + "%";
-  document.getElementById("player1-active-pokemon").src = team.pkm[0].img;
-  document.getElementById("move1").innerHTML = team.pkm[0].moves[0].name + "<br>" + team.pkm[0].moves[0].type;
-  document.getElementById("move2").innerHTML = team.pkm[0].moves[1].name + "<br>" + team.pkm[0].moves[1].type;
-  document.getElementById("move3").innerHTML = team.pkm[0].moves[2].name + "<br>" + team.pkm[0].moves[2].type;
-  document.getElementById("move4").innerHTML = team.pkm[0].moves[3].name + "<br>" + team.pkm[0].moves[3].type;
+    document.getElementById("pokemon1-name").innerHTML = team.pkm[0].name;
+    document.getElementById("pokemon1-hp").innerHTML = team.pkm[0].hp;
+    document.getElementById("pokemon1-hp").style.width = ((team.pkm[0].hp / team.pkm[0].hp) * 100) + "%";
+    document.getElementById("player1-active-pokemon").src = team.pkm[0].img;
+    document.getElementById("move1").innerHTML = team.pkm[0].moves[0].name + "<br>" + team.pkm[0].moves[0].type;
+    document.getElementById("move2").innerHTML = team.pkm[0].moves[1].name + "<br>" + team.pkm[0].moves[1].type;
+    document.getElementById("move3").innerHTML = team.pkm[0].moves[2].name + "<br>" + team.pkm[0].moves[2].type;
+    document.getElementById("move4").innerHTML = team.pkm[0].moves[3].name + "<br>" + team.pkm[0].moves[3].type;
 
-  // [!] fix icons not showing up
-  document.getElementById("pokemon1-img").src = team.pkm[0].img;
-  document.getElementById("pokemon1-img-name").innerHTML = team.pkm[0].name;
-  document.getElementById("pokemon2-img").src = team.pkm[1].img;
-  document.getElementById("pokemon2-img-name").innerHTML = team.pkm[1].name;
-  document.getElementById("pokemon3-img").src = team.pkm[2].img;
-  document.getElementById("pokemon3-img-name").innerHTML = team.pkm[2].name;
-  document.getElementById("pokemon4-img").src = team.pkm[3].img;
-  document.getElementById("pokemon4-img-name").innerHTML = team.pkm[3].name;
-  document.getElementById("pokemon5-img").src = team.pkm[4].img;
-  document.getElementById("pokemon5-img-name").innerHTML = team.pkm[4].name;
-  document.getElementById("pokemon6-img").src = team.pkm[5].img;
-  document.getElementById("pokemon6-img-name").innerHTML = team.pkm[5].name;
+    // [!] fix icons not showing up
+    document.getElementById("pokemon1-img").src = team.pkm[0].img;
+    document.getElementById("pokemon1-img-name").innerHTML = team.pkm[0].name;
+    document.getElementById("pokemon2-img").src = team.pkm[1].img;
+    document.getElementById("pokemon2-img-name").innerHTML = team.pkm[1].name;
+    document.getElementById("pokemon3-img").src = team.pkm[2].img;
+    document.getElementById("pokemon3-img-name").innerHTML = team.pkm[2].name;
+    document.getElementById("pokemon4-img").src = team.pkm[3].img;
+    document.getElementById("pokemon4-img-name").innerHTML = team.pkm[3].name;
+    document.getElementById("pokemon5-img").src = team.pkm[4].img;
+    document.getElementById("pokemon5-img-name").innerHTML = team.pkm[4].name;
+    document.getElementById("pokemon6-img").src = team.pkm[5].img;
+    document.getElementById("pokemon6-img-name").innerHTML = team.pkm[5].name;
 
-  // query the db for a ran pokemon and give it 4 random moves
-  //enemy pokemon
-  document.getElementById("enemy-pokemon-name").innerHTML = enemyTeam.pkm[0].name;
-  document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
-  document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp/enemyTeam.pkm[0].hp)*100)+"%";
-  document.getElementById("player2-active-pokemon").src = enemyTeam.pkm[0].img;
-  
-  // query the db for a rand pokemon and give it 4 random moves
+    // query the db for a ran pokemon and give it 4 random moves
+    //enemy pokemon
+    document.getElementById("enemy-pokemon-name").innerHTML = enemyTeam.pkm[0].name;
+    document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+    document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].hp) * 100) + "%";
+    document.getElementById("player2-active-pokemon").src = enemyTeam.pkm[0].img;
 
 }
 
+ 
+  // //if its the cpus turn
+  function cpuTurn(){
+    console.log("====in cpu turn===");
+    
+    cpuMove = Math.floor(Math.random()*4);
+
+    console.log("cpu used"+cpuMove);
+    //check if move pp is not 0
+    if (enemyTeam.pkm[currPkm].moves[cpuMove].pp != 0) {
+        console.log(enemyTeam.pkm[currPkm].moves[cpuMove].name + " can be used pp is " + enemyTeam.pkm[currPkm].moves[cpuMove].pp);
+
+        moveInfo = enemyTeam.pkm[currPkm].moves[cpuMove];
+        use_move( enemyTeam.pkm[cpuMove],team.pkm[currPkm], moveInfo);
+        //show new heal and status effect
+        document.getElementById("pokemon1-hp").innerHTML = team.pkm[currPkm].hp;
+        document.getElementById("pokemon1-hp").style.width = ((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100) + "%";
+        console.log("width of health bar"+((team.pkm[currPkm].hp / team.pkm[currPkm].attr.hp) * 100));
+    }   
+
+  }
 //battle
 
 /*
 todo
  -switch between the user turn to pick moves and the cpus turn ( prevent the user from clicking any buttons
- when its the cpius turn)
+ when its the cpus turn)
     -who goes first is based on what pokemon has a higher speed stay
 
  -check if  the users pokemon is dead (can only switch), if all pokemon are dead game over, if the cpus lead pokemon is dead or if
@@ -336,41 +380,189 @@ todo
  a team member or to release to pokemon to the wild
  */
 function Battle() {
-  if (
-    isPlayer1Turn == true &&
-    isPlayerLeaderDead == false &&
-    isPlayer1TeamDead == false
-  ) {
-    //let the user pick an attack or switch
+    if (
+        isPlayer1Turn == true &&
+        isPlayerLeaderDead == false &&
+        isPlayer1TeamDead == false
+    ) {
+        //let the user pick an attack or switch
 
-    // listen for a single button press
+        // listen for a single button press
 
-    const move1 = document.getElementById("move1");
-    move1.addEventListener("click", function () {
-    console.log("move1 was selected");
+        const move1 = document.getElementById("move1");
+        move1.addEventListener("click", function () {
+            console.log("move1 was selected");
 
-      //check if move pp is not 0
+            //check if move pp is not 0
+            if (team.pkm[currPkm].moves[0].pp != 0) {
+                console.log(team.pkm[currPkm].moves[0].name + " can be used pp is " + team.pkm[currPkm].moves[0].pp);
 
-      // query the db to see the type of move it is phys or state
+                //[!] home
+                moveInfo = team.pkm[currPkm].moves[0];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                console.log("enemy pokemon:", enemyTeam.pkm[0])
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
-      //store the damage and typing
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
+            }
+            cpuTurn();
+        });
 
-      //query the opponents type to finalize damage calculation
+        const move2 = document.getElementById("move2");
+        move2.addEventListener("click", function () {
+            console.log("move2 was selected");
 
-      //attempt inflict damage by editing the oppenent hp value in $session
+            //check if move pp is not 0
+            if (team.pkm[currPkm].moves[1].pp != 0) {
+                console.log(team.pkm[currPkm].moves[1].name + " can be used pp is " + team.pkm[currPkm].moves[1].pp);
 
-      // query move description to see if it will inclict a status effect on the opponent
+                moveInfo = team.pkm[currPkm].moves[1];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
 
-      // decrease PP by 1
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
+            }
+            cpuTurn();
 
-      //
-    });
-  }
+        });
+        const move3 = document.getElementById("move3");
+        move3.addEventListener("click", function () {
+            console.log("move2 was selected");
+
+            //check if move pp is not 0
+            if (team.pkm[currPkm].moves[2].pp != 0) {
+                console.log(team.pkm[currPkm].moves[2].name + " can be used pp is " + team.pkm[currPkm].moves[2].pp);
+
+                moveInfo = team.pkm[currPkm].moves[2];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
+
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
+            }
+            cpuTurn();
+
+        });
+        const move4 = document.getElementById("move4");
+        move4.addEventListener("click", function () {
+            console.log("move2 was selected");
+
+            //check if move pp is not 0
+            if (team.pkm[currPkm].moves[3].pp != 0) {
+                console.log(team.pkm[currPkm].moves[3].name + " can be used pp is " + team.pkm[currPkm].moves[3].pp);
+
+                moveInfo = team.pkm[currPkm].moves[3];
+                use_move(team.pkm[currPkm], enemyTeam.pkm[0], moveInfo);
+                //show new heal and status effect
+                document.getElementById("enemy-pokemon-hp").innerHTML = enemyTeam.pkm[0].hp;
+                document.getElementById("enemy-pokemon-hp").style.width = ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100) + "%";
+                console.log("width of health bar" + ((enemyTeam.pkm[0].hp / enemyTeam.pkm[0].attr.hp) * 100));
+
+                //remove pp
+                moveInfo.pp -= 1;
+                console.log("pp: ", moveInfo.pp)
+
+            }
+            cpuTurn();
+
+        });
+
+        const switch1 = document.getElementById("pokemon1-img-name");
+        switch1.addEventListener("click", function () {
+            console.log("switch1 was selected");
+            if (team.pkm[0].hp > 0) {
+                currPkm = 0
+            }
+            updatePlayer1Pokemon()
+        })
+
+        const switch2 = document.getElementById("pokemon2-img-name");
+        switch2.addEventListener("click", function () {
+            console.log("switch2 was selected");
+            if (team.pkm[1].hp > 0) {
+                currPkm = 1
+            }
+            updatePlayer1Pokemon()
+        })
+
+        const switch3 = document.getElementById("pokemon3-img-name");
+        switch3.addEventListener("click", function () {
+            console.log("switch3 was selected");
+            if (team.pkm[2].hp > 0) {
+                currPkm = 2
+            }
+            updatePlayer1Pokemon()
+        })
+
+        const switch4 = document.getElementById("pokemon4-img-name");
+        switch4.addEventListener("click", function () {
+            console.log("switch4 was selected");
+            if (team.pkm[3].hp > 0) {
+                currPkm = 3
+            }
+            updatePlayer1Pokemon()
+        })
+
+        const switch5 = document.getElementById("pokemon5-img-name");
+        switch5.addEventListener("click", function () {
+            console.log("switch5 was selected");
+            if (team.pkm[4].hp > 0) {
+                currPkm = 4
+            }
+            updatePlayer1Pokemon()
+        })
+
+        const switch6 = document.getElementById("pokemon6-img-name");
+        switch6.addEventListener("click", function () {
+            console.log("switch6 was selected");
+            if (team.pkm[5].hp > 0) {
+                currPkm = 5
+            }
+            updatePlayer1Pokemon()
+        })
+
+        
+    }
+
+    if(isPlayer1Turn ==false){
+      cpuTurn();
+    }
+
+
+
+
+}
+
+
+
+function updatePlayer1Pokemon() {
+    document.getElementById("pokemon1-name").innerHTML = team.pkm[currPkm].name;
+    document.getElementById("pokemon1-hp").innerHTML = team.pkm[currPkm].hp;
+    document.getElementById("pokemon1-hp").style.width = ((team.pkm[currPkm].hp / team.pkm[currPkm].hp) * 100) + "%";
+    document.getElementById("player1-active-pokemon").src = team.pkm[currPkm].img;
+    document.getElementById("move1").innerHTML = team.pkm[currPkm].moves[0].name + "<br>" + team.pkm[currPkm].moves[0].type;
+    document.getElementById("move2").innerHTML = team.pkm[currPkm].moves[1].name + "<br>" + team.pkm[currPkm].moves[1].type;
+    document.getElementById("move3").innerHTML = team.pkm[currPkm].moves[2].name + "<br>" + team.pkm[currPkm].moves[2].type;
+    document.getElementById("move4").innerHTML = team.pkm[currPkm].moves[3].name + "<br>" + team.pkm[currPkm].moves[3].type;
 }
 
 window.onload = function () {
-  Battle();
-  initBattle();
+    Battle();
+    initBattle();
 };
 
 //battleEnd
